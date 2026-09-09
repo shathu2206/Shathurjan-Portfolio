@@ -1,5 +1,6 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import Home from '../app/page';
+import {GalleryPage} from '../components/gallery';
 import content from '../content/portfolio';
 import {UpdatesIndex,PostPage} from '../components/updates';
 import {loadPosts,type Post} from '../lib/posts';
@@ -18,3 +19,5 @@ export function render() {
 }
 export function renderUpdates(posts:Post[]){return document(<UpdatesIndex posts={posts}/>,`${content.settings.metadata.updatesTitle} | ${content.profile.name}`,content.settings.journal.description)}
 export function renderPost(post:Post){return document(<PostPage post={post}/>,`${post.title} | ${content.profile.name}`,post.excerpt||post.title)}
+
+export function renderGallery(){return document(<GalleryPage/>,`${content.gallery.title} | ${content.profile.name}`,content.gallery.description)}

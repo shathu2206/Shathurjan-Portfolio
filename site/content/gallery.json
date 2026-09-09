@@ -1,0 +1,28 @@
+{
+  "gallery": {
+    "eyebrow": "IN PICTURES",
+    "title": "Gallery",
+    "description": "Photos, CAD renders, and moments from the engineering process.",
+    "emptyMessage": "Photos are on the way.",
+    "photos": [
+      {
+        "image": "assets/gallery-placeholder-01.png",
+        "alt": "Labelled placeholder for a CAD render",
+        "title": "CAD render — placeholder",
+        "caption": "A space for a model, assembly, or design detail. Replace this placeholder with your own render."
+      },
+      {
+        "image": "assets/gallery-placeholder-02.png",
+        "alt": "Labelled placeholder for a workshop photo",
+        "title": "In the workshop — placeholder",
+        "caption": "A space for a prototype or a moment from the build process. Replace this with your own photo."
+      },
+      {
+        "image": "assets/gallery-placeholder-03.png",
+        "alt": "Labelled placeholder for a flight or fieldwork photo",
+        "title": "Out in the field — placeholder",
+        "caption": "A space for flight training, testing, or a project in action. Replace this with your own photo."
+      }
+    ]
+  }
+}

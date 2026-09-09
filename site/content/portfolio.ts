@@ -1,5 +1,5 @@
 import settingsData from './settings.json';
-import fieldNotesData from './field-notes.json';
+import galleryData from './gallery.json';
 import profile from './profile.json';
 import projects from './projects.json';
 import experience from './experience.json';
@@ -12,7 +12,7 @@ export interface Experience { title: string; organization: string; date: string;
 
 interface Portfolio {
   settings: typeof settingsData.settings;
-  fieldNotes: typeof fieldNotesData.fieldNotes;
+  gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{image:string;alt:string;title:string;caption?:string}[]};
   profile: {
     name: string; role: string;
     availability: string; intro: string;
@@ -34,9 +34,10 @@ interface Portfolio {
 }
 
 // Optional lists can be omitted by the editor when empty.
-const data = { ...settingsData, ...fieldNotesData, ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
+const data = { ...settingsData, ...galleryData, ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
 const content: Portfolio = {
   ...data,
+  gallery: {...data.gallery, photos: data.gallery.photos ?? []},
   settings: {...data.settings, sections: data.settings.sections ?? [], navigation: data.settings.navigation ?? []},
   profile: { ...data.profile, highlights: data.profile.highlights ?? [] },
   projects: (data.projects ?? []).map(project => ({

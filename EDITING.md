@@ -18,8 +18,8 @@ Choose a section in the dashboard, make changes, and press **Save**. Saving upda
 | Dashboard section | What you can change |
 | --- | --- |
 | **Introduction, name & CV** | Name everywhere on the site, combined Introduction/About text, languages, availability, contact details, highlights, and CV PDF |
-| **Field Notes box** | Show/hide the box, both top labels, each headline line, interests, and footer text |
 | **Website text & layout** | All section headings, descriptions, buttons, navigation tabs, header/footer, Updates page labels, search descriptions, colours, font, page width, and section order/visibility |
+| **Gallery** | Add, replace, remove and reorder photos; edit their titles, captions, image descriptions and page headings |
 | **Projects** | Add, edit, remove, and reorder project cards; upload renders and photos |
 | **Engineering Updates** | Write new posts, format text, upload images, and add optional LinkedIn links |
 | **Technical experience** | Engineering roles, dates, descriptions, and responsibilities |
@@ -41,7 +41,13 @@ Leave **Show on website** off to keep a post off the website while working on it
 
 ## Navigate the portfolio
 
-The top navigation stays visible while you scroll. **Intro**, **Projects**, **Experience**, **Leadership**, **Education**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. Awards appear with Education. All About text, the professional summary, and languages are together below your name in the introduction.
+The top navigation stays visible while you scroll. **Intro**, **Projects**, **Experience**, **Leadership**, **Education**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. **Gallery** opens the photo gallery. Awards appear with Education. All About text, the professional summary, and languages are together below your name in the introduction.
+
+## Add gallery photos
+
+Open **Gallery** in Pages CMS. Under **Photos**, add an entry or open a placeholder. Upload or select a photo, enter its title, a short caption and an image description, then **Save**. Drag entries to reorder them or remove an entry to take it off the gallery. The three starter images are clearly labelled placeholders, ready to replace.
+
+A sample engineering update is also published in **Engineering Updates**. Edit it into your own post, turn **Show on website** off to hide it, or remove it when you no longer need it.
 
 ## Add a project
 
@@ -75,11 +81,11 @@ Open [Publish portfolio in GitHub Actions](https://github.com/shathu2206/Shathur
 
 Open **Website text & layout**. Each existing section has its own editable headings and labels. Use **Homepage sections** to reorder sections; remove an entry to hide that section without deleting its content. Add it back to show it again. The introduction stays at the top. The Updates page remains available independently of its homepage invitation.
 
-Under **Navigation tabs**, change labels, reorder tabs, or remove them. Select destinations from the dropdown. Tabs for hidden homepage sections automatically disappear. The Intro and Updates destinations remain available.
+Under **Navigation tabs**, change labels, reorder tabs, or remove them. Select destinations from the dropdown. Tabs for hidden homepage sections automatically disappear. The Intro, Updates and Gallery destinations remain available.
 
 Under **Colours, font and page width**, change the palette using six-digit hex colours (for example `#b6f16c`), choose a font, and adjust page width. Under **Header and footer**, edit the logo initials, subtitle, and footer. Your full name comes from **Introduction, name & CV** and updates throughout the site automatically. Logo initials also update the browser icon.
 
-Use **Field Notes box** to edit every word in that box or hide it. Put each headline line on a separate line. Changes stay within the existing responsive design; entirely new types of page components still require a design/code change.
+Changes stay within the existing responsive design; entirely new types of page components still require a design/code change.
 
 ## Optional direct editing
 

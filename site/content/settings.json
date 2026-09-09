@@ -44,6 +44,10 @@
         "target": "skills"
       },
       {
+        "label": "Gallery",
+        "target": "gallery"
+      },
+      {
         "label": "Updates ↗",
         "target": "updates"
       },

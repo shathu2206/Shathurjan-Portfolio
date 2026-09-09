@@ -86,6 +86,67 @@ content:
         required: false
         pattern: ^https://(www\.)?linkedin\.com/
         description: 'Optional: paste a link to the same post on LinkedIn.'
+  - name: gallery
+    label: Gallery
+    type: file
+    path: site/content/gallery.json
+    format: json
+    fields:
+      - name: gallery
+        label: Gallery page
+        type: object
+        required: true
+        fields:
+          - name: eyebrow
+            label: Small label above heading
+            type: string
+            required: true
+          - name: title
+            label: Page title
+            type: string
+            required: true
+          - name: description
+            label: Page introduction
+            type: text
+            required: true
+          - name: emptyMessage
+            label: Message when there are no photos
+            type: text
+            required: true
+          - name: photos
+            label: Photos — add, edit or drag to reorder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.title}'
+            description: >-
+              Replace the labelled placeholders with your photos. Add a title, a short caption and an image
+              description, then save.
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                required: true
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+              - name: title
+                label: Photo title
+                type: string
+                required: true
+              - name: caption
+                label: Short caption
+                type: text
+                required: false
+              - name: alt
+                label: Image description
+                type: string
+                required: true
+                description: Describe the image for visitors using screen readers.
   - name: settings
     label: Website text & layout
     type: file
@@ -186,6 +247,8 @@ content:
                       value: updates
                     - label: Contact
                       value: contact
+                    - label: Gallery page
+                      value: gallery
           - name: work
             label: Projects section
             type: object
@@ -492,41 +555,6 @@ content:
                 options:
                   min: 900
                   max: 1600
-  - name: field-notes
-    label: Field Notes box
-    type: file
-    path: site/content/field-notes.json
-    format: json
-    fields:
-      - name: fieldNotes
-        label: Field Notes box
-        type: object
-        required: true
-        fields:
-          - name: visible
-            label: Show the Field Notes box
-            type: boolean
-            required: true
-          - name: label
-            label: Label
-            type: string
-            required: true
-          - name: reference
-            label: Top right label
-            type: string
-            required: true
-          - name: headline
-            label: Headline — one line per row
-            type: text
-            required: true
-          - name: focus
-            label: Engineering interests
-            type: text
-            required: true
-          - name: footer
-            label: Footer text
-            type: text
-            required: true
   - name: profile
     label: Introduction, name & CV
     fields:

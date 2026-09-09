@@ -19,7 +19,7 @@ await build({
   define: { 'process.env.NODE_ENV': JSON.stringify('production') },
   build: { ssr: 'scripts/render.tsx', outDir: intermediate, copyPublicDir: false, minify: false },
 });
-const { render, content, loadPosts, renderUpdates, renderPost, renderIcon } = await import(pathToFileURL(resolve(intermediate, 'render.js')).href);
+const { render, content, loadPosts, renderUpdates, renderPost, renderIcon, renderGallery } = await import(pathToFileURL(resolve(intermediate, 'render.js')).href);
 const posts = await loadPosts();
 await mkdir(output, { recursive: true });
 await cp(resolve(root, 'public'), output, { recursive: true });
@@ -30,6 +30,8 @@ const css = (await readFile(resolve(root, 'app/globals.css'), 'utf8'))
   .replace(/^@theme inline \{[^\n]*\}\r?\n/gm, '');
 await writeFile(resolve(output, 'styles.css'), css);
 await writeFile(resolve(output, 'index.html'), render());
+await mkdir(resolve(output,'gallery'),{recursive:true});
+await writeFile(resolve(output,'gallery/index.html'),renderGallery());
 await mkdir(resolve(output,'updates'),{recursive:true});
 await writeFile(resolve(output,'updates/index.html'),renderUpdates(posts));
 for(const post of posts){
@@ -37,10 +39,10 @@ for(const post of posts){
   await writeFile(resolve(output,'updates',post.slug,'index.html'),renderPost(post));
 }
 await writeFile(resolve(output, '.nojekyll'), '');
-for (const file of [content.profile.resume, ...content.projects.flatMap(p => p.images.map(i => i.src)), ...posts.flatMap(p=>p.image?[p.image]:[])]) {
+for (const file of [content.profile.resume, ...content.gallery.photos.map(photo=>photo.image), ...content.projects.flatMap(p => p.images.map(i => i.src)), ...posts.flatMap(p=>p.image?[p.image]:[])]) {
   if (!file || file.includes('..') || file.includes('\\') || /^[a-z]+:/i.test(file)) throw new Error(`Use a public asset path: ${file}`);
   const assetPath = file.replace(/^\/+/, '');
   if (!assetPath.startsWith('assets/')) throw new Error(`Choose a file from the assets folder: ${file}`);
   await access(resolve(output, assetPath));
 }
-console.log(`Built portfolio, Updates feed, ${posts.length} published posts, and assets for GitHub Pages.`);
+console.log(`Built portfolio, Gallery, Updates feed, ${posts.length} published posts, and assets for GitHub Pages.`);

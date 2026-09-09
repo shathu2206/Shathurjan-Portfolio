@@ -1,0 +1,9 @@
+{
+  "title": "Sample update: from CAD to prototype",
+  "date": "2026-09-09",
+  "published": true,
+  "excerpt": "A placeholder showing how an engineering update can look. Replace it with a real project update when you’re ready.",
+  "image": "assets/gallery-placeholder-01.png",
+  "imageAlt": "Labelled CAD-render placeholder for this sample update",
+  "body": "**Sample post — this is placeholder content, not a record of a completed project.**\n\n## The idea\n\nUse this space to introduce what you are designing and the problem you want to solve. A few sentences about the requirements and constraints are enough.\n\n## Design notes\n\n- Explain one design decision and why you made it.\n- Add a CAD render, sketch, or prototype photo.\n- Describe what you measured, checked, or learned.\n\n## Next steps\n\nFinish with the next test or improvement you plan to make. You can also add a link to the same update on LinkedIn.\n\n*Replace this sample with your own update, or switch off “Show on website” in Pages CMS to hide it.*"
+}
