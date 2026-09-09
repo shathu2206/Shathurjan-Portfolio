@@ -6,7 +6,7 @@ An aerospace engineering portfolio for internship and co-op applications.
 
 ## Edit your portfolio
 
-Open **[Pages CMS](https://app.pagescms.org)** and sign in with GitHub. Select `shathu2206 / Shathurjan-Portfolio` and the `main` branch. Use **Profile & CV**, **Projects**, **Experience**, **Education**, and **Skills** to edit your portfolio through forms and image upload controls. Saving a change automatically rebuilds and publishes the website.
+Open **[Pages CMS](https://app.pagescms.org)** and sign in with GitHub. Select `shathu2206 / Shathurjan-Portfolio` and the `main` branch. Edit your profile, projects, technical experience, leadership, education, awards, and skills through forms and image upload controls. Use **Engineering Updates** to write formatted posts with images and optional LinkedIn links. Saving automatically rebuilds the website; posts appear only when **Show on website** is enabled.
 
 See [EDITING.md](EDITING.md) for the one-time connection and a guide to everyday editing. No code editing is needed for content updates.
 
@@ -30,7 +30,7 @@ Open the local URL printed in the terminal. To build the public website:
 npm run build
 ```
 
-The complete static website is written to `site/out/`. React renders the content at build time, so the published site requires no server, login, or browser-side JavaScript. Only `site/out/` is deployed; the original source stays in this repository.
+The complete static website is written to `site/out/`: the portfolio at `/`, the Updates feed at `/updates/`, and each published post at `/updates/<filename>/`. React renders the content at build time, so the published site requires no server, login, or browser-side JavaScript. Only `site/out/` is deployed; the original source stays in this repository.
 
 ## Files
 

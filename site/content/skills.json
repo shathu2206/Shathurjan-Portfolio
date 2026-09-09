@@ -4,26 +4,25 @@
       "title": "Design & modelling",
       "items": [
         "SolidWorks · Onshape · CATIA",
-        "Parametric CAD & surface geometry",
+        "Parametric CAD · Geometry / surface design",
         "Assembly integration · OpenRocket"
       ]
     },
     {
-      "title": "Analysis & programming",
+      "title": "Tools & languages",
       "items": [
-        "MATLAB · Simulink",
-        "ANSYS (training)",
-        "C / C++ · Arduino",
-        "HTML · CSS · JavaScript"
+        "ANSYS (training) · MATLAB · Simulink",
+        "Arduino IDE (C/C++) · C",
+        "HTML · CSS · JavaScript",
+        "Data analysis / visualisation · Testing / prototyping"
       ]
     },
     {
-      "title": "Build & collaborate",
+      "title": "Professional skills",
       "items": [
-        "Prototyping & verification",
-        "Electronics & sensor integration",
-        "Technical communication & mentorship",
-        "Team coordination"
+        "Technical communication · Team coordination",
+        "Technical mentorship · Safety-minded testing",
+        "Event / logistics management"
       ]
     }
   ]

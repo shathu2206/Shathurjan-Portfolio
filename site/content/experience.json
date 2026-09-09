@@ -1,28 +1,112 @@
 {
   "experience": [
     {
-      "title": "Glider pilot trainee",
+      "title": "Hardware Team Member",
+      "organization": "Skydrone Research Project (Frontier)",
+      "date": "Sep 2025 – Present",
+      "description": "Autonomous UAV structures and multidisciplinary integration.",
+      "details": [
+        "Design and analyse the physical structure of an autonomous UAV for both terrestrial and extraterrestrial use cases.",
+        "Conduct FEA and CFD simulations using SolidWorks, ANSYS, and MATLAB/Simulink to evaluate frame stiffness and aerodynamic efficiency.",
+        "Collaborate with electronics and software teams to align mechanical design with control and AI navigation systems.",
+        "Support research into lightweight materials and control surface design for future autonomous deployment."
+      ]
+    },
+    {
+      "title": "Lead-in-Training",
+      "organization": "Metropolitan Aerospace Rocket Society (MARS)",
+      "date": "Sep 2025 – Present",
+      "description": "Supporting student rocket teams while developing technical leadership.",
+      "details": [
+        "Support student teams through the design, manufacturing, assembly, and launch of competition rockets while training under an experienced lead.",
+        "Assist teams with preliminary rocket configuration, stability analysis, and performance evaluation using OpenRocket.",
+        "Guide members through CAD development in Onshape, including component design, assembly integration, and design iteration.",
+        "Assist with manufacturing, troubleshooting, launch preparation, and technical decision-making while developing team leadership skills."
+      ]
+    },
+    {
+      "title": "Glider Pilot Trainee · Scholarship Recipient",
       "organization": "University Soaring Society",
       "date": "2026 – Present",
-      "description": "Awarded a flight-training scholarship and completed my first solo flight. Continuing supervised training in aircraft handling, aerotow, circuit operations, and flight safety toward a Glider Pilot Licence."
+      "description": "Flight training toward a Glider Pilot Licence, including a completed first solo flight.",
+      "details": [
+        "Awarded a flight-training scholarship to pursue a Glider Pilot Licence through the University Soaring Society.",
+        "Progressed through supervised glider flight training and successfully completed first solo flight.",
+        "Develop practical experience in aircraft handling, aerotow procedures, circuit operations, takeoffs, landings, and flight safety.",
+        "Continue flight training and licensing requirements toward obtaining a Glider Pilot Licence."
+      ]
     },
     {
-      "title": "Rocketry lead-in-training",
-      "organization": "MARS",
-      "date": "Sep 2025 – Present",
-      "description": "Support student teams through rocket configuration, Onshape CAD development, manufacturing, assembly, and launch preparation while training under an experienced lead."
-    },
-    {
-      "title": "Propulsion subteam member",
-      "organization": "TMU MetRocketry · Igniter Team",
+      "title": "Propulsion Subteam Member · Igniter Team",
+      "organization": "TMU MetRocketry",
       "date": "Mar 2025 – Present",
-      "description": "Conducted background research into material options and manufacturing processes for the team’s first igniter spincasting approach, while building knowledge of hybrid propulsion systems."
+      "description": "Igniter manufacturing research and exposure to hybrid propulsion.",
+      "details": [
+        "Conducted background research to support the team’s first spincasting approach for igniter components.",
+        "Reviewed material options, manufacturing processes, and safety factors relevant to igniter development and spincasting.",
+        "Attended propulsion meetings to understand igniter requirements and gain exposure to hybrid-engine fundamentals.",
+        "Support igniter development activities while building practical knowledge of propulsion-system design, manufacturing, and testing."
+      ]
     },
     {
-      "title": "Embedded systems designer",
-      "organization": "STEM+ Club · Plant Wall Automation",
+      "title": "Competitor · Mechanical / Structural Designer",
+      "organization": "MLP · Combat Robotics",
+      "date": "May 2025 – Present",
+      "description": "Mechanical design for a two-person beetleweight combat robot team.",
+      "details": [
+        "Lead mechanical design and CAD for a two-person combat robot, including frame, drivetrain, and weapon subsystems.",
+        "Model parts in Onshape with CF-PETG and steel reinforcements to balance stiffness, impact strength, and weight.",
+        "Manage mass budget, geometry layout, and manufacturability under beetleweight constraints.",
+        "Integrate with electronics systems for wiring protection, component placement, and service accessibility."
+      ]
+    },
+    {
+      "title": "Competitor · Lead Developer",
+      "organization": "NASA Space Apps Challenge Hackathon 2025",
+      "date": "Oct 2025",
+      "description": "Asteroid impact visualisation and scientific communication.",
+      "details": [
+        "Designed a full-stack asteroid impact visualisation platform integrating NASA NEO, GIS, and demographic data.",
+        "Built a Node.js and Express server with front-end logic in HTML, CSS, and JavaScript using Esri ArcGIS and Open-Meteo APIs.",
+        "Modelled crater scaling, shockwave radius, and energy propagation using open scientific datasets for hazard prediction.",
+        "Earned NASA Space Apps “Best Storytelling” Second Runner-Up for clarity in scientific communication and system design."
+      ]
+    },
+    {
+      "title": "Competitor · Lead CAD Designer",
+      "organization": "Metropolitan Aerospace Rocket Society (MARS)",
+      "date": "Jan 2025 – Mar 2025",
+      "description": "Parametric aerodynamic geometry for a hybrid student rocket.",
+      "details": [
+        "Modelled the aerodynamic nose cone and avionics bay for a hybrid student rocket using CATIA and MATLAB.",
+        "Derived and implemented curvature equations to generate accurate geometry based on OpenRocket data.",
+        "Integrated spline-based point inputs from MATLAB into CATIA for parametric surface generation.",
+        "Ensured alignment between avionics design, structural manufacturability, and aerodynamic performance."
+      ]
+    },
+    {
+      "title": "Embedded Systems Designer",
+      "organization": "Plant Wall Automation · STEM+ Club",
       "date": "Sep 2023 – Jun 2024",
-      "description": "Built and programmed an Arduino system for watering, lighting, humidity, and temperature control. Calibrated sensor circuits and closed-loop C++ logic for reliable one-year operation."
+      "description": "Arduino-based environmental monitoring and closed-loop control.",
+      "details": [
+        "Built an Arduino-based automated system regulating watering, lighting, humidity, and temperature for plant growth.",
+        "Programmed C++ logic for real-time response to soil-moisture and environmental sensors.",
+        "Wired and calibrated circuits for stable closed-loop control and reliable one-year operation.",
+        "Collaborated with the biology team to define operational thresholds and environmental parameters."
+      ]
+    },
+    {
+      "title": "Electronics Integrator",
+      "organization": "Autonomous Rover Project · STEM+ Club",
+      "date": "Sep 2023 – Jun 2024",
+      "description": "Sensor integration, motion control, and autonomous rover prototyping.",
+      "details": [
+        "Assisted in wiring, assembling, and coding a line-following autonomous rover with infrared sensors and DC motors.",
+        "Created 3D-printed chassis parts using Bambu Studio and Arduino IDE C++ for motor control routines.",
+        "Supported troubleshooting and debugging post-demo to identify performance inconsistencies.",
+        "Gained foundational experience in autonomous system wiring, motion control, and sensor integration."
+      ]
     }
   ]
 }

@@ -3,6 +3,15 @@
     "school": "Toronto Metropolitan University",
     "degree": "BEng, Aerospace Engineering",
     "date": "September 2024 – Present",
-    "coursework": "Coursework: Fluid Mechanics, Thermodynamics, Materials Science, Electrical Circuits, Engineering Design & Communication. Dean’s List: Fall 2024 and Winter 2025."
+    "coursework": "Coursework: Fluid Mechanics, Thermodynamics, Materials Science, Electrical Circuits, Engineering Design & Communication. Dean’s List: Fall 2024 and Winter 2025.",
+    "gpa": "4.06 / 4.33",
+    "previous": [
+      {
+        "school": "Westhill Collegiate Institute",
+        "degree": "Ontario Secondary School Diploma",
+        "date": "Feb 2023 – Jun 2024",
+        "details": []
+      }
+    ]
   }
 }

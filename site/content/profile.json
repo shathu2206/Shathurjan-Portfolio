@@ -25,6 +25,18 @@
         "value": "First solo flight",
         "label": "Glider pilot trainee · Scholarship recipient"
       }
-    ]
+    ],
+    "phone": "(647) 740-5968",
+    "languages": [
+      {
+        "language": "English",
+        "level": "Fluent"
+      },
+      {
+        "language": "Tamil",
+        "level": "Native"
+      }
+    ],
+    "summary": "Aerospace Engineering student experienced in CAD, propulsion systems, robotics, and flight training. Skilled in concept-to-test workflows involving simulation, design, prototyping, manufacturing, and verification. Recognised for data-driven problem solving, precision modelling, and cross-disciplinary collaboration across aerodynamics, structures, propulsion, and controls."
   }
 }

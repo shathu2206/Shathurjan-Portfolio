@@ -1,19 +1,15 @@
 import { ArrowDown, ArrowUpRight, ArrowRight } from 'lucide-react';
 import content from '../content/portfolio';
+import {Header,Footer} from '../components/site-chrome';
+import {CVSections} from '../components/cv-sections';
+import {asset,updatesUrl} from '../lib/paths';
 
 export const dynamic = 'force-static';
 
-const base = process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : '';
-const asset = (path: string) => `${base}/${path.replace(/^\//, '')}`;
-
 export default function Home() {
-  const { profile, projects, experience, skills, education } = content;
+  const { profile, projects, education } = content;
   return <>
-    <a className="skip-link" href="#main">Skip to content</a>
-    <header className="site-header wrap">
-      <a className="wordmark" href="#main" aria-label={`${profile.name}, home`}><span className="monogram">SM<span>↗</span></span><span>SHATHURJAN<br/><span className="wordmark-sub">ENGINEERING PORTFOLIO</span></span></a>
-      <nav aria-label="Main navigation"><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact <ArrowUpRight size={15}/></a></nav>
-    </header>
+    <Header/>
     <main id="main">
       <section className="hero wrap" aria-labelledby="hero-title">
         <div className="hero-copy"><p className="eyebrow"><span className="status-dot"/>{profile.availability}</p><h1 id="hero-title">{profile.firstName}<br/><span>{profile.lastName}.</span></h1><p className="hero-role">{profile.role}</p><p className="hero-intro">{profile.intro}</p><div className="hero-actions"><a className="button primary" href="#work">Explore my work <ArrowDown size={18}/></a><a className="text-link" href={asset(profile.resume)} target="_blank" rel="noreferrer">View CV <ArrowUpRight size={18}/></a></div></div>
@@ -31,10 +27,10 @@ export default function Home() {
           {project.link && <a className="text-link project-link" href={project.link} target="_blank" rel="noreferrer">View project <ArrowUpRight size={16}/></a>}
         </article>)}</div>
       </section>
-      <section id="about" className="about-section" aria-labelledby="about-title"><div className="wrap about-layout"><div className="about-intro"><p className="eyebrow">02 / ABOUT</p><h2 id="about-title">From CAD<br/>to the cockpit.</h2><p>{profile.about}</p><div className="education"><span className="eyebrow">EDUCATION</span><h3>{education.degree}</h3><p>{education.school}</p><span>{education.date}</span><p className="coursework">{education.coursework}</p></div></div><div className="experience-list"><h3>Beyond the selected projects</h3>{experience.map(item => <article key={item.title}><div className="experience-meta"><span>{item.organization}</span><span>{item.date}</span></div><h4>{item.title}</h4><p>{item.description}</p></article>)}</div></div></section>
-      <section className="skills-section wrap" aria-labelledby="skills-title"><div><p className="eyebrow">03 / TOOLKIT</p><h2 id="skills-title">Tools I work with.</h2></div><div className="skills-grid">{skills.map(group => <div key={group.title}><h3>{group.title}</h3><ul>{group.items.map(item => <li key={item}>{item}</li>)}</ul></div>)}</div></section>
-      <section id="contact" className="contact-section wrap" aria-labelledby="contact-title"><div><p className="eyebrow">04 / GET IN TOUCH</p><h2 id="contact-title">Let’s build<br/>what’s next.</h2><p>{profile.contactIntro}</p></div><div className="contact-links"><a href={`mailto:${profile.email}`}><span><small>EMAIL</small>{profile.email}</span><ArrowUpRight/></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><span><small>CONNECT</small>LinkedIn</span><ArrowUpRight/></a><a href={asset(profile.resume)} target="_blank" rel="noreferrer"><span><small>EXPERIENCE & EDUCATION</small>View my CV</span><ArrowRight/></a></div></section>
+      <CVSections/>
+      <section className="updates-invitation wrap"><div><p className="eyebrow">07 / ENGINEERING UPDATES</p><h2>What I’m working on.</h2><p>Project progress, lessons learned, and notes from engineering student life.</p></div><a className="button primary" href={updatesUrl}>Explore updates <ArrowUpRight size={18}/></a></section>
+      <section id="contact" className="contact-section wrap" aria-labelledby="contact-title"><div><p className="eyebrow">08 / GET IN TOUCH</p><h2 id="contact-title">Let’s build<br/>what’s next.</h2><p>{profile.contactIntro}</p></div><div className="contact-links">{profile.phone && <a href={`tel:${profile.phone.replace(/[^+0-9]/g, "")}`}><span><small>PHONE</small>{profile.phone}</span><ArrowUpRight/></a>}<a href={`mailto:${profile.email}`}><span><small>EMAIL</small>{profile.email}</span><ArrowUpRight/></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><span><small>CONNECT</small>LinkedIn</span><ArrowUpRight/></a><a href={asset(profile.resume)} target="_blank" rel="noreferrer"><span><small>EXPERIENCE & EDUCATION</small>View my CV</span><ArrowRight/></a></div></section>
     </main>
-    <footer className="wrap"><span>© {new Date().getFullYear()} {profile.name}</span><span>Aerospace engineering · Toronto</span><a href="#main">Back to top ↑</a></footer>
+    <Footer/>
   </>;
 }

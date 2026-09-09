@@ -19,9 +19,27 @@ Choose a section in the dashboard, make changes, and press **Save**. Saving upda
 | --- | --- |
 | **Profile & CV** | Name, introduction, availability, interests, About text, contact details, highlights, and CV PDF |
 | **Projects** | Add, edit, remove, and reorder project cards; upload renders and photos |
-| **Experience** | Roles, organisations, dates, and descriptions |
+| **Engineering Updates** | Write new posts, format text, upload images, and add optional LinkedIn links |
+| **Technical experience** | Engineering roles, dates, descriptions, and responsibilities |
+| **Leadership & community** | Volunteer, leadership, tutoring, coaching, and community roles |
+| **Awards & achievements** | Awards, organisations, and dates |
 | **Education** | University, degree, dates, coursework, and recognition |
 | **Skills** | Skill groups and the entries in each group |
+
+## Write an engineering update
+
+1. Open **Engineering Updates** in the dashboard and create a new entry.
+2. Give it a title and date. Add a short introduction for the feed if you want one.
+3. Write in **Your post** using the visual formatting toolbar. You can add headings, bold text, lists, links, and images.
+4. Optionally select a **Cover image** and describe it in **Cover image description**. You can also insert more images into the post itself.
+5. Optionally paste the URL of your LinkedIn version in **LinkedIn post link**. This adds a link to LinkedIn; it does not automatically post to or import from LinkedIn.
+6. Turn **Show on website** on, then **Save**. The post appears at the top of [Engineering Updates](https://shathu2206.github.io/Shathurjan-Portfolio/updates/) after publishing finishes.
+
+Leave **Show on website** off to keep a post off the website while working on it. Draft files are still visible in this public GitHub repository. The date is a display/sorting date, not a publishing schedule. Each published post has its own shareable link. Keep its filename unchanged after sharing that link.
+
+## Navigate the portfolio
+
+The top navigation stays visible while you scroll. **Projects**, **Experience**, **Leadership**, **Education**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. Awards appear with Education; languages and the professional summary appear in About.
 
 ## Add a project
 
@@ -57,4 +75,4 @@ The dashboard changes content and the order of repeated items. Colours, typograp
 
 ## Optional direct editing
 
-If you prefer GitHub's file editor, the content is in `site/content/profile.json`, `projects.json`, `experience.json`, `education.json`, and `skills.json`. Each file contains the matching named section. `.pages.yml` describes the dashboard fields. Normal content editing does not require opening these files.
+If you prefer GitHub's file editor, the portfolio content is in the JSON files under `site/content/`. Posts are individual JSON files in `site/content/posts/`. `.pages.yml` describes the dashboard fields. Normal content editing does not require opening these files.
