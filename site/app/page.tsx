@@ -1,5 +1,5 @@
 import { ArrowDown, ArrowUpRight, ArrowRight } from 'lucide-react';
-import content from '../content/portfolio.json';
+import content from '../content/portfolio';
 
 export const dynamic = 'force-static';
 
@@ -24,7 +24,7 @@ export default function Home() {
         <div className="section-heading"><div><p className="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Engineering in practice.</h2></div><p>Structures, systems, and the decisions<br className="desktop-break"/> that connect them.</p></div>
         <div className="project-grid">{projects.map((project, index) => <article className="project" key={project.id} id={project.id}>
           <div className="project-top"><span className="project-number">0{index + 1}</span><span className="project-category">{project.category}</span><span className="project-date">{project.date}</span></div>
-          {project.images.length > 0 && <div className="project-gallery">{project.images.map((img: {src:string;alt:string;caption:string}) => <figure key={img.src}><img src={asset(img.src)} alt={img.alt} loading="lazy" width="1200" height="800"/>{img.caption && <figcaption>{img.caption}</figcaption>}</figure>)}</div>}
+          {project.images.length > 0 && <div className="project-gallery">{project.images.map(img => <figure key={img.src}><img src={asset(img.src)} alt={img.alt} loading="lazy" width="1200" height="800"/>{img.caption && <figcaption>{img.caption}</figcaption>}</figure>)}</div>}
           <p className="project-organization">{project.organization}</p><h3>{project.title}</h3><p className="project-role">{project.role}</p><p className="project-summary">{project.summary}</p>
           <div className="project-detail"><h4>My contribution</h4><ul>{project.contributions.map(item => <li key={item}>{item}</li>)}</ul></div>
           <div className="project-outcome"><span>{project.outcomeLabel}</span><p>{project.outcome}</p></div><ul className="tags" aria-label="Tools and methods">{project.tools.map(tool => <li key={tool}>{tool}</li>)}</ul>

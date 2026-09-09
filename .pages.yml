@@ -1,0 +1,278 @@
+# Visual editor configuration for https://app.pagescms.org
+media:
+  input: site/public/assets
+  output: assets
+  rename: safe
+  extensions:
+    - png
+    - jpg
+    - jpeg
+    - webp
+    - pdf
+content:
+  - name: profile
+    label: Profile & CV
+    fields:
+      - name: profile
+        label: About me and contact
+        type: object
+        fields:
+          - name: name
+            label: Full name
+            type: string
+            required: true
+          - name: firstName
+            label: First name
+            type: string
+            required: true
+          - name: lastName
+            label: Last name
+            type: string
+            required: true
+          - name: role
+            label: Role / university
+            type: string
+            required: true
+          - name: availability
+            label: Availability banner
+            type: string
+            required: true
+          - name: intro
+            label: Introduction
+            type: text
+            required: true
+          - name: focus
+            label: Engineering interests
+            type: string
+            required: true
+          - name: about
+            label: About me
+            type: text
+            required: true
+          - name: email
+            label: Contact email
+            type: string
+            required: true
+            pattern:
+              regex: ^[^\s@]+@[^\s@]+\.[^\s@]+$
+              message: Enter a valid email address.
+          - name: linkedin
+            label: LinkedIn URL
+            type: string
+            required: true
+            pattern: ^https://
+          - name: resume
+            label: CV (PDF)
+            type: file
+            required: true
+            options:
+              extensions:
+                - pdf
+            description: >-
+              Choose or upload the PDF visitors should download. Uploading a new file does not select it until
+              you save this profile.
+          - name: contactIntro
+            label: Contact section introduction
+            type: text
+            required: true
+          - name: highlights
+            label: Highlights below your introduction
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.value}'
+            fields:
+              - name: value
+                label: Headline
+                type: string
+                required: true
+              - name: label
+                label: Supporting detail
+                type: string
+                required: true
+    type: file
+    path: site/content/profile.json
+    format: json
+  - name: projects
+    label: Projects
+    fields:
+      - name: projects
+        label: Featured projects
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.title}'
+        fields:
+          - name: title
+            label: Project title
+            type: string
+            required: true
+          - name: id
+            label: Short project name
+            type: string
+            required: true
+            description: >-
+              A unique name for the project link, e.g. wing-analysis. Keep this unchanged after sharing the
+              link.
+            pattern:
+              regex: ^[a-z][a-z0-9-]*$
+              message: Use lowercase letters, numbers and hyphens, starting with a letter.
+          - name: category
+            label: Category
+            type: string
+            required: true
+          - name: organization
+            label: Team / organisation
+            type: string
+            required: true
+          - name: date
+            label: Dates
+            type: string
+            required: true
+          - name: role
+            label: Your role
+            type: string
+            required: true
+          - name: summary
+            label: Project description
+            type: text
+            required: true
+          - name: contributions
+            label: What I contributed
+            type: text
+            list: true
+          - name: outcomeLabel
+            label: Result heading
+            type: string
+            required: true
+            description: 'For example: RESULT, DESIGN APPROACH, or RESEARCH FOCUS.'
+          - name: outcome
+            label: Result or current progress
+            type: text
+            required: true
+          - name: tools
+            label: Tools and methods
+            type: string
+            list: true
+          - name: images
+            label: CAD renders and photos
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.alt}'
+            fields:
+              - name: src
+                label: Image
+                type: image
+                required: true
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+              - name: alt
+                label: Image description
+                type: string
+                required: true
+                description: Describe what the image shows for visitors using screen readers.
+              - name: caption
+                label: Caption
+                type: string
+                required: false
+          - name: link
+            label: Project link (optional)
+            type: string
+            required: false
+            pattern: ^https://
+            description: A full https:// address, or leave empty.
+        description: >-
+          Add a project, open an existing card to edit it, or reorder the cards. Their order here is their
+          order on the website.
+    type: file
+    path: site/content/projects.json
+    format: json
+  - name: experience
+    label: Experience
+    fields:
+      - name: experience
+        label: Experience entries
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.title}'
+        fields:
+          - name: title
+            label: Role
+            type: string
+            required: true
+          - name: organization
+            label: Organisation
+            type: string
+            required: true
+          - name: date
+            label: Dates
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+            required: true
+    type: file
+    path: site/content/experience.json
+    format: json
+  - name: education
+    label: Education
+    fields:
+      - name: education
+        label: Education
+        type: object
+        fields:
+          - name: school
+            label: University
+            type: string
+            required: true
+          - name: degree
+            label: Degree
+            type: string
+            required: true
+          - name: date
+            label: Dates
+            type: string
+            required: true
+          - name: coursework
+            label: Coursework and recognition
+            type: text
+            required: true
+    type: file
+    path: site/content/education.json
+    format: json
+  - name: skills
+    label: Skills
+    fields:
+      - name: skills
+        label: Skill groups
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.title}'
+        fields:
+          - name: title
+            label: Group title
+            type: string
+            required: true
+          - name: items
+            label: Skills
+            type: string
+            list: true
+    type: file
+    path: site/content/skills.json
+    format: json
+settings:
+  content:
+    merge: true

@@ -1,6 +1,7 @@
 import { renderToStaticMarkup } from 'react-dom/server';
 import Home from '../app/page';
-import content from '../content/portfolio.json';
+import content from '../content/portfolio';
+export { content };
 
 export function render() {
   const title = `${content.profile.name} | Aerospace Engineering Portfolio`;

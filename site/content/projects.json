@@ -1,0 +1,100 @@
+{
+  "projects": [
+    {
+      "id": "rocket-cad",
+      "title": "Parametric rocket design",
+      "category": "AEROSPACE / CAD",
+      "organization": "Metropolitan Aerospace Rocket Society (MARS)",
+      "date": "JAN – MAR 2025",
+      "role": "Lead CAD Designer",
+      "summary": "Designing a hybrid student rocket’s nose cone and avionics bay, with aerodynamic geometry that could translate into a manufacturable structure.",
+      "contributions": [
+        "Derived curvature equations from OpenRocket data and implemented them in MATLAB.",
+        "Transferred spline-based point inputs into CATIA to generate parametric surfaces.",
+        "Integrated the avionics bay geometry with aerodynamic and structural requirements."
+      ],
+      "outcomeLabel": "DESIGN APPROACH",
+      "outcome": "A connected workflow from rocket configuration data to equations, surface geometry, and component integration.",
+      "tools": [
+        "CATIA",
+        "MATLAB",
+        "OpenRocket",
+        "Parametric surfaces"
+      ],
+      "images": [],
+      "link": ""
+    },
+    {
+      "id": "combat-robot",
+      "title": "Beetleweight combat robot",
+      "category": "MECHANICAL / ROBOTICS",
+      "organization": "MLP · Combat Robotics",
+      "date": "MAY 2025 – PRESENT",
+      "role": "Mechanical / Structural Designer · Two-person team",
+      "summary": "Developing a compact combat robot around a tightly constrained mass budget, balancing impact resistance, packaging, and service access.",
+      "contributions": [
+        "Lead CAD development of the frame, drivetrain, and weapon subsystem.",
+        "Model CF-PETG components with steel reinforcement to balance stiffness and weight.",
+        "Coordinate electronics placement, wiring protection, and access for maintenance."
+      ],
+      "outcomeLabel": "ENGINEERING FOCUS",
+      "outcome": "Iterating the mechanical layout around mass, manufacturability, and subsystem integration within beetleweight constraints.",
+      "tools": [
+        "Onshape",
+        "CF-PETG",
+        "Assembly design",
+        "Mass budgeting"
+      ],
+      "images": [],
+      "link": ""
+    },
+    {
+      "id": "skydrone",
+      "title": "Autonomous UAV structures",
+      "category": "STRUCTURES / RESEARCH",
+      "organization": "Skydrone Research Project · Frontier",
+      "date": "SEP 2025 – PRESENT",
+      "role": "Hardware Team Member",
+      "summary": "Contributing to the physical structure of an autonomous UAV being researched for terrestrial and extraterrestrial use cases.",
+      "contributions": [
+        "Design and analyse structural components for frame stiffness and aerodynamic efficiency.",
+        "Contribute to FEA and CFD work using SolidWorks, ANSYS, and MATLAB/Simulink.",
+        "Coordinate mechanical design with electronics, controls, and AI navigation teams."
+      ],
+      "outcomeLabel": "RESEARCH FOCUS",
+      "outcome": "Lightweight materials, control surfaces, and mechanical integration for future autonomous deployment.",
+      "tools": [
+        "SolidWorks",
+        "ANSYS",
+        "MATLAB / Simulink",
+        "FEA / CFD"
+      ],
+      "images": [],
+      "link": ""
+    },
+    {
+      "id": "asteroid-platform",
+      "title": "Asteroid impact visualisation",
+      "category": "SIMULATION / SOFTWARE",
+      "organization": "NASA Space Apps Challenge 2025",
+      "date": "OCT 2025",
+      "role": "Lead Developer",
+      "summary": "Building a full-stack visualisation platform that connects asteroid data with geography and demographics to communicate impact scenarios.",
+      "contributions": [
+        "Built a Node.js / Express server and an HTML, CSS, and JavaScript front end.",
+        "Integrated NASA NEO data, Esri ArcGIS, and Open-Meteo APIs.",
+        "Modelled crater scaling, shockwave radius, and energy propagation using open scientific datasets."
+      ],
+      "outcomeLabel": "RECOGNITION",
+      "outcome": "NASA Space Apps 2025 — Best Storytelling, Second Runner-Up, for scientific communication and system design.",
+      "tools": [
+        "JavaScript",
+        "Node.js / Express",
+        "ArcGIS",
+        "Data visualisation"
+      ],
+      "images": [],
+      "link": ""
+    }
+  ]
+}

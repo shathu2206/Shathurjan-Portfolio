@@ -1,63 +1,60 @@
-# Editing your portfolio
+# Edit your portfolio without code
 
-You can make all routine updates in GitHub's website. You do not need to install software.
+**Your dashboard:** [Pages CMS](https://app.pagescms.org)
 
-## Change text
+**Your website:** [Shathurjan's portfolio](https://shathu2206.github.io/Shathurjan-Portfolio/)
 
-1. Open [your portfolio content](https://github.com/shathu2206/Shathurjan-Portfolio/blob/main/site/content/portfolio.json).
-2. Click the pencil icon. Change the words between quotation marks.
-3. Keep the quotation marks, commas, brackets, and field names in place. For a quote inside text, write `\"quoted words\"`.
-4. Click **Commit changes**, add a short description, and commit to **main**.
-5. Open **Actions → Publish portfolio**. When the run is green, refresh your portfolio.
+## Connect once
 
-The `profile` section controls your introduction, contact details, availability, and highlights. `projects` contains the four featured projects. `experience`, `education`, and `skills` control the remaining content.
+1. Open Pages CMS and sign in with your GitHub account, **shathu2206**.
+2. If prompted to install the Pages CMS GitHub app, select **Only select repositories**, then **Shathurjan-Portfolio**. This lets the editor save your portfolio content and images to that repository.
+3. Open **Shathurjan-Portfolio** and select the **main** branch.
+4. The editing sections are already configured. You do not need to create a configuration or edit code.
 
-## Add CAD renders
+## Everyday editing
 
-1. Export a render as PNG, JPG, or WebP. Aim for about 1600 pixels wide and under 1 MB when practical. Use lowercase filenames with hyphens, such as `rocket-nose-cone.png`.
-2. Open `site/public/assets/` in GitHub, choose **Add file → Upload files**, upload the image, and commit it.
-3. Open `site/content/portfolio.json`. Find the matching project and replace its `"images": []` with:
+Choose a section in the dashboard, make changes, and press **Save**. Saving updates the repository and starts automatic publishing. Allow a short time for GitHub to finish, then refresh your website. Save publishes your changes; this setup does not have a separate draft workflow.
 
-```json
-"images": [
-  {
-    "src": "assets/rocket-nose-cone.png",
-    "alt": "CATIA render showing the rocket nose cone and avionics bay",
-    "caption": "Parametric nose cone and avionics bay assembly."
-  }
-]
-```
+| Dashboard section | What you can change |
+| --- | --- |
+| **Profile & CV** | Name, introduction, availability, interests, About text, contact details, highlights, and CV PDF |
+| **Projects** | Add, edit, remove, and reorder project cards; upload renders and photos |
+| **Experience** | Roles, organisations, dates, and descriptions |
+| **Education** | University, degree, dates, coursework, and recognition |
+| **Skills** | Skill groups and the entries in each group |
 
-4. Commit the content edit. The image appears above that project's title after publishing.
+## Add a project
 
-Use your actual filename and a description of what your render shows. Paths are case-sensitive on GitHub. Include `assets/` in the path, but do not include `site/public/`, a leading slash, or the repository name. The build checks image files exist and stops publication if one is missing, preserving the previous working site.
+1. Open **Projects** and add an item to **Featured projects**.
+2. Enter its title and a unique **Short project name**, such as `wing-analysis`. This is part of the project's direct link, so keep it stable after sharing.
+3. Fill in your role, team, dates, description, contributions, and result or current progress.
+4. Add tools and images if you have them. The project link is optional.
+5. Save. The new card appears in the same design as the others.
 
-For several renders, add more objects inside `images`, separated by commas. For no caption, use `"caption": ""`. Keep `alt` descriptive for screen-reader users. An empty image array hides the gallery without leaving a blank placeholder.
+Open an existing project card to edit it. Use the editor's list controls to reorder or remove cards. Their order in the editor is their order on your website.
 
-## Update your CV
+## Upload CAD renders or photos
 
-Upload the new PDF to `site/public/assets/` using the existing name **Shathurjan-CV.pdf**. Both CV links update automatically after publication. The CV and everything in this public repository are accessible to visitors; use the version you want recruiters to download.
+1. Open the project in **Projects**.
+2. Under **CAD renders and photos**, add an image item.
+3. Click the **Image** picker and upload a PNG, JPG, JPEG, or WebP, or select an existing upload.
+4. Write an **Image description** for visitors using screen readers. Add a caption if useful.
+5. Save the project list.
 
-## Add, remove, or reorder projects
+Aim for around 1600 pixels wide and under 1 MB when practical. No images are required: cards without images remain complete. Uploaded media and portfolio content are public once committed to this public repository. Remove an image from its project and save before deleting the underlying media file.
 
-Each object in the `projects` array is one card. Copy an existing object, assign a unique `id` such as `wing-analysis`, and replace the content. Separate project objects with commas; do not add a comma after the final object. Their order in the file is their order on the page.
+## Replace your CV
 
-Use `contributions` for work you personally did. Keep `outcome` accurate to the project's current stage; add measured results when you have them. The `outcomeLabel` can be `RESULT`, `DESIGN APPROACH`, or `RESEARCH FOCUS`. Set `link` to a real project URL if available, or leave it empty to hide the link.
+Open **Profile & CV**, find **CV (PDF)**, and choose or upload your new PDF. Then save the profile. Both CV links update automatically. You can use a new filename; you do not need to overwrite the previous PDF.
 
-## Change colours or layout
+## Check publishing
 
-Edit `site/app/globals.css`. The top `:root` block contains the main colours:
+Open [Publish portfolio in GitHub Actions](https://github.com/shathu2206/Shathurjan-Portfolio/actions/workflows/deploy.yml). A green run means the update has published. If a run fails, the previous working version stays live. Check that any selected CV or image is still present in the media library.
 
-- `--background`: page background
-- `--foreground`: primary text
-- `--primary`: lime accent
-- `--card`: project backgrounds
-- `--border`: dividers and card borders
+## Layout and design
 
-Keep text and background colours sufficiently distinct. Major layout changes belong in `site/app/page.tsx`.
+The dashboard changes content and the order of repeated items. Colours, typography, page layout, and new kinds of sections are design changes handled separately. You can ask Codex to make those changes while keeping your current content.
 
-## If an update does not appear
+## Optional direct editing
 
-Check **Actions → Publish portfolio**. A green run means publication succeeded; refresh your browser. A red run commonly means a missing image or a JSON punctuation error. Open the failed step to see the message, correct the file, and commit again. You can restore earlier content using the file's **History** on GitHub.
-
-The repository must have **Settings → Pages → Source → GitHub Actions** selected. Hosting instructions: https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages
+If you prefer GitHub's file editor, the content is in `site/content/profile.json`, `projects.json`, `experience.json`, `education.json`, and `skills.json`. Each file contains the matching named section. `.pages.yml` describes the dashboard fields. Normal content editing does not require opening these files.

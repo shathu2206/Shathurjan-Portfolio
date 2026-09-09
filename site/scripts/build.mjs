@@ -19,7 +19,7 @@ await build({
   define: { 'process.env.NODE_ENV': JSON.stringify('production') },
   build: { ssr: 'scripts/render.tsx', outDir: intermediate, copyPublicDir: false, minify: false },
 });
-const { render } = await import(pathToFileURL(resolve(intermediate, 'render.js')).href);
+const { render, content } = await import(pathToFileURL(resolve(intermediate, 'render.js')).href);
 await mkdir(output, { recursive: true });
 await cp(resolve(root, 'public'), output, { recursive: true });
 const css = (await readFile(resolve(root, 'app/globals.css'), 'utf8'))
@@ -29,9 +29,10 @@ const css = (await readFile(resolve(root, 'app/globals.css'), 'utf8'))
 await writeFile(resolve(output, 'styles.css'), css);
 await writeFile(resolve(output, 'index.html'), render());
 await writeFile(resolve(output, '.nojekyll'), '');
-const content = JSON.parse(await readFile(resolve(root, 'content/portfolio.json'), 'utf8'));
 for (const file of [content.profile.resume, ...content.projects.flatMap(p => p.images.map(i => i.src))]) {
-  if (file.startsWith('/') || file.includes('..') || /^https?:/.test(file)) throw new Error(`Use a relative public asset path: ${file}`);
-  await access(resolve(output, file));
+  if (!file || file.includes('..') || file.includes('\\') || /^[a-z]+:/i.test(file)) throw new Error(`Use a public asset path: ${file}`);
+  const assetPath = file.replace(/^\/+/, '');
+  if (!assetPath.startsWith('assets/')) throw new Error(`Choose a file from the assets folder: ${file}`);
+  await access(resolve(output, assetPath));
 }
 console.log('Built out/index.html, styles.css, CV, and project assets for GitHub Pages.');

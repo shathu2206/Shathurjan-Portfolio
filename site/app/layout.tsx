@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import content from '../content/portfolio.json';
+import content from '../content/portfolio';
 import './globals.css';
 export const metadata: Metadata = {
   title: `${content.profile.name} | Aerospace Engineering Portfolio`,

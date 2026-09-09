@@ -1,0 +1,30 @@
+{
+  "skills": [
+    {
+      "title": "Design & modelling",
+      "items": [
+        "SolidWorks · Onshape · CATIA",
+        "Parametric CAD & surface geometry",
+        "Assembly integration · OpenRocket"
+      ]
+    },
+    {
+      "title": "Analysis & programming",
+      "items": [
+        "MATLAB · Simulink",
+        "ANSYS (training)",
+        "C / C++ · Arduino",
+        "HTML · CSS · JavaScript"
+      ]
+    },
+    {
+      "title": "Build & collaborate",
+      "items": [
+        "Prototyping & verification",
+        "Electronics & sensor integration",
+        "Technical communication & mentorship",
+        "Team coordination"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "experience": [
+    {
+      "title": "Glider pilot trainee",
+      "organization": "University Soaring Society",
+      "date": "2026 – Present",
+      "description": "Awarded a flight-training scholarship and completed my first solo flight. Continuing supervised training in aircraft handling, aerotow, circuit operations, and flight safety toward a Glider Pilot Licence."
+    },
+    {
+      "title": "Rocketry lead-in-training",
+      "organization": "MARS",
+      "date": "Sep 2025 – Present",
+      "description": "Support student teams through rocket configuration, Onshape CAD development, manufacturing, assembly, and launch preparation while training under an experienced lead."
+    },
+    {
+      "title": "Propulsion subteam member",
+      "organization": "TMU MetRocketry · Igniter Team",
+      "date": "Mar 2025 – Present",
+      "description": "Conducted background research into material options and manufacturing processes for the team’s first igniter spincasting approach, while building knowledge of hybrid propulsion systems."
+    },
+    {
+      "title": "Embedded systems designer",
+      "organization": "STEM+ Club · Plant Wall Automation",
+      "date": "Sep 2023 – Jun 2024",
+      "description": "Built and programmed an Arduino system for watering, lighting, humidity, and temperature control. Calibrated sensor circuits and closed-loop C++ logic for reliable one-year operation."
+    }
+  ]
+}

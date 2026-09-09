@@ -6,9 +6,9 @@ An aerospace engineering portfolio for internship and co-op applications.
 
 ## Edit your portfolio
 
-Your biography, contact information, project descriptions, skills, and experience are in [site/content/portfolio.json](site/content/portfolio.json). Open that file on GitHub and click the pencil to edit. Commit your change to `main`; GitHub Actions rebuilds and republishes the website automatically.
+Open **[Pages CMS](https://app.pagescms.org)** and sign in with GitHub. Select `shathu2206 / Shathurjan-Portfolio` and the `main` branch. Use **Profile & CV**, **Projects**, **Experience**, **Education**, and **Skills** to edit your portfolio through forms and image upload controls. Saving a change automatically rebuilds and publishes the website.
 
-See [EDITING.md](EDITING.md) for a step-by-step guide to editing text, adding CAD renders, adding projects, and updating your CV.
+See [EDITING.md](EDITING.md) for the one-time connection and a guide to everyday editing. No code editing is needed for content updates.
 
 ## GitHub Pages setup
 
@@ -36,7 +36,9 @@ The complete static website is written to `site/out/`. React renders the content
 
 | File | Purpose |
 | --- | --- |
-| `site/content/portfolio.json` | Personal content and project images |
+| `.pages.yml` | Visual editing dashboard configuration |
+| `site/content/*.json` | Profile, projects, experience, education, and skills |
+| `site/content/portfolio.ts` | Combines the content for the website |
 | `site/public/assets/` | CV and CAD renders |
 | `site/app/page.tsx` | Page layout |
 | `site/app/globals.css` | Colours, type, and responsive styling |
