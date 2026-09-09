@@ -1,0 +1,36 @@
+{
+  "introPhotos": {
+    "visible": true,
+    "label": "Photos from my engineering journey",
+    "autoplay": true,
+    "intervalSeconds": 15,
+    "previousLabel": "Previous photo",
+    "nextLabel": "Next photo",
+    "pauseLabel": "Pause slideshow",
+    "playLabel": "Play slideshow",
+    "photoLabel": "Show photo",
+    "photos": [
+      {
+        "image": "assets/intro-portrait-placeholder.png",
+        "alt": "Portrait placeholder, ready for a photo of Shathurjan",
+        "caption": "Your portrait — placeholder",
+        "fit": "contain",
+        "position": "center"
+      },
+      {
+        "image": "assets/gallery-placeholder-02.png",
+        "alt": "Workshop photo placeholder",
+        "caption": "In the workshop — placeholder",
+        "fit": "contain",
+        "position": "center"
+      },
+      {
+        "image": "assets/gallery-placeholder-03.png",
+        "alt": "Flight and fieldwork photo placeholder",
+        "caption": "Outside the classroom — placeholder",
+        "fit": "contain",
+        "position": "center"
+      }
+    ]
+  }
+}

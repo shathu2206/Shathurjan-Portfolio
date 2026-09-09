@@ -8,5 +8,5 @@ export const metadata: Metadata = {
   icons: { icon: `${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/favicon.svg` },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" style={themeStyle()}><body>{children}</body></html>;
+  return <html lang="en" style={themeStyle()}><body>{children}<script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/intro-carousel.js`} defer/></body></html>;
 }

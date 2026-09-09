@@ -30,7 +30,7 @@ Open the local URL printed in the terminal. To build the public website:
 npm run build
 ```
 
-The complete static website is written to `site/out/`: the portfolio at `/`, the Updates feed at `/updates/`, and each published post at `/updates/<filename>/`. React renders the content at build time, so the published site requires no server, login, or browser-side JavaScript. Only `site/out/` is deployed; the original source stays in this repository.
+The complete static website is written to `site/out/`: the portfolio at `/`, Gallery at `/gallery/`, the Updates feed at `/updates/`, and each published post at `/updates/<filename>/`. React renders the content at build time, so the published site requires no server or visitor login. A small browser script powers the introduction photo carousel; the first photo and the rest of the content remain visible without JavaScript. Only `site/out/` is deployed; the original source stays in this repository.
 
 ## Files
 

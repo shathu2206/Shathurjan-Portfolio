@@ -1,5 +1,6 @@
 import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import content from '../content/portfolio';
+import {IntroPhotos} from '../components/intro-photos';
 import {Header,Footer} from '../components/site-chrome';
 import {ContactSection} from '../components/contact';
 import {CVSections} from '../components/cv-sections';
@@ -14,8 +15,9 @@ export default function Home() {
   return <>
     <Header/>
     <main id="main">
-      <section id="intro" className="hero wrap hero-simple" aria-labelledby="hero-title">
+      <section id="intro" className={`hero wrap ${content.introPhotos.visible&&content.introPhotos.photos.length?"hero-with-photos":"hero-simple"}`} aria-labelledby="hero-title">
         <div className="hero-copy"><p className="eyebrow"><span className="status-dot"/>{profile.availability}</p><h1 id="hero-title">{nameParts[0]}{nameParts.length>1&&<><br/><span>{nameParts.slice(1).join(" ")}</span></>}</h1><p className="hero-role">{profile.role}</p><div className="hero-intro">{profile.intro.split(/\n\s*\n/).filter(Boolean).map((text,index)=><p className="preserve-lines" key={index}>{text}</p>)}</div><div className="language-list">{profile.languages?.map(item=><span key={item.language}>{item.language} · {item.level}</span>)}</div><div className="hero-actions">{sections.has("work")&&<a className="button primary" href="#work">{settings.intro.workButton} <ArrowDown size={18}/></a>}<a className="text-link" href={asset(content.contact.resume)} target="_blank" rel="noreferrer">{settings.intro.cvButton} <ArrowUpRight size={18}/></a></div></div>
+        <IntroPhotos/>
       </section>
       {!!profile.highlights.length&&<div className="credentials wrap">{profile.highlights.map(item => <div key={item.value}><strong>{item.value}</strong><span>{item.label}</span></div>)}</div>}
       {[...sections].map(id=><div className="section-slot" key={id}>{id==="work"?(<section id="work" className="work-section wrap" aria-labelledby="work-title">

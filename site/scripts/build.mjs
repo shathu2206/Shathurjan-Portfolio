@@ -5,7 +5,7 @@ import { resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 // This portfolio is a static document. Render React at build time so GitHub
-// Pages needs neither a server nor browser-side JavaScript.
+// Pages needs no server; the intro carousel uses a small progressive-enhancement script.
 const root = process.cwd();
 const output = resolve(root, 'out');
 const intermediate = resolve(root, '.build');
@@ -39,7 +39,7 @@ for(const post of posts){
   await writeFile(resolve(output,'updates',post.slug,'index.html'),renderPost(post));
 }
 await writeFile(resolve(output, '.nojekyll'), '');
-for (const file of [content.contact.resume, ...content.contact.links.filter(link=>link.type==='file').map(link=>link.file), ...content.gallery.photos.map(photo=>photo.image), ...content.projects.flatMap(p => p.images.map(i => i.src)), ...posts.flatMap(p=>p.image?[p.image]:[])]) {
+for (const file of [...content.introPhotos.photos.map(photo=>photo.image), content.contact.resume, ...content.contact.links.filter(link=>link.type==='file').map(link=>link.file), ...content.gallery.photos.map(photo=>photo.image), ...content.projects.flatMap(p => p.images.map(i => i.src)), ...posts.flatMap(p=>p.image?[p.image]:[])]) {
   if (!file || file.includes('..') || file.includes('\\') || /^[a-z]+:/i.test(file)) throw new Error(`Use a public asset path: ${file}`);
   const assetPath = file.replace(/^\/+/, '');
   if (!assetPath.startsWith('assets/')) throw new Error(`Choose a file from the assets folder: ${file}`);

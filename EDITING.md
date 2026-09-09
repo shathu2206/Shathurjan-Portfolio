@@ -20,6 +20,7 @@ Choose a section in the dashboard, make changes, and press **Save**. Saving upda
 | **Introduction & name** | Name everywhere on the site, combined Introduction/About text, languages, availability, and highlights |
 | **Website text & layout** | All section headings, descriptions, buttons, navigation tabs, header/footer, Updates page labels, search descriptions, colours, font, page width, and section order/visibility |
 | **Get in touch** | Contact heading and introduction, main CV, and an expandable list of phone numbers, emails, websites, social profiles and documents |
+| **Intro photos** | Upload and reorder introduction photos, edit captions, choose cropping, and set automatic timing |
 | **Gallery** | Add, replace, remove and reorder photos; edit their titles, captions, image descriptions and page headings |
 | **Projects** | Add, edit, remove, and reorder project cards; upload renders and photos |
 | **Engineering Updates** | Write new posts, format text, upload images, and add optional LinkedIn links |
@@ -43,6 +44,12 @@ Leave **Show on website** off to keep a post off the website while working on it
 ## Navigate the portfolio
 
 The top navigation stays visible while you scroll. **Intro**, **Projects**, **Experience**, **Leadership**, **Education**, **Awards & Achievements**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. **Gallery** opens the photo gallery. Education and Awards & Achievements are separate sections, each with its own tab. Their headings, order and visibility can be edited independently under **Website text & layout**. All About text, the professional summary, and languages are together below your name in the introduction.
+
+## Edit the introduction slideshow
+
+Open **Intro photos** in Pages CMS. Replace the labelled placeholders under **Photos**, or add more photos. Add an image description and an optional caption. Drag entries to reorder them. Choose **Show the whole photo** to avoid cropping, or **Fill the frame** for a full portrait frame. Save to publish.
+
+The slideshow switches every **15 seconds** by default. Visitors can use previous/next buttons, photo dots or keyboard arrows, and pause automatic playback. Playback pauses while the pointer or keyboard focus is inside the slideshow or the browser tab is hidden; reduced-motion preferences start it paused. You can change the timing or disable automatic changes in the editor. One photo displays without slideshow controls; removing all photos or disabling **Show photos** hides the frame. On small screens, photos appear below the introduction.
 
 ## Add gallery photos
 

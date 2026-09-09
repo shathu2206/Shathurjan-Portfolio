@@ -1,4 +1,5 @@
 import settingsData from './settings.json';
+import introPhotosData from './intro-photos.json';
 import galleryData from './gallery.json';
 import profile from './profile.json';
 import contactData from './contact.json';
@@ -14,6 +15,7 @@ export interface ContactLink {label:string;type:'phone'|'email'|'link'|'linkedin
 export interface Experience { title: string; organization: string; date: string; description: string; details?: string[] }
 
 interface Portfolio {
+  introPhotos: {visible:boolean;label:string;autoplay:boolean;intervalSeconds:number;previousLabel:string;nextLabel:string;pauseLabel:string;playLabel:string;photoLabel:string;photos:{image:string;alt:string;caption?:string;fit?:string;position?:string}[]};
   contact: {eyebrow:string;title:string;intro:string;resume:string;links:ContactLink[]};
   settings: typeof settingsData.settings;
   gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{image:string;alt:string;title:string;caption?:string}[]};
@@ -37,9 +39,10 @@ interface Portfolio {
 }
 
 // Optional lists can be omitted by the editor when empty.
-const data = { ...settingsData, ...contactData, ...galleryData, ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
+const data = { ...settingsData, ...introPhotosData, ...contactData, ...galleryData, ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
 const content: Portfolio = {
   ...data,
+  introPhotos: {...data.introPhotos, photos: data.introPhotos.photos ?? []},
   contact: {...data.contact, links: data.contact.links ?? []},
   gallery: {...data.gallery, photos: data.gallery.photos ?? []},
   settings: {...data.settings, sections: data.settings.sections ?? [], navigation: data.settings.navigation ?? []},

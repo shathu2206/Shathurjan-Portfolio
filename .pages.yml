@@ -86,6 +86,105 @@ content:
         required: false
         pattern: ^https://(www\.)?linkedin\.com/
         description: 'Optional: paste a link to the same post on LinkedIn.'
+  - name: intro-photos
+    label: Intro photos
+    type: file
+    path: site/content/intro-photos.json
+    format: json
+    fields:
+      - name: introPhotos
+        label: Introduction slideshow
+        type: object
+        required: true
+        fields:
+          - name: visible
+            label: Show photos beside introduction
+            type: boolean
+            required: true
+          - name: label
+            label: Slideshow description
+            type: string
+            required: true
+          - name: autoplay
+            label: Automatically change photos
+            type: boolean
+            required: true
+          - name: intervalSeconds
+            label: Seconds between photos
+            type: number
+            required: true
+            options:
+              min: 5
+              max: 60
+            description: 15 seconds by default. Visitors can also switch photos themselves or pause the slideshow.
+          - name: previousLabel
+            label: Previous button label
+            type: string
+            required: true
+          - name: nextLabel
+            label: Next button label
+            type: string
+            required: true
+          - name: pauseLabel
+            label: Pause button text
+            type: string
+            required: true
+          - name: playLabel
+            label: Play button text
+            type: string
+            required: true
+          - name: photoLabel
+            label: Photo selection label
+            type: string
+            required: true
+          - name: photos
+            label: Photos — add, replace or drag to reorder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.caption}'
+            description: >-
+              Upload your portraits, project photos or other images here. With one photo the slideshow becomes
+              a still image; with no photos the space is hidden.
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                required: true
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+              - name: alt
+                label: Image description
+                type: string
+                required: true
+              - name: caption
+                label: Short caption
+                type: text
+                required: false
+              - name: fit
+                label: Photo sizing
+                type: select
+                required: true
+                options:
+                  values:
+                    - label: Show the whole photo
+                      value: contain
+                    - label: Fill the frame (may crop)
+                      value: cover
+              - name: position
+                label: Photo alignment
+                type: select
+                required: true
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
   - name: contact
     label: Get in touch
     type: file
