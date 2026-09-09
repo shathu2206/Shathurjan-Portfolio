@@ -14,6 +14,7 @@
       "experience",
       "leadership",
       "education",
+      "awards",
       "skills",
       "updates",
       "contact"
@@ -38,6 +39,10 @@
       {
         "label": "Education",
         "target": "education"
+      },
+      {
+        "label": "Awards & Achievements",
+        "target": "awards"
       },
       {
         "label": "Skills",
@@ -73,9 +78,8 @@
       "title": "Working with people."
     },
     "education": {
-      "eyebrow": "EDUCATION & RECOGNITION",
+      "eyebrow": "EDUCATION",
       "title": "A foundation to build on.",
-      "awardsTitle": "Awards & achievements",
       "gpaLabel": "GPA"
     },
     "skills": {
@@ -132,6 +136,10 @@
       "mutedText": "#b3bfc9",
       "font": "Arial, Helvetica, sans-serif",
       "width": 1240
+    },
+    "awards": {
+      "eyebrow": "RECOGNITION",
+      "title": "Awards & achievements"
     }
   }
 }

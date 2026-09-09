@@ -204,8 +204,10 @@ content:
                   value: experience
                 - label: Leadership & community
                   value: leadership
-                - label: Education & awards
+                - label: Education
                   value: education
+                - label: Awards & achievements
+                  value: awards
                 - label: Skills
                   value: skills
                 - label: Updates invitation
@@ -239,8 +241,10 @@ content:
                       value: experience
                     - label: Leadership & community
                       value: leadership
-                    - label: Education & awards
+                    - label: Education
                       value: education
+                    - label: Awards & achievements
+                      value: awards
                     - label: Skills
                       value: skills
                     - label: Updates page
@@ -305,7 +309,7 @@ content:
                 type: string
                 required: true
           - name: education
-            label: Education and awards section
+            label: Education section
             type: object
             required: true
             fields:
@@ -317,12 +321,21 @@ content:
                 label: Heading
                 type: string
                 required: true
-              - name: awardsTitle
-                label: Awards Title
-                type: string
-                required: true
               - name: gpaLabel
                 label: Gpa Label
+                type: string
+                required: true
+          - name: awards
+            label: Awards & achievements section
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
                 type: string
                 required: true
           - name: skills

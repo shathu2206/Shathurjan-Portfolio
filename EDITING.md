@@ -41,7 +41,7 @@ Leave **Show on website** off to keep a post off the website while working on it
 
 ## Navigate the portfolio
 
-The top navigation stays visible while you scroll. **Intro**, **Projects**, **Experience**, **Leadership**, **Education**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. **Gallery** opens the photo gallery. Awards appear with Education. All About text, the professional summary, and languages are together below your name in the introduction.
+The top navigation stays visible while you scroll. **Intro**, **Projects**, **Experience**, **Leadership**, **Education**, **Awards & Achievements**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. **Gallery** opens the photo gallery. Education and Awards & Achievements are separate sections, each with its own tab. Their headings, order and visibility can be edited independently under **Website text & layout**. All About text, the professional summary, and languages are together below your name in the introduction.
 
 ## Add gallery photos
 
