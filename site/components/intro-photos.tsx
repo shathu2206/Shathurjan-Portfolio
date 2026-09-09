@@ -10,15 +10,17 @@ export function IntroPhotos(){
     className:'intro-carousel',role:'region','aria-roledescription':'carousel','aria-label':p.label,
     'data-autoplay':String(p.autoplay),'data-interval':String(p.intervalSeconds),
   },<>
+    <div className="intro-photo-stage">
     <div className="intro-slides">{p.photos.map((photo,index)=><figure data-slide key={index} hidden={index!==0} role="group" aria-roledescription="slide" aria-label={`${index+1} / ${p.photos.length}`}>
       <img src={asset(photo.image)} alt={photo.alt} width="900" height="1125" loading={index===0?'eager':'lazy'} style={{objectFit:photo.fit==='cover'?'cover':'contain',objectPosition:photo.position||'center'}}/>
-      {photo.caption&&<figcaption>{photo.caption}</figcaption>}
     </figure>)}</div>
     <div className="intro-photo-controls" data-controls hidden>
       <button className="intro-photo-arrow" type="button" data-previous aria-label={p.previousLabel}><ChevronLeft size={22}/></button>
       <button className="intro-photo-arrow" type="button" data-next aria-label={p.nextLabel}><ChevronRight size={22}/></button>
-      <div className="intro-photo-dots">{p.photos.map((photo,index)=><button type="button" data-dot={index} key={index} aria-label={`${p.photoLabel} ${index+1}: ${photo.caption||photo.alt}`} aria-current={index===0?'true':undefined}><span/></button>)}</div>
     </div>
+    </div>
+    <div className="intro-photo-dots" data-dots hidden>{p.photos.map((photo,index)=><button type="button" data-dot={index} key={index} aria-label={`${p.photoLabel} ${index+1}: ${photo.caption||photo.alt}`} aria-current={index===0?'true':undefined}><span/></button>)}</div>
+    <div className="intro-photo-captions">{p.photos.map((photo,index)=><p data-caption key={index} hidden={index!==0}>{photo.caption||''}</p>)}</div>
     <span className="sr-only" data-announcement aria-live="polite" aria-atomic="true"/>
   </>);
 }

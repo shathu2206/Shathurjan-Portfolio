@@ -239,25 +239,27 @@ h1 span,.project-summary,.project-detail ul,.tags li,.project-category,.project-
 @media(max-width:720px) { .awards-grid { grid-template-columns: 1fr; gap: 8px; } }
 
 .hero-with-photos { display: grid; grid-template-columns: minmax(0,1.4fr) minmax(0,1fr); gap: 60px; align-items: start; }
-.intro-carousel { display: block; width: 100%; max-width: 480px; align-self: center; border: 1px solid var(--border); background: var(--card); }
+.intro-carousel { display: block; width: 100%; max-width: 480px; align-self: center; background: transparent; }
 .intro-slides figure { margin: 0; }
-.intro-slides figure[hidden],.intro-photo-controls[hidden] { display: none; }
+.intro-slides figure[hidden],.intro-photo-controls[hidden],.intro-photo-dots[hidden],.intro-photo-captions [hidden] { display: none; }
 .intro-slides img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; background: var(--background); }
-.intro-slides figcaption { padding: 18px 22px; font-size: .9375rem; color: var(--muted-foreground); overflow-wrap: anywhere; white-space: pre-line; }
+.intro-photo-stage { position: relative; overflow: hidden; border: 1px solid var(--border); border-radius: 10px; }
+.intro-photo-captions p:not(:empty) { margin-top: 8px; font-size: .875rem; color: var(--muted-foreground); overflow-wrap: anywhere; white-space: pre-line; }
 .intro-carousel { position: relative; touch-action: pan-y pinch-zoom; }
 .intro-slides img { user-select: none; -webkit-user-drag: none; }
-.intro-photo-controls { position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 4 / 5; pointer-events: none; }
-.intro-photo-controls button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; color: white; cursor: pointer; pointer-events: auto; }
-.intro-photo-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgb(0 0 0 / .35); border-radius: 50%; opacity: 0; pointer-events: none !important; transition: opacity .15s ease; }
+.intro-photo-controls { position: absolute; inset: 0; pointer-events: none; }
+.intro-photo-controls button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; color: #17212b; cursor: pointer; pointer-events: auto; }
+.intro-photo-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgb(255 255 255 / .7); border-radius: 50%; opacity: 0; pointer-events: none !important; transition: opacity .15s ease; }
 .intro-photo-arrow[data-previous] { left: 12px; }
 .intro-photo-arrow[data-next] { right: 12px; }
 .intro-photo-arrow:focus-visible { opacity: 1; pointer-events: auto !important; }
-@media (hover: hover) and (pointer: fine) { .intro-carousel:hover .intro-photo-arrow,.intro-carousel:focus-within .intro-photo-arrow { opacity: 1; pointer-events: auto !important; } }
+@media (hover: hover) and (pointer: fine) { .intro-photo-stage:hover .intro-photo-arrow { opacity: 1; pointer-events: auto !important; } }
 .intro-photo-controls button:focus-visible { outline: 2px solid white; outline-offset: -3px; }
-.intro-photo-dots { position: absolute; bottom: 8px; left: 0; width: 100%; display: flex; justify-content: center; overflow-x: auto; pointer-events: auto; }
-.intro-photo-dots button { flex: 0 0 32px; width: 32px; background: transparent; }
-.intro-photo-dots span { width: 7px; height: 7px; border: 1px solid rgb(255 255 255 / .6); background: rgb(255 255 255 / .35); border-radius: 50%; box-shadow: 0 1px 4px rgb(0 0 0 / .55); }
-.intro-photo-dots [aria-current="true"] span { background: white; border-color: white; }
+.intro-photo-dots { display: flex; justify-content: center; flex-wrap: wrap; margin-top: 2px; padding: 0; background: transparent; }
+.intro-photo-dots button { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 24px; width: 24px; height: 20px; padding: 0; border: 0; background: transparent; cursor: pointer; }
+.intro-photo-dots button:focus-visible { outline: 2px solid var(--primary); outline-offset: 0; border-radius: 3px; }
+.intro-photo-dots span { width: 5px; height: 5px; background: var(--muted-foreground); opacity: .5; border-radius: 50%; }
+.intro-photo-dots [aria-current="true"] span { background: var(--primary); opacity: 1; }
 @media (prefers-reduced-motion: reduce) { .intro-photo-arrow { transition: none; } }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 @media(max-width:900px) { .hero-with-photos { grid-template-columns: 1fr; gap: 36px; } .hero-with-photos .hero-intro { max-width: 850px; } .intro-carousel { max-width: 560px; } }

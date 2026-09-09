@@ -14,7 +14,9 @@ class IntroCarousel extends HTMLElement {
     this.paused=this.dataset.autoplay!=='true'||this.motion.matches;
     this.gesture=null;this.hovered=false;this.focused=this.contains(document.activeElement);
     this.dots=Array.from(this.querySelectorAll('[data-dot]'));
+    this.captions=Array.from(this.querySelectorAll('[data-caption]'));
     this.querySelector('[data-controls]').hidden=false;
+    this.querySelector('[data-dots]').hidden=false;
     listen(this.querySelector('[data-next]'),'click',()=>this.show(this.index+1,true));
     listen(this.querySelector('[data-previous]'),'click',()=>this.show(this.index-1,true));
     this.dots.forEach((dot,index)=>listen(dot,'click',()=>this.show(index,true)));
@@ -53,6 +55,7 @@ class IntroCarousel extends HTMLElement {
   show(index,manual){
     this.index=(index+this.slides.length)%this.slides.length;
     this.slides.forEach((slide,i)=>{slide.hidden=i!==this.index;});
+    this.captions.forEach((caption,i)=>{caption.hidden=i!==this.index;});
     this.dots.forEach((dot,i)=>{if(i===this.index)dot.setAttribute('aria-current','true');else dot.removeAttribute('aria-current');});
     this.slides[this.index].querySelector('img').loading='eager';
     this.slides[(this.index+1)%this.slides.length].querySelector('img').loading='eager';
