@@ -49,7 +49,7 @@ The top navigation stays visible while you scroll. **Intro**, **Projects**, **Ex
 
 Open **Intro photos** in Pages CMS. Replace the labelled placeholders under **Photos**, or add more photos. Add an image description and an optional caption. Drag entries to reorder them. Choose **Show the whole photo** to avoid cropping, or **Fill the frame** for a full portrait frame. Save to publish.
 
-The slideshow switches every **15 seconds** by default. Visitors can use previous/next buttons, photo dots or keyboard arrows, and pause automatic playback. Playback pauses while the pointer or keyboard focus is inside the slideshow or the browser tab is hidden; reduced-motion preferences start it paused. You can change the timing or disable automatic changes in the editor. One photo displays without slideshow controls; removing all photos or disabling **Show photos** hides the frame. On small screens, photos appear below the introduction.
+The slideshow switches every **15 seconds** by default. Visitors can switch photos with arrows that appear on hover or keyboard focus, subtle dots over the bottom of the image, keyboard arrow keys, or horizontal swipes on touchscreens. There is no separate control panel or page counter. Playback pauses while the mouse or keyboard focus is inside the slideshow, during a swipe, or while the browser tab is hidden. Reduced-motion preferences disable automatic playback. Vertical touch gestures still scroll the page. You can change the timing or disable automatic changes in the editor. One photo displays without slideshow controls; removing all photos or disabling **Show photos** hides the frame. On small screens, photos appear below the introduction.
 
 ## Add gallery photos
 

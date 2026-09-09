@@ -6,8 +6,6 @@
     "intervalSeconds": 15,
     "previousLabel": "Previous photo",
     "nextLabel": "Next photo",
-    "pauseLabel": "Pause slideshow",
-    "playLabel": "Play slideshow",
     "photoLabel": "Show photo",
     "photos": [
       {

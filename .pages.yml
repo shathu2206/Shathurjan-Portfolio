@@ -116,21 +116,15 @@ content:
             options:
               min: 5
               max: 60
-            description: 15 seconds by default. Visitors can also switch photos themselves or pause the slideshow.
+            description: >-
+              15 seconds by default. Visitors can switch photos with hover arrows, photo dots, keyboard arrows
+              or touch swipes.
           - name: previousLabel
             label: Previous button label
             type: string
             required: true
           - name: nextLabel
             label: Next button label
-            type: string
-            required: true
-          - name: pauseLabel
-            label: Pause button text
-            type: string
-            required: true
-          - name: playLabel
-            label: Play button text
             type: string
             required: true
           - name: photoLabel

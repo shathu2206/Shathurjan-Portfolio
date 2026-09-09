@@ -121,7 +121,7 @@ html { scroll-padding-top: 120px; }
 .site-header nav { gap: 23px; white-space: nowrap; }
 .site-header nav a { border-bottom: 2px solid transparent; }
 .site-header nav a:hover,.site-header nav a[aria-current] { color: var(--primary); border-bottom-color: var(--primary); }
-.updates-nav { color: var(--primary); }
+
 .about-overview { display: grid; grid-template-columns: .9fr 1.5fr; gap: 80px; }
 .about-overview h2 { font-size: clamp(2.6rem,4vw,3.6rem); }
 .about-overview > div > p { color: #435563; }
@@ -244,15 +244,20 @@ h1 span,.project-summary,.project-detail ul,.tags li,.project-category,.project-
 .intro-slides figure[hidden],.intro-photo-controls[hidden] { display: none; }
 .intro-slides img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; background: var(--background); }
 .intro-slides figcaption { padding: 18px 22px; font-size: .9375rem; color: var(--muted-foreground); overflow-wrap: anywhere; white-space: pre-line; }
-.intro-photo-controls { padding: 14px 16px 10px; border-top: 1px solid var(--border); }
-.intro-photo-navigation { display: flex; align-items: center; gap: 5px; }
-.intro-photo-navigation button,.intro-photo-dots button { display: inline-flex; align-items: center; justify-content: center; min-width: 44px; min-height: 44px; padding: 8px; border: 1px solid transparent; background: transparent; color: var(--foreground); font: inherit; cursor: pointer; }
-.intro-photo-navigation [data-toggle] { margin-left: auto; font-size: .875rem; color: var(--primary); }
-.intro-photo-navigation [data-counter] { min-width: 44px; text-align: center; font-size: .875rem; font-variant-numeric: tabular-nums; }
-.intro-photo-controls button:hover { background: var(--background); }
-.intro-photo-controls button:focus-visible { outline: 2px solid var(--primary); outline-offset: -2px; }
-.intro-photo-dots { display: flex; flex-wrap: wrap; justify-content: center; }
-.intro-photo-dots span { width: 7px; height: 7px; border: 1px solid var(--muted-foreground); border-radius: 50%; }
-.intro-photo-dots [aria-current="true"] span { background: var(--primary); border-color: var(--primary); }
+.intro-carousel { position: relative; touch-action: pan-y pinch-zoom; }
+.intro-slides img { user-select: none; -webkit-user-drag: none; }
+.intro-photo-controls { position: absolute; top: 0; left: 0; width: 100%; aspect-ratio: 4 / 5; pointer-events: none; }
+.intro-photo-controls button { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; padding: 0; border: 0; color: white; cursor: pointer; pointer-events: auto; }
+.intro-photo-arrow { position: absolute; top: 50%; transform: translateY(-50%); background: rgb(0 0 0 / .35); border-radius: 50%; opacity: 0; pointer-events: none !important; transition: opacity .15s ease; }
+.intro-photo-arrow[data-previous] { left: 12px; }
+.intro-photo-arrow[data-next] { right: 12px; }
+.intro-photo-arrow:focus-visible { opacity: 1; pointer-events: auto !important; }
+@media (hover: hover) and (pointer: fine) { .intro-carousel:hover .intro-photo-arrow,.intro-carousel:focus-within .intro-photo-arrow { opacity: 1; pointer-events: auto !important; } }
+.intro-photo-controls button:focus-visible { outline: 2px solid white; outline-offset: -3px; }
+.intro-photo-dots { position: absolute; bottom: 8px; left: 0; width: 100%; display: flex; justify-content: center; overflow-x: auto; pointer-events: auto; }
+.intro-photo-dots button { flex: 0 0 32px; width: 32px; background: transparent; }
+.intro-photo-dots span { width: 7px; height: 7px; border: 1px solid rgb(255 255 255 / .6); background: rgb(255 255 255 / .35); border-radius: 50%; box-shadow: 0 1px 4px rgb(0 0 0 / .55); }
+.intro-photo-dots [aria-current="true"] span { background: white; border-color: white; }
+@media (prefers-reduced-motion: reduce) { .intro-photo-arrow { transition: none; } }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 @media(max-width:900px) { .hero-with-photos { grid-template-columns: 1fr; gap: 36px; } .hero-with-photos .hero-intro { max-width: 850px; } .intro-carousel { max-width: 560px; } }
