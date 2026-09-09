@@ -1,0 +1,133 @@
+{
+  "settings": {
+    "branding": {
+      "monogram": "SM",
+      "subtitle": "ENGINEERING PORTFOLIO",
+      "footer": "Aerospace engineering · Toronto"
+    },
+    "intro": {
+      "workButton": "Explore my work",
+      "cvButton": "View CV"
+    },
+    "sections": [
+      "work",
+      "experience",
+      "leadership",
+      "education",
+      "skills",
+      "updates",
+      "contact"
+    ],
+    "navigation": [
+      {
+        "label": "Intro",
+        "target": "intro"
+      },
+      {
+        "label": "Projects",
+        "target": "work"
+      },
+      {
+        "label": "Experience",
+        "target": "experience"
+      },
+      {
+        "label": "Leadership",
+        "target": "leadership"
+      },
+      {
+        "label": "Education",
+        "target": "education"
+      },
+      {
+        "label": "Skills",
+        "target": "skills"
+      },
+      {
+        "label": "Updates ↗",
+        "target": "updates"
+      },
+      {
+        "label": "Contact",
+        "target": "contact"
+      }
+    ],
+    "work": {
+      "eyebrow": "SELECTED WORK",
+      "title": "Engineering in practice.",
+      "description": "Structures, systems, and the decisions that connect them.",
+      "contributionLabel": "My contribution",
+      "linkLabel": "View project",
+      "toolsLabel": "Tools and methods"
+    },
+    "experience": {
+      "eyebrow": "TECHNICAL EXPERIENCE",
+      "title": "Across engineering disciplines."
+    },
+    "leadership": {
+      "eyebrow": "LEADERSHIP & COMMUNITY",
+      "title": "Working with people."
+    },
+    "education": {
+      "eyebrow": "EDUCATION & RECOGNITION",
+      "title": "A foundation to build on.",
+      "awardsTitle": "Awards & achievements",
+      "gpaLabel": "GPA"
+    },
+    "skills": {
+      "eyebrow": "TECHNICAL COMPETENCIES",
+      "title": "Tools I work with."
+    },
+    "updates": {
+      "eyebrow": "ENGINEERING UPDATES",
+      "title": "What I’m working on.",
+      "description": "Project progress, lessons learned, and notes from engineering student life.",
+      "button": "Explore updates"
+    },
+    "contact": {
+      "eyebrow": "GET IN TOUCH",
+      "title": "Let’s build\nwhat’s next.",
+      "phoneLabel": "PHONE",
+      "emailLabel": "EMAIL",
+      "socialLabel": "CONNECT",
+      "socialLinkLabel": "LinkedIn",
+      "cvLabel": "EXPERIENCE & EDUCATION",
+      "cvLinkLabel": "View my CV"
+    },
+    "journal": {
+      "eyebrow": "ENGINEERING UPDATES",
+      "title": "Notes along\nthe way.",
+      "description": "Project progress, lessons from building, and life as an aerospace engineering student.",
+      "emptyEyebrow": "THE JOURNAL",
+      "emptyTitle": "Updates are on the way.",
+      "emptyDescription": "This is where I’ll share what I’m building, testing, and learning.",
+      "asideLabel": "BEHIND THE WORK",
+      "connectLabel": "Connect on LinkedIn",
+      "readLabel": "Read update",
+      "backLabel": "All updates",
+      "byLabel": "By",
+      "linkedinLabel": "Read on LinkedIn"
+    },
+    "accessibility": {
+      "skipLink": "Skip to content",
+      "navigation": "Main navigation",
+      "home": "home",
+      "backToTop": "Back to top ↑"
+    },
+    "metadata": {
+      "title": "Aerospace Engineering Portfolio",
+      "description": "Projects, technical experience, leadership, education, and engineering updates.",
+      "updatesTitle": "Engineering Updates"
+    },
+    "appearance": {
+      "background": "#101922",
+      "foreground": "#f1f5f7",
+      "accent": "#b6f16c",
+      "card": "#16212b",
+      "border": "#34424e",
+      "mutedText": "#b3bfc9",
+      "font": "Arial, Helvetica, sans-serif",
+      "width": 1240
+    }
+  }
+}

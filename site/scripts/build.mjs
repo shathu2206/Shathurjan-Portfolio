@@ -19,10 +19,11 @@ await build({
   define: { 'process.env.NODE_ENV': JSON.stringify('production') },
   build: { ssr: 'scripts/render.tsx', outDir: intermediate, copyPublicDir: false, minify: false },
 });
-const { render, content, loadPosts, renderUpdates, renderPost } = await import(pathToFileURL(resolve(intermediate, 'render.js')).href);
+const { render, content, loadPosts, renderUpdates, renderPost, renderIcon } = await import(pathToFileURL(resolve(intermediate, 'render.js')).href);
 const posts = await loadPosts();
 await mkdir(output, { recursive: true });
 await cp(resolve(root, 'public'), output, { recursive: true });
+await writeFile(resolve(output, 'favicon.svg'), renderIcon());
 const css = (await readFile(resolve(root, 'app/globals.css'), 'utf8'))
   .replace(/^@import.*;\r?\n/gm, '')
   .replace(/^@custom-variant.*;\r?\n/gm, '')

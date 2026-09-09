@@ -17,7 +17,9 @@ Choose a section in the dashboard, make changes, and press **Save**. Saving upda
 
 | Dashboard section | What you can change |
 | --- | --- |
-| **Profile & CV** | Name, introduction, availability, interests, About text, contact details, highlights, and CV PDF |
+| **Introduction, name & CV** | Name everywhere on the site, combined Introduction/About text, languages, availability, contact details, highlights, and CV PDF |
+| **Field Notes box** | Show/hide the box, both top labels, each headline line, interests, and footer text |
+| **Website text & layout** | All section headings, descriptions, buttons, navigation tabs, header/footer, Updates page labels, search descriptions, colours, font, page width, and section order/visibility |
 | **Projects** | Add, edit, remove, and reorder project cards; upload renders and photos |
 | **Engineering Updates** | Write new posts, format text, upload images, and add optional LinkedIn links |
 | **Technical experience** | Engineering roles, dates, descriptions, and responsibilities |
@@ -30,7 +32,7 @@ Choose a section in the dashboard, make changes, and press **Save**. Saving upda
 
 1. Open **Engineering Updates** in the dashboard and create a new entry.
 2. Give it a title and date. Add a short introduction for the feed if you want one.
-3. Write in **Your post** using the visual formatting toolbar. You can add headings, bold text, lists, links, and images.
+3. Click **Your post** and start writing. Type `/` to insert headings, lists, or images. Select text to reveal formatting controls.
 4. Optionally select a **Cover image** and describe it in **Cover image description**. You can also insert more images into the post itself.
 5. Optionally paste the URL of your LinkedIn version in **LinkedIn post link**. This adds a link to LinkedIn; it does not automatically post to or import from LinkedIn.
 6. Turn **Show on website** on, then **Save**. The post appears at the top of [Engineering Updates](https://shathu2206.github.io/Shathurjan-Portfolio/updates/) after publishing finishes.
@@ -39,7 +41,7 @@ Leave **Show on website** off to keep a post off the website while working on it
 
 ## Navigate the portfolio
 
-The top navigation stays visible while you scroll. **Projects**, **Experience**, **Leadership**, **Education**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. Awards appear with Education; languages and the professional summary appear in About.
+The top navigation stays visible while you scroll. **Intro**, **Projects**, **Experience**, **Leadership**, **Education**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. Awards appear with Education. All About text, the professional summary, and languages are together below your name in the introduction.
 
 ## Add a project
 
@@ -63,7 +65,7 @@ Aim for around 1600 pixels wide and under 1 MB when practical. No images are req
 
 ## Replace your CV
 
-Open **Profile & CV**, find **CV (PDF)**, and choose or upload your new PDF. Then save the profile. Both CV links update automatically. You can use a new filename; you do not need to overwrite the previous PDF.
+Open **Introduction, name & CV**, find **CV (PDF)**, and choose or upload your new PDF. Then save the profile. Both CV links update automatically. You can use a new filename; you do not need to overwrite the previous PDF.
 
 ## Check publishing
 
@@ -71,7 +73,13 @@ Open [Publish portfolio in GitHub Actions](https://github.com/shathu2206/Shathur
 
 ## Layout and design
 
-The dashboard changes content and the order of repeated items. Colours, typography, page layout, and new kinds of sections are design changes handled separately. You can ask Codex to make those changes while keeping your current content.
+Open **Website text & layout**. Each existing section has its own editable headings and labels. Use **Homepage sections** to reorder sections; remove an entry to hide that section without deleting its content. Add it back to show it again. The introduction stays at the top. The Updates page remains available independently of its homepage invitation.
+
+Under **Navigation tabs**, change labels, reorder tabs, or remove them. Select destinations from the dropdown. Tabs for hidden homepage sections automatically disappear. The Intro and Updates destinations remain available.
+
+Under **Colours, font and page width**, change the palette using six-digit hex colours (for example `#b6f16c`), choose a font, and adjust page width. Under **Header and footer**, edit the logo initials, subtitle, and footer. Your full name comes from **Introduction, name & CV** and updates throughout the site automatically. Logo initials also update the browser icon.
+
+Use **Field Notes box** to edit every word in that box or hide it. Put each headline line on a separate line. Changes stay within the existing responsive design; entirely new types of page components still require a design/code change.
 
 ## Optional direct editing
 

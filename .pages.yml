@@ -79,32 +79,463 @@ content:
             - jpg
             - jpeg
             - webp
-        description: >-
-          Write your update here. Use the formatting toolbar for headings, bold text, lists, links, and
-          images.
+        description: Write here. Type '/' to insert headings, lists or images. Select text for formatting controls.
       - name: linkedin
         label: LinkedIn post link
         type: string
         required: false
         pattern: ^https://(www\.)?linkedin\.com/
         description: 'Optional: paste a link to the same post on LinkedIn.'
+  - name: settings
+    label: Website text & layout
+    type: file
+    path: site/content/settings.json
+    format: json
+    fields:
+      - name: settings
+        label: Settings
+        type: object
+        required: true
+        fields:
+          - name: branding
+            label: Header and footer
+            type: object
+            required: true
+            fields:
+              - name: monogram
+                label: Logo initials
+                type: string
+                required: true
+              - name: subtitle
+                label: Subtitle
+                type: string
+                required: true
+              - name: footer
+                label: Footer text
+                type: text
+                required: true
+          - name: intro
+            label: Introduction buttons
+            type: object
+            required: true
+            fields:
+              - name: workButton
+                label: Work Button
+                type: string
+                required: true
+              - name: cvButton
+                label: Cv Button
+                type: string
+                required: true
+          - name: sections
+            label: Homepage sections — drag to reorder, remove to hide
+            type: select
+            required: false
+            list: true
+            description: >-
+              The introduction stays at the top. Remove a section to hide it; add it back to restore it.
+              Matching navigation tabs hide automatically. Content is preserved.
+            options:
+              values:
+                - label: Projects
+                  value: work
+                - label: Technical experience
+                  value: experience
+                - label: Leadership & community
+                  value: leadership
+                - label: Education & awards
+                  value: education
+                - label: Skills
+                  value: skills
+                - label: Updates invitation
+                  value: updates
+                - label: Contact
+                  value: contact
+          - name: navigation
+            label: Navigation tabs — drag to reorder
+            type: object
+            required: false
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.label}'
+            fields:
+              - name: label
+                label: Tab label
+                type: string
+                required: true
+              - name: target
+                label: Destination
+                type: select
+                required: true
+                options:
+                  values:
+                    - label: Introduction
+                      value: intro
+                    - label: Projects
+                      value: work
+                    - label: Technical experience
+                      value: experience
+                    - label: Leadership & community
+                      value: leadership
+                    - label: Education & awards
+                      value: education
+                    - label: Skills
+                      value: skills
+                    - label: Updates page
+                      value: updates
+                    - label: Contact
+                      value: contact
+          - name: work
+            label: Projects section
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: contributionLabel
+                label: Contribution Label
+                type: string
+                required: true
+              - name: linkLabel
+                label: Link Label
+                type: string
+                required: true
+              - name: toolsLabel
+                label: Tools Label
+                type: string
+                required: true
+          - name: experience
+            label: Experience section
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: string
+                required: true
+          - name: leadership
+            label: Leadership section
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: string
+                required: true
+          - name: education
+            label: Education and awards section
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: string
+                required: true
+              - name: awardsTitle
+                label: Awards Title
+                type: string
+                required: true
+              - name: gpaLabel
+                label: Gpa Label
+                type: string
+                required: true
+          - name: skills
+            label: Skills section
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: string
+                required: true
+          - name: updates
+            label: Updates invitation on homepage
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: button
+                label: Button
+                type: string
+                required: true
+          - name: contact
+            label: Contact section
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: text
+                required: true
+              - name: phoneLabel
+                label: Phone Label
+                type: string
+                required: true
+              - name: emailLabel
+                label: Email Label
+                type: string
+                required: true
+              - name: socialLabel
+                label: Social Label
+                type: string
+                required: true
+              - name: socialLinkLabel
+                label: Social Link Label
+                type: string
+                required: true
+              - name: cvLabel
+                label: Cv Label
+                type: string
+                required: true
+              - name: cvLinkLabel
+                label: Cv Link Label
+                type: string
+                required: true
+          - name: journal
+            label: Updates page and post labels
+            type: object
+            required: true
+            fields:
+              - name: eyebrow
+                label: Small label above heading
+                type: string
+                required: true
+              - name: title
+                label: Heading
+                type: text
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: emptyEyebrow
+                label: Empty Eyebrow
+                type: string
+                required: true
+              - name: emptyTitle
+                label: Empty Title
+                type: string
+                required: true
+              - name: emptyDescription
+                label: Empty Description
+                type: text
+                required: true
+              - name: asideLabel
+                label: Aside Label
+                type: string
+                required: true
+              - name: connectLabel
+                label: Connect Label
+                type: string
+                required: true
+              - name: readLabel
+                label: Read Label
+                type: string
+                required: true
+              - name: backLabel
+                label: Back Label
+                type: string
+                required: true
+              - name: byLabel
+                label: By Label
+                type: string
+                required: true
+              - name: linkedinLabel
+                label: Linkedin Label
+                type: string
+                required: true
+          - name: accessibility
+            label: Navigation and accessibility labels
+            type: object
+            required: true
+            fields:
+              - name: skipLink
+                label: Skip Link
+                type: string
+                required: true
+              - name: navigation
+                label: Navigation accessibility label
+                type: string
+                required: true
+              - name: home
+                label: Home
+                type: string
+                required: true
+              - name: backToTop
+                label: Back To Top
+                type: string
+                required: true
+          - name: metadata
+            label: Browser titles and search descriptions
+            type: object
+            required: true
+            fields:
+              - name: title
+                label: Heading
+                type: string
+                required: true
+              - name: description
+                label: Description
+                type: text
+                required: true
+              - name: updatesTitle
+                label: Updates Title
+                type: string
+                required: true
+          - name: appearance
+            label: Colours, font and page width
+            type: object
+            required: true
+            fields:
+              - name: background
+                label: Background
+                type: string
+                required: true
+                pattern:
+                  regex: ^#[0-9a-fA-F]{6}$
+                  message: 'Use a six-digit hex colour, such as #b6f16c.'
+              - name: foreground
+                label: Foreground
+                type: string
+                required: true
+                pattern:
+                  regex: ^#[0-9a-fA-F]{6}$
+                  message: 'Use a six-digit hex colour, such as #b6f16c.'
+              - name: accent
+                label: Accent
+                type: string
+                required: true
+                pattern:
+                  regex: ^#[0-9a-fA-F]{6}$
+                  message: 'Use a six-digit hex colour, such as #b6f16c.'
+              - name: card
+                label: Card
+                type: string
+                required: true
+                pattern:
+                  regex: ^#[0-9a-fA-F]{6}$
+                  message: 'Use a six-digit hex colour, such as #b6f16c.'
+              - name: border
+                label: Border
+                type: string
+                required: true
+                pattern:
+                  regex: ^#[0-9a-fA-F]{6}$
+                  message: 'Use a six-digit hex colour, such as #b6f16c.'
+              - name: mutedText
+                label: Secondary text colour
+                type: string
+                required: true
+                pattern:
+                  regex: ^#[0-9a-fA-F]{6}$
+                  message: 'Use a six-digit hex colour, such as #b6f16c.'
+              - name: font
+                label: Text font
+                type: select
+                required: true
+                options:
+                  values:
+                    - label: Arial (current)
+                      value: Arial, Helvetica, sans-serif
+                    - label: Georgia
+                      value: Georgia, serif
+                    - label: Verdana
+                      value: Verdana, sans-serif
+                    - label: Monospace
+                      value: monospace
+              - name: width
+                label: Maximum page width (pixels)
+                type: number
+                required: true
+                options:
+                  min: 900
+                  max: 1600
+  - name: field-notes
+    label: Field Notes box
+    type: file
+    path: site/content/field-notes.json
+    format: json
+    fields:
+      - name: fieldNotes
+        label: Field Notes box
+        type: object
+        required: true
+        fields:
+          - name: visible
+            label: Show the Field Notes box
+            type: boolean
+            required: true
+          - name: label
+            label: Label
+            type: string
+            required: true
+          - name: reference
+            label: Top right label
+            type: string
+            required: true
+          - name: headline
+            label: Headline — one line per row
+            type: text
+            required: true
+          - name: focus
+            label: Engineering interests
+            type: text
+            required: true
+          - name: footer
+            label: Footer text
+            type: text
+            required: true
   - name: profile
-    label: Profile & CV
+    label: Introduction, name & CV
     fields:
       - name: profile
-        label: About me and contact
+        label: Your introduction and contact details
         type: object
         fields:
           - name: name
             label: Full name
-            type: string
-            required: true
-          - name: firstName
-            label: First name
-            type: string
-            required: true
-          - name: lastName
-            label: Last name
             type: string
             required: true
           - name: role
@@ -116,17 +547,12 @@ content:
             type: string
             required: true
           - name: intro
-            label: Introduction
+            label: Introduction and About text
             type: text
             required: true
-          - name: focus
-            label: Engineering interests
-            type: string
-            required: true
-          - name: about
-            label: About me
-            type: text
-            required: true
+            description: >-
+              Everything here appears directly below your name and role. Separate paragraphs with a blank
+              line.
           - name: email
             label: Contact email
             type: string
@@ -169,10 +595,6 @@ content:
                 label: Supporting detail
                 type: string
                 required: true
-          - name: summary
-            label: Professional summary
-            type: text
-            required: true
           - name: phone
             label: Phone number
             type: string

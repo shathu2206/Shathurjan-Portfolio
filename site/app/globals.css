@@ -187,3 +187,29 @@ html { scroll-padding-top: 120px; }
 .post-body img { display: block; max-width: 100%; height: auto; margin-block: 28px; }
 @media(max-width:1150px){.site-header{flex-wrap:wrap;padding-block:15px;gap:8px}.site-header nav{width:100%;overflow-x:auto;gap:25px;padding-bottom:2px}.site-header .wordmark-sub{display:none}.site-header .monogram{font-size:1.2rem}.wordmark>span:last-child{display:block}.about-overview{gap:40px}html{scroll-padding-top:145px}}
 @media(max-width:720px){.site-header{min-height:105px}.site-header nav{gap:23px;font-size:.875rem}.site-header .wordmark>span:last-child{display:block}.about-overview,.cv-grid,.education-layout,.updates-layout{grid-template-columns:1fr}.cv-section,.leadership-section{padding-block:48px}.cv-card{padding:23px}.education-layout{gap:25px}.updates-invitation{flex-direction:column;align-items:start;padding-block:45px}.updates-main{padding-block:45px}.updates-layout{gap:35px;margin-top:35px}.post-preview,.empty-updates{padding:24px}.updates-aside{position:static}.post-article{margin-top:35px}.cv-card .experience-meta{flex-direction:column;gap:4px}.article-main{padding-block:30px 60px}.contact-section{padding-top:45px}}
+
+/* Content and appearance controls supplied by Pages CMS. */
+body { font-family: var(--site-font, Arial, Helvetica, sans-serif); }
+.wrap { max-width: var(--page-width, 1240px); }
+@media(min-width:1051px) { .wrap { width: min(var(--page-width, 1240px), calc(100% - 112px)); } }
+h1,h2,.preserve-lines { white-space: pre-line; overflow-wrap: anywhere; }
+.hero { align-items: start; grid-template-columns: minmax(0,1.6fr) minmax(0,1fr); }
+.hero-copy { min-width: 0; }
+.hero-intro p + p { margin-top: 18px; }
+.hero .language-list { color: var(--muted-foreground); }
+.hero .language-list span { border-color: var(--border); }
+.hero-without-note { grid-template-columns: 1fr; }
+.hero-without-note .hero-intro { max-width: 850px; }
+.profile-note { align-self: start; min-height: 440px; background-color: var(--card); border-color: var(--border); }
+.note-headline > span { display: block; }
+.note-headline .note-line { color: var(--foreground); }
+.note-headline .note-accent { color: var(--primary); }
+.credentials { grid-template-columns: repeat(auto-fit,minmax(min(240px,100%),1fr)); }
+.section-heading > p { max-width: 340px; }
+.header-shell { background: color-mix(in srgb,var(--background) 96%,transparent); }
+.leadership-section { background: color-mix(in srgb,var(--background) 55%,var(--card)); }
+.primary { color: var(--background); }
+.primary:hover { background: color-mix(in srgb,var(--primary) 85%,white); }
+h1 span,.project-summary,.project-detail ul,.tags li,.project-category,.project-date,.note-top,.note-bottom,.profile-note > p:not(.note-headline),.cv-card > p,.post-body { color: var(--muted-foreground); }
+.monogram,.note-rule,.tags li { border-color: var(--border); }
+@media(max-width:720px) { .hero { grid-template-columns:1fr; } .profile-note { min-height:0; width:100%; } }

@@ -1,3 +1,5 @@
+import settingsData from './settings.json';
+import fieldNotesData from './field-notes.json';
 import profile from './profile.json';
 import projects from './projects.json';
 import experience from './experience.json';
@@ -9,11 +11,13 @@ import awards from './awards.json';
 export interface Experience { title: string; organization: string; date: string; description: string; details?: string[] }
 
 interface Portfolio {
+  settings: typeof settingsData.settings;
+  fieldNotes: typeof fieldNotesData.fieldNotes;
   profile: {
-    name: string; firstName: string; lastName: string; role: string;
-    availability: string; intro: string; focus: string; about: string;
+    name: string; role: string;
+    availability: string; intro: string;
     email: string; linkedin: string; resume: string; contactIntro: string;
-    phone?: string; summary?: string; languages?: {language:string;level:string}[];
+    phone?: string; languages?: {language:string;level:string}[];
     highlights: {value: string; label: string}[];
   };
   projects: {
@@ -30,9 +34,10 @@ interface Portfolio {
 }
 
 // Optional lists can be omitted by the editor when empty.
-const data = { ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
+const data = { ...settingsData, ...fieldNotesData, ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
 const content: Portfolio = {
   ...data,
+  settings: {...data.settings, sections: data.settings.sections ?? [], navigation: data.settings.navigation ?? []},
   profile: { ...data.profile, highlights: data.profile.highlights ?? [] },
   projects: (data.projects ?? []).map(project => ({
     ...project, images: project.images ?? [], tools: project.tools ?? [],
