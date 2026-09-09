@@ -28,6 +28,13 @@
         "caption": "Outside the classroom — placeholder",
         "fit": "contain",
         "position": "center"
+      },
+      {
+        "image": "assets/screenshot20251218234123pinterest.jpg",
+        "alt": "Placeholder",
+        "caption": "hehehe",
+        "fit": "cover",
+        "position": "center"
       }
     ]
   }
