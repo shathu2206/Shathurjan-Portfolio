@@ -33,7 +33,7 @@
         "image": "assets/screenshot20251218234123pinterest.jpg",
         "alt": "Placeholder",
         "caption": "hehehe",
-        "fit": "cover",
+        "fit": "contain",
         "position": "center"
       }
     ]
