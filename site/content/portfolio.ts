@@ -1,6 +1,7 @@
 import settingsData from './settings.json';
 import galleryData from './gallery.json';
 import profile from './profile.json';
+import contactData from './contact.json';
 import projects from './projects.json';
 import experience from './experience.json';
 import education from './education.json';
@@ -8,16 +9,18 @@ import skills from './skills.json';
 import leadership from './leadership.json';
 import awards from './awards.json';
 
+export interface ContactLink {label:string;type:'phone'|'email'|'link'|'linkedin'|'cv'|'file';text?:string;value?:string;file?:string}
+
 export interface Experience { title: string; organization: string; date: string; description: string; details?: string[] }
 
 interface Portfolio {
+  contact: {eyebrow:string;title:string;intro:string;resume:string;links:ContactLink[]};
   settings: typeof settingsData.settings;
   gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{image:string;alt:string;title:string;caption?:string}[]};
   profile: {
     name: string; role: string;
     availability: string; intro: string;
-    email: string; linkedin: string; resume: string; contactIntro: string;
-    phone?: string; languages?: {language:string;level:string}[];
+    languages?: {language:string;level:string}[];
     highlights: {value: string; label: string}[];
   };
   projects: {
@@ -34,9 +37,10 @@ interface Portfolio {
 }
 
 // Optional lists can be omitted by the editor when empty.
-const data = { ...settingsData, ...galleryData, ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
+const data = { ...settingsData, ...contactData, ...galleryData, ...profile, ...projects, ...experience, ...education, ...skills, ...leadership, ...awards } as unknown as Portfolio;
 const content: Portfolio = {
   ...data,
+  contact: {...data.contact, links: data.contact.links ?? []},
   gallery: {...data.gallery, photos: data.gallery.photos ?? []},
   settings: {...data.settings, sections: data.settings.sections ?? [], navigation: data.settings.navigation ?? []},
   profile: { ...data.profile, highlights: data.profile.highlights ?? [] },

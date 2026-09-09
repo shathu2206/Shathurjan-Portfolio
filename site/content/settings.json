@@ -92,16 +92,6 @@
       "description": "Project progress, lessons learned, and notes from engineering student life.",
       "button": "Explore updates"
     },
-    "contact": {
-      "eyebrow": "GET IN TOUCH",
-      "title": "Let’s build\nwhat’s next.",
-      "phoneLabel": "PHONE",
-      "emailLabel": "EMAIL",
-      "socialLabel": "CONNECT",
-      "socialLinkLabel": "LinkedIn",
-      "cvLabel": "EXPERIENCE & EDUCATION",
-      "cvLinkLabel": "View my CV"
-    },
     "journal": {
       "eyebrow": "ENGINEERING UPDATES",
       "title": "Notes along\nthe way.",

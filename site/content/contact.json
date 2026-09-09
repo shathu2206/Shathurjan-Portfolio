@@ -1,0 +1,31 @@
+{
+  "contact": {
+    "eyebrow": "GET IN TOUCH",
+    "title": "Let’s build\nwhat’s next.",
+    "intro": "I’m looking for internship and co-op opportunities where I can contribute to design, analysis, and testing while learning from experienced engineers.",
+    "resume": "assets/Shathurjan-CV.pdf",
+    "links": [
+      {
+        "label": "PHONE",
+        "type": "phone",
+        "value": "(647) 740-5968"
+      },
+      {
+        "label": "EMAIL",
+        "type": "email",
+        "value": "r.m.shathurjan@gmail.com"
+      },
+      {
+        "label": "CONNECT",
+        "type": "linkedin",
+        "text": "LinkedIn",
+        "value": "https://www.linkedin.com/in/shathurjan-muhunthan/"
+      },
+      {
+        "label": "EXPERIENCE & EDUCATION",
+        "type": "cv",
+        "text": "View my CV"
+      }
+    ]
+  }
+}

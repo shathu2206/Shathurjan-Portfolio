@@ -86,6 +86,93 @@ content:
         required: false
         pattern: ^https://(www\.)?linkedin\.com/
         description: 'Optional: paste a link to the same post on LinkedIn.'
+  - name: contact
+    label: Get in touch
+    type: file
+    path: site/content/contact.json
+    format: json
+    fields:
+      - name: contact
+        label: Get in touch section
+        type: object
+        required: true
+        fields:
+          - name: eyebrow
+            label: Small heading (Get in touch)
+            type: string
+            required: true
+          - name: title
+            label: Main heading
+            type: text
+            required: true
+          - name: intro
+            label: Introduction
+            type: text
+            required: true
+          - name: resume
+            label: Main CV (PDF)
+            type: file
+            required: true
+            description: Used by the introduction’s View CV button and any contact entry with type Main CV.
+            options:
+              extensions:
+                - pdf
+          - name: links
+            label: Contact entries — add, remove or drag to reorder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.label}'
+            description: >-
+              Add as many entries as you need: phone numbers, email addresses, websites, social profiles or
+              documents.
+            fields:
+              - name: label
+                label: Small label (for example EMAIL or GITHUB)
+                type: string
+                required: true
+              - name: type
+                label: Link type
+                type: select
+                required: true
+                options:
+                  values:
+                    - label: Phone number
+                      value: phone
+                    - label: Email address
+                      value: email
+                    - label: Website or social link
+                      value: link
+                    - label: LinkedIn profile
+                      value: linkedin
+                    - label: Main CV (uses PDF above)
+                      value: cv
+                    - label: Another document
+                      value: file
+              - name: text
+                label: Display text
+                type: string
+                required: false
+                description: >-
+                  Optional for phone/email: leave empty to display the number or address. For websites or
+                  documents, use a name such as GitHub or View my CV.
+              - name: value
+                label: Phone number, email address or website URL
+                type: string
+                required: false
+                description: >-
+                  Enter the number or email normally, or paste a full https:// URL. Leave empty for Main CV or
+                  Another document. The first LinkedIn profile entry also supplies the link on the Updates
+                  page.
+              - name: file
+                label: Document
+                type: file
+                required: false
+                description: Choose a file only when Link type is Another document.
+                options:
+                  extensions:
+                    - pdf
   - name: gallery
     label: Gallery
     type: file
@@ -372,43 +459,6 @@ content:
                 label: Button
                 type: string
                 required: true
-          - name: contact
-            label: Contact section
-            type: object
-            required: true
-            fields:
-              - name: eyebrow
-                label: Small label above heading
-                type: string
-                required: true
-              - name: title
-                label: Heading
-                type: text
-                required: true
-              - name: phoneLabel
-                label: Phone Label
-                type: string
-                required: true
-              - name: emailLabel
-                label: Email Label
-                type: string
-                required: true
-              - name: socialLabel
-                label: Social Label
-                type: string
-                required: true
-              - name: socialLinkLabel
-                label: Social Link Label
-                type: string
-                required: true
-              - name: cvLabel
-                label: Cv Label
-                type: string
-                required: true
-              - name: cvLinkLabel
-                label: Cv Link Label
-                type: string
-                required: true
           - name: journal
             label: Updates page and post labels
             type: object
@@ -569,10 +619,10 @@ content:
                   min: 900
                   max: 1600
   - name: profile
-    label: Introduction, name & CV
+    label: Introduction & name
     fields:
       - name: profile
-        label: Your introduction and contact details
+        label: Your introduction
         type: object
         fields:
           - name: name
@@ -594,32 +644,6 @@ content:
             description: >-
               Everything here appears directly below your name and role. Separate paragraphs with a blank
               line.
-          - name: email
-            label: Contact email
-            type: string
-            required: true
-            pattern:
-              regex: ^[^\s@]+@[^\s@]+\.[^\s@]+$
-              message: Enter a valid email address.
-          - name: linkedin
-            label: LinkedIn URL
-            type: string
-            required: true
-            pattern: ^https://
-          - name: resume
-            label: CV (PDF)
-            type: file
-            required: true
-            options:
-              extensions:
-                - pdf
-            description: >-
-              Choose or upload the PDF visitors should download. Uploading a new file does not select it until
-              you save this profile.
-          - name: contactIntro
-            label: Contact section introduction
-            type: text
-            required: true
           - name: highlights
             label: Highlights below your introduction
             type: object
@@ -636,10 +660,6 @@ content:
                 label: Supporting detail
                 type: string
                 required: true
-          - name: phone
-            label: Phone number
-            type: string
-            required: false
           - name: languages
             label: Languages
             type: object

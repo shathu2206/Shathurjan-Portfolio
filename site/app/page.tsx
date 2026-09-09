@@ -1,6 +1,7 @@
-import { ArrowDown, ArrowUpRight, ArrowRight } from 'lucide-react';
+import { ArrowDown, ArrowUpRight } from 'lucide-react';
 import content from '../content/portfolio';
 import {Header,Footer} from '../components/site-chrome';
+import {ContactSection} from '../components/contact';
 import {CVSections} from '../components/cv-sections';
 import {asset,updatesUrl} from '../lib/paths';
 
@@ -14,7 +15,7 @@ export default function Home() {
     <Header/>
     <main id="main">
       <section id="intro" className="hero wrap hero-simple" aria-labelledby="hero-title">
-        <div className="hero-copy"><p className="eyebrow"><span className="status-dot"/>{profile.availability}</p><h1 id="hero-title">{nameParts[0]}{nameParts.length>1&&<><br/><span>{nameParts.slice(1).join(" ")}</span></>}</h1><p className="hero-role">{profile.role}</p><div className="hero-intro">{profile.intro.split(/\n\s*\n/).filter(Boolean).map((text,index)=><p className="preserve-lines" key={index}>{text}</p>)}</div><div className="language-list">{profile.languages?.map(item=><span key={item.language}>{item.language} · {item.level}</span>)}</div><div className="hero-actions">{sections.has("work")&&<a className="button primary" href="#work">{settings.intro.workButton} <ArrowDown size={18}/></a>}<a className="text-link" href={asset(profile.resume)} target="_blank" rel="noreferrer">{settings.intro.cvButton} <ArrowUpRight size={18}/></a></div></div>
+        <div className="hero-copy"><p className="eyebrow"><span className="status-dot"/>{profile.availability}</p><h1 id="hero-title">{nameParts[0]}{nameParts.length>1&&<><br/><span>{nameParts.slice(1).join(" ")}</span></>}</h1><p className="hero-role">{profile.role}</p><div className="hero-intro">{profile.intro.split(/\n\s*\n/).filter(Boolean).map((text,index)=><p className="preserve-lines" key={index}>{text}</p>)}</div><div className="language-list">{profile.languages?.map(item=><span key={item.language}>{item.language} · {item.level}</span>)}</div><div className="hero-actions">{sections.has("work")&&<a className="button primary" href="#work">{settings.intro.workButton} <ArrowDown size={18}/></a>}<a className="text-link" href={asset(content.contact.resume)} target="_blank" rel="noreferrer">{settings.intro.cvButton} <ArrowUpRight size={18}/></a></div></div>
       </section>
       {!!profile.highlights.length&&<div className="credentials wrap">{profile.highlights.map(item => <div key={item.value}><strong>{item.value}</strong><span>{item.label}</span></div>)}</div>}
       {[...sections].map(id=><div className="section-slot" key={id}>{id==="work"?(<section id="work" className="work-section wrap" aria-labelledby="work-title">
@@ -27,7 +28,7 @@ export default function Home() {
           <div className="project-outcome"><span>{project.outcomeLabel}</span><p>{project.outcome}</p></div><ul className="tags" aria-label={settings.work.toolsLabel}>{project.tools.map(tool => <li key={tool}>{tool}</li>)}</ul>
           {project.link && <a className="text-link project-link" href={project.link} target="_blank" rel="noreferrer">{settings.work.linkLabel} <ArrowUpRight size={16}/></a>}
         </article>)}</div>
-      </section>):id==="updates"?(<section className="updates-invitation wrap"><div><p className="eyebrow">{settings.updates.eyebrow}</p><h2>{settings.updates.title}</h2><p>{settings.updates.description}</p></div><a className="button primary" href={updatesUrl}>{settings.updates.button} <ArrowUpRight size={18}/></a></section>):id==="contact"?(<section id="contact" className="contact-section wrap" aria-labelledby="contact-title"><div><p className="eyebrow">{settings.contact.eyebrow}</p><h2 id="contact-title">{settings.contact.title}</h2><p>{profile.contactIntro}</p></div><div className="contact-links">{profile.phone && <a href={`tel:${profile.phone.replace(/[^+0-9]/g, "")}`}><span><small>{settings.contact.phoneLabel}</small>{profile.phone}</span><ArrowUpRight/></a>}<a href={`mailto:${profile.email}`}><span><small>{settings.contact.emailLabel}</small>{profile.email}</span><ArrowUpRight/></a><a href={profile.linkedin} target="_blank" rel="noreferrer"><span><small>{settings.contact.socialLabel}</small>{settings.contact.socialLinkLabel}</span><ArrowUpRight/></a><a href={asset(profile.resume)} target="_blank" rel="noreferrer"><span><small>{settings.contact.cvLabel}</small>{settings.contact.cvLinkLabel}</span><ArrowRight/></a></div></section>):<CVSections section={id}/>}</div>)}
+      </section>):id==="updates"?(<section className="updates-invitation wrap"><div><p className="eyebrow">{settings.updates.eyebrow}</p><h2>{settings.updates.title}</h2><p>{settings.updates.description}</p></div><a className="button primary" href={updatesUrl}>{settings.updates.button} <ArrowUpRight size={18}/></a></section>):id==="contact"?(<ContactSection/>):<CVSections section={id}/>}</div>)}
     </main>
     <Footer/>
   </>;

@@ -39,7 +39,7 @@ for(const post of posts){
   await writeFile(resolve(output,'updates',post.slug,'index.html'),renderPost(post));
 }
 await writeFile(resolve(output, '.nojekyll'), '');
-for (const file of [content.profile.resume, ...content.gallery.photos.map(photo=>photo.image), ...content.projects.flatMap(p => p.images.map(i => i.src)), ...posts.flatMap(p=>p.image?[p.image]:[])]) {
+for (const file of [content.contact.resume, ...content.contact.links.filter(link=>link.type==='file').map(link=>link.file), ...content.gallery.photos.map(photo=>photo.image), ...content.projects.flatMap(p => p.images.map(i => i.src)), ...posts.flatMap(p=>p.image?[p.image]:[])]) {
   if (!file || file.includes('..') || file.includes('\\') || /^[a-z]+:/i.test(file)) throw new Error(`Use a public asset path: ${file}`);
   const assetPath = file.replace(/^\/+/, '');
   if (!assetPath.startsWith('assets/')) throw new Error(`Choose a file from the assets folder: ${file}`);

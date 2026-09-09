@@ -17,8 +17,9 @@ Choose a section in the dashboard, make changes, and press **Save**. Saving upda
 
 | Dashboard section | What you can change |
 | --- | --- |
-| **Introduction, name & CV** | Name everywhere on the site, combined Introduction/About text, languages, availability, contact details, highlights, and CV PDF |
+| **Introduction & name** | Name everywhere on the site, combined Introduction/About text, languages, availability, and highlights |
 | **Website text & layout** | All section headings, descriptions, buttons, navigation tabs, header/footer, Updates page labels, search descriptions, colours, font, page width, and section order/visibility |
+| **Get in touch** | Contact heading and introduction, main CV, and an expandable list of phone numbers, emails, websites, social profiles and documents |
 | **Gallery** | Add, replace, remove and reorder photos; edit their titles, captions, image descriptions and page headings |
 | **Projects** | Add, edit, remove, and reorder project cards; upload renders and photos |
 | **Engineering Updates** | Write new posts, format text, upload images, and add optional LinkedIn links |
@@ -69,9 +70,15 @@ Open an existing project card to edit it. Use the editor's list controls to reor
 
 Aim for around 1600 pixels wide and under 1 MB when practical. No images are required: cards without images remain complete. Uploaded media and portfolio content are public once committed to this public repository. Remove an image from its project and save before deleting the underlying media file.
 
+## Edit Get in touch or add a contact entry
+
+Open **Get in touch** in Pages CMS. Edit the headings and introduction at the top. Under **Contact entries**, open any entry to change it, or add a new item. Choose its type, enter a label and destination, and optionally set the display text. Phone and email entries use the number/address as their display text when left blank. For a website, paste the full https:// address; for a document, choose a PDF. Main CV entries use the PDF at the top of this editor. Drag entries to reorder them, or remove an entry to take it off the website. Save to publish.
+
+The first entry of type **LinkedIn profile** also controls the LinkedIn link on the Updates page. Removing all LinkedIn profile entries hides that link.
+
 ## Replace your CV
 
-Open **Introduction, name & CV**, find **CV (PDF)**, and choose or upload your new PDF. Then save the profile. Both CV links update automatically. You can use a new filename; you do not need to overwrite the previous PDF.
+Open **Get in touch**, find **Main CV (PDF)**, and choose or upload your new PDF. Then save. The introduction’s CV button and all Main CV contact entries update automatically. You can use a new filename; you do not need to overwrite the previous PDF.
 
 ## Check publishing
 
@@ -83,7 +90,7 @@ Open **Website text & layout**. Each existing section has its own editable headi
 
 Under **Navigation tabs**, change labels, reorder tabs, or remove them. Select destinations from the dropdown. Tabs for hidden homepage sections automatically disappear. The Intro, Updates and Gallery destinations remain available.
 
-Under **Colours, font and page width**, change the palette using six-digit hex colours (for example `#b6f16c`), choose a font, and adjust page width. Under **Header and footer**, edit the logo initials, subtitle, and footer. Your full name comes from **Introduction, name & CV** and updates throughout the site automatically. Logo initials also update the browser icon.
+Under **Colours, font and page width**, change the palette using six-digit hex colours (for example `#b6f16c`), choose a font, and adjust page width. Under **Header and footer**, edit the logo initials, subtitle, and footer. Your full name comes from **Introduction & name** and updates throughout the site automatically. Logo initials also update the browser icon.
 
 Changes stay within the existing responsive design; entirely new types of page components still require a design/code change.
 
