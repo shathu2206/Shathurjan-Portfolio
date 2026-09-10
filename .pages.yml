@@ -1714,6 +1714,36 @@ content:
                 - alternating
                 - image-left
                 - image-right
+          - name: lightBackground
+            label: Light Background
+            type: string
+            default: '#f4f6f1'
+            description: Light-mode color as a hex code. Dark-mode colors remain separate.
+          - name: lightForeground
+            label: Light Foreground
+            type: string
+            default: '#101922'
+            description: Light-mode color as a hex code. Dark-mode colors remain separate.
+          - name: lightAccent
+            label: Light Accent
+            type: string
+            default: '#356b24'
+            description: Light-mode color as a hex code. Dark-mode colors remain separate.
+          - name: lightCard
+            label: Light Card
+            type: string
+            default: '#e8eee5'
+            description: Light-mode color as a hex code. Dark-mode colors remain separate.
+          - name: lightBorder
+            label: Light Border
+            type: string
+            default: '#bdc9bd'
+            description: Light-mode color as a hex code. Dark-mode colors remain separate.
+          - name: lightMutedText
+            label: Light Muted Text
+            type: string
+            default: '#4d605b'
+            description: Light-mode color as a hex code. Dark-mode colors remain separate.
   - name: image-filters
     label: Image appearance & sizing
     type: file

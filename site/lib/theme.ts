@@ -7,6 +7,12 @@ export function themeStyle():CSSProperties {
   const fonts=['Arial, Helvetica, sans-serif','Georgia, serif','Verdana, sans-serif','monospace'];
   const number=(value:number,fallback:number,min:number,max:number)=>Math.max(min,Math.min(max,Number.isFinite(Number(value))?Number(value):fallback));
   return {
+    '--light-background':color(appearance.lightBackground,'#f4f6f1'),
+    '--light-foreground':color(appearance.lightForeground,'#101922'),
+    '--light-accent':color(appearance.lightAccent,'#356b24'),
+    '--light-card':color(appearance.lightCard,'#e8eee5'),
+    '--light-border':color(appearance.lightBorder,'#bdc9bd'),
+    '--light-muted-text':color(appearance.lightMutedText,'#4d605b'),
     '--background':color(appearance.background,'#101922'),
     '--foreground':color(appearance.foreground,'#f1f5f7'),
     '--primary':color(appearance.accent,'#b6f16c'),

@@ -18,6 +18,12 @@
     "galleryColumns": 2,
     "galleryFit": "contain",
     "galleryRatio": "4 / 3",
-    "projectLayout": "alternating"
+    "projectLayout": "alternating",
+    "lightBackground": "#f4f6f1",
+    "lightForeground": "#101922",
+    "lightAccent": "#356b24",
+    "lightCard": "#e8eee5",
+    "lightBorder": "#bdc9bd",
+    "lightMutedText": "#4d605b"
   }
 }

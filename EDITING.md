@@ -81,6 +81,10 @@ The starter cover photos are credited NASA research imagery, separate from your 
 
 ## Intro photos and Gallery
 
+### Light and dark themes
+
+Visitors can open the sun/moon button at the bottom right and choose **Light**, **Dark**, or **Device theme**. The default follows their device. Manual choices are remembered in their browser across pages and visits; choosing Device theme restores automatic switching. In **Theme & layout**, the original colors control dark mode and the **Light background / foreground / accent / card / border / muted text** fields control light mode independently.
+
 ### Size each image independently
 
 Beside every image or logo picker, open **[image name] — size & background** and turn on **Customize this image**. Set its width percentage, optional maximum width in pixels, aspect ratio, fit, crop position and background. For example, set a logo to a maximum width of 180 pixels, or one experience photo to 600 pixels. Images still shrink to fit smaller screens. **Original proportions** avoids stretching; **Fill and crop** fills a selected aspect ratio.
