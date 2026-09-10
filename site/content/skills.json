@@ -5,33 +5,27 @@
       "items": [
         {
           "name": "SolidWorks",
-          "level": "0",
-          "note": ""
+          "level": "3"
         },
         {
           "name": "Onshape",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "CATIA",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Parametric CAD",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Geometry / surface design",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Assembly integration",
-          "level": "0",
-          "note": ""
+          "level": "0"
         }
       ]
     },
@@ -45,23 +39,19 @@
         },
         {
           "name": "MATLAB",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Simulink",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "OpenRocket",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Data analysis / visualisation",
-          "level": "0",
-          "note": ""
+          "level": "0"
         }
       ]
     },
@@ -70,28 +60,23 @@
       "items": [
         {
           "name": "Arduino IDE (C/C++)",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "C",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "HTML",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "CSS",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "JavaScript",
-          "level": "0",
-          "note": ""
+          "level": "0"
         }
       ]
     },
@@ -100,13 +85,11 @@
       "items": [
         {
           "name": "Testing / prototyping",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Safety-minded testing",
-          "level": "0",
-          "note": ""
+          "level": "0"
         }
       ]
     },
@@ -115,23 +98,19 @@
       "items": [
         {
           "name": "Technical communication",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Team coordination",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Technical mentorship",
-          "level": "0",
-          "note": ""
+          "level": "0"
         },
         {
           "name": "Event / logistics management",
-          "level": "0",
-          "note": ""
+          "level": "0"
         }
       ]
     }
