@@ -23,7 +23,7 @@ Choose a dashboard section, make changes, and press **Save**. Saving automatical
 | **Get in touch** | Contact page title, introduction, CV and any number of contact links |
 | **Website text & layout** | Navigation, page headings and introductions, button labels, homepage visibility, slideshow side, header logo and footer |
 | **Theme & layout** | Colours, body and heading fonts, text size, spacing, page width, cover brightness/height, photo corners, gallery layout and project image alignment |
-| **Image filters** | Original colours, grayscale, sepia, brightness, contrast, saturation and opacity for individual image files |
+| **Image appearance & sizing** | Original colours, grayscale, sepia, brightness, contrast, saturation and opacity for individual image files |
 
 All existing website content has a dashboard editor. You can add, remove and reorder entries in the lists, and add extra blocks to each existing page. The theme controls start with the current design's values; nothing needs changing until you choose your new theme.
 
@@ -59,9 +59,17 @@ Open **Skills**. Add or rename a category, then open each individual skill and s
 
 The visible labels can be renamed under **Website text & layout → Skills page text → Proficiency labels**. Keep the five labels in the same order; ratings refer to their positions.
 
+## Company logos, work photos and image dimensions
+
+Inside each **Technical experience**, **Leadership & community**, **Education**, **Awards & achievements** or **Projects** entry, use **Show company / organization logo** to toggle the logo. Select **Company / organization logo override** to upload or choose a logo directly. Leaving that field empty uses the shared matching logo; to hide that automatic logo, turn the switch off. **Organization logos → Show this organization logo** disables a shared logo wherever it is automatically matched.
+
+Both experience editors retain the existing main photo and now have **Additional work photos**. Add, remove or reorder photos, with a description and optional caption for each. **Show work photos** hides all photos for the entry; **Show this photo** hides an individual additional photo without deleting it.
+
+For any image, open **Image appearance & sizing**, select the file and enable **Customize image size and proportions**. Choose an aspect ratio, width as a percentage of its available space, optional maximum width in pixels, fitting and crop position. Choose **Keep existing page filters** to resize without changing colours. **Natural image proportions** displays the original proportions; **Fill the frame** can crop an image. Covers and slideshow frames resize with their images. Settings apply wherever the same file is used; separate copies allow different settings in different places. Images remain constrained to fit smaller screens.
+
 ## Covers and logos
 
-To change an image's filter, open **Image filters**, add an entry and select the existing image. Choose **Original colours**, **Grayscale** or **Sepia**, then adjust brightness, contrast, saturation or opacity if needed. The normal value is **100%**. Keep **Apply these image settings** on and choose **Original colours** to remove grayscale from a cover; this overrides its page-level black-and-white setting. Turning the switch off or removing the entry restores the page defaults. Use one filter entry per image. These settings apply wherever that same file appears; upload a separate copy if you want different effects in different places. Save to publish. The uploaded image file itself is never modified.
+To change an image's filter, open **Image appearance & sizing**, add an entry and select the existing image. Choose **Original colours**, **Grayscale** or **Sepia**, then adjust brightness, contrast, saturation or opacity if needed. The normal value is **100%**. Keep **Apply these image settings** on and choose **Original colours** to remove grayscale from a cover; this overrides its page-level black-and-white setting. Turning the switch off or removing the entry restores the page defaults. Use one filter entry per image. These settings apply wherever that same file appears; upload a separate copy if you want different effects in different places. Save to publish. The uploaded image file itself is never modified.
 
 In **Page covers & extra blocks**, open the entry for the relevant page and choose a photo. Add its description, crop position and optional credit/source link. Turn **Display cover in black and white** off to show its original colours. Remove the image for a text-only header. Keep one entry per page. Page headings and introductions are edited under their own content sections or **Website text & layout**.
 

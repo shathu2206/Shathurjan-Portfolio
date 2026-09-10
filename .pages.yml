@@ -394,6 +394,13 @@ content:
             type: string
             required: false
             description: Optional website opened when a visitor selects this logo.
+          - name: visible
+            label: Show this organization logo
+            type: boolean
+            default: true
+            description: >-
+              Controls the shared logo wherever it is automatically matched. A logo chosen directly on an
+              individual entry is controlled by that entry.
   - name: contact
     label: Get in touch
     type: file
@@ -1170,21 +1177,21 @@ content:
                 - image-left
                 - image-right
   - name: image-filters
-    label: Image filters
+    label: Image appearance & sizing
     type: file
     path: site/content/image-filters.json
     format: json
     fields:
       - name: imageFilters
-        label: Filters by image
+        label: Image settings
         type: object
         list:
           collapsible:
             collapsed: true
             summary: '{fields.image}'
         description: >-
-          Choose an existing image to control its appearance everywhere that same file is used, including
-          covers, slideshow, gallery, logos and posts. No uploaded file is altered. Use one entry per image.
+          Select an image file and adjust its appearance or dimensions wherever that file is used. Use one
+          entry per image.
         fields:
           - name: image
             label: Image to style
@@ -1207,15 +1214,20 @@ content:
           - name: effect
             label: Colour filter
             type: select
-            default: original
+            default: inherit
             options:
               values:
+                - label: Keep existing page filters (size changes only)
+                  value: inherit
                 - label: Original colours (no colour filter)
                   value: original
                 - label: Grayscale
                   value: grayscale
                 - label: Sepia
                   value: sepia
+            description: >-
+              Choose Keep existing page filters to change size without changing colours, brightness or
+              opacity.
           - name: brightness
             label: Brightness (%)
             type: number
@@ -1248,6 +1260,67 @@ content:
               min: 0
               max: 100
             description: 100 = fully visible.
+          - name: resize
+            label: Customize image size and proportions
+            type: boolean
+            default: false
+          - name: ratio
+            label: Aspect ratio
+            type: select
+            default: original
+            options:
+              values:
+                - label: Keep the current layout
+                  value: original
+                - label: Natural image proportions
+                  value: auto
+                - label: 16 / 9
+                  value: 16 / 9
+                - label: 3 / 2
+                  value: 3 / 2
+                - label: 4 / 3
+                  value: 4 / 3
+                - label: 1 / 1
+                  value: 1 / 1
+                - label: 4 / 5
+                  value: 4 / 5
+                - label: 9 / 16
+                  value: 9 / 16
+          - name: width
+            label: Width within its available space (%)
+            type: number
+            default: 100
+            options:
+              min: 10
+              max: 100
+          - name: maxWidth
+            label: Maximum width (pixels, optional)
+            type: number
+            options:
+              min: 40
+              max: 2560
+            description: Leave empty for no additional limit. The image still shrinks to fit small screens.
+          - name: fit
+            label: Fitting when a ratio is selected
+            type: select
+            default: contain
+            options:
+              values:
+                - label: Show the whole image
+                  value: contain
+                - label: Fill the frame (crop)
+                  value: cover
+          - name: position
+            label: Crop position
+            type: select
+            default: center
+            options:
+              values:
+                - center
+                - top
+                - bottom
+                - left
+                - right
   - name: profile
     label: Introduction & name
     fields:
@@ -1578,6 +1651,23 @@ content:
                 - bottom
                 - left
                 - right
+          - name: showLogo
+            label: Show company / organization logo
+            type: boolean
+            default: true
+          - name: logo
+            label: Company / organization logo override
+            type: image
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+            description: >-
+              Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
+              switch off to hide either logo.
         description: >-
           Add projects or drag to reorder. Each project automatically appears on the Projects page and has its
           own detail page.
@@ -1634,6 +1724,57 @@ content:
             label: Photo caption
             type: string
             required: false
+          - name: showLogo
+            label: Show company / organization logo
+            type: boolean
+            default: true
+          - name: logo
+            label: Company / organization logo override
+            type: image
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+            description: >-
+              Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
+              switch off to hide either logo.
+          - name: showPhotos
+            label: Show work photos
+            type: boolean
+            default: true
+          - name: photos
+            label: Additional work photos — add, remove and reorder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.caption}'
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+                    - svg
+                required: true
+              - name: alt
+                label: Image description
+                type: string
+                required: true
+              - name: caption
+                label: Caption
+                type: text
+              - name: visible
+                label: Show this photo
+                type: boolean
+                default: true
     type: file
     path: site/content/experience.json
     format: json
@@ -1688,6 +1829,40 @@ content:
                 label: Additional details
                 type: text
                 list: true
+              - name: showLogo
+                label: Show company / organization logo
+                type: boolean
+                default: true
+              - name: logo
+                label: Company / organization logo override
+                type: image
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+                    - svg
+                description: >-
+                  Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn
+                  the switch off to hide either logo.
+          - name: showLogo
+            label: Show company / organization logo
+            type: boolean
+            default: true
+          - name: logo
+            label: Company / organization logo override
+            type: image
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+            description: >-
+              Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
+              switch off to hide either logo.
     type: file
     path: site/content/education.json
     format: json
@@ -1796,6 +1971,57 @@ content:
             label: Photo caption
             type: string
             required: false
+          - name: showLogo
+            label: Show company / organization logo
+            type: boolean
+            default: true
+          - name: logo
+            label: Company / organization logo override
+            type: image
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+            description: >-
+              Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
+              switch off to hide either logo.
+          - name: showPhotos
+            label: Show work photos
+            type: boolean
+            default: true
+          - name: photos
+            label: Additional work photos — add, remove and reorder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.caption}'
+            fields:
+              - name: image
+                label: Photo
+                type: image
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+                    - svg
+                required: true
+              - name: alt
+                label: Image description
+                type: string
+                required: true
+              - name: caption
+                label: Caption
+                type: text
+              - name: visible
+                label: Show this photo
+                type: boolean
+                default: true
   - name: awards
     label: Awards & achievements
     type: file
@@ -1822,6 +2048,23 @@ content:
             label: Date / year
             type: string
             required: true
+          - name: showLogo
+            label: Show company / organization logo
+            type: boolean
+            default: true
+          - name: logo
+            label: Company / organization logo override
+            type: image
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+            description: >-
+              Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
+              switch off to hide either logo.
 settings:
   content:
     merge: true
