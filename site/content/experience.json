@@ -14,14 +14,7 @@
       "imageAlt": "hehe",
       "imageCaption": "haha",
       "showLogo": true,
-      "showPhotos": true,
-      "photos": [
-        {
-          "image": "assets/screenshot4-8-2026185926wwwinstagramcom-1.jpeg",
-          "alt": "hehe",
-          "visible": true
-        }
-      ]
+      "showPhotos": true
     },
     {
       "title": "Lead-in-Training",
