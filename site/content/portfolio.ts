@@ -1,4 +1,5 @@
 import settingsData from './settings.json';
+import appearanceData from './appearance.json';
 import introPhotosData from './intro-photos.json';
 import galleryData from './gallery.json';
 import profile from './profile.json';
@@ -16,8 +17,8 @@ export interface ContactLink {label:string;type:'phone'|'email'|'link'|'linkedin
 
 export interface Experience { title: string; organization: string; date: string; description: string; details?: string[]; image?:string; imageAlt?:string; imageCaption?:string }
 export interface StoryBlock {title:string;body?:string;image?:string;imageAlt?:string;caption?:string;layout?:string;videoUrl?:string;videoFile?:string}
-export interface Project {id:string;title:string;category:string;organization:string;date:string;role:string;summary:string;contributions:string[];outcomeLabel:string;outcome:string;tools:string[];images:{src:string;alt:string;caption?:string}[];link?:string;cover?:string;coverAlt?:string;coverCaption?:string;featured?:boolean;sections:StoryBlock[];videos:{title:string;url?:string;file?:string;caption?:string}[]}
-export interface PageCover {id:string;cover?:string;coverAlt?:string;position?:string;credit?:string;creditUrl?:string;description?:string}
+export interface Project {id:string;title:string;category:string;organization:string;date:string;role:string;summary:string;contributions:string[];outcomeLabel:string;outcome:string;tools:string[];images:{src:string;alt:string;caption?:string}[];link?:string;cover?:string;coverAlt?:string;coverCaption?:string;coverFit?:string;coverPosition?:string;featured?:boolean;sections:StoryBlock[];videos:{title:string;url?:string;file?:string;caption?:string}[]}
+export interface PageCover {id:string;cover?:string;coverAlt?:string;position?:string;credit?:string;creditUrl?:string;monochrome?:boolean;blocks?:StoryBlock[]}
 export interface Organization {name:string;match:string[];logo?:string;url?:string}
 
 interface Portfolio {
@@ -25,8 +26,8 @@ interface Portfolio {
   organizations:Organization[];
   introPhotos: {visible:boolean;label:string;autoplay:boolean;intervalSeconds:number;previousLabel:string;nextLabel:string;photoLabel:string;photos:{image:string;alt:string;caption?:string;fit?:string;position?:string}[]};
   contact: {eyebrow:string;title:string;intro:string;resume:string;links:ContactLink[]};
-  settings: typeof settingsData.settings;
-  gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{image:string;alt:string;title:string;caption?:string}[]};
+  settings: typeof settingsData.settings & typeof appearanceData;
+  gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{image:string;alt:string;title:string;caption?:string;fit?:string;position?:string}[]};
   profile: {
     name: string; role: string;
     availability: string; intro: string;
@@ -50,7 +51,7 @@ const content: Portfolio = {
   introPhotos: {...data.introPhotos, photos: data.introPhotos.photos ?? []},
   contact: {...data.contact, links: data.contact.links ?? []},
   gallery: {...data.gallery, photos: data.gallery.photos ?? []},
-  settings: {...data.settings, sections: data.settings.sections ?? [], navigation: data.settings.navigation ?? [], skills:{...data.settings.skills,levels:['Not yet rated','Introduced','Developing','Proficient','Advanced'].map((fallback,index)=>data.settings.skills.levels?.[index]||fallback)}},
+  settings: {...data.settings, appearance:appearanceData.appearance, sections: data.settings.sections ?? [], navigation: data.settings.navigation ?? [], skills:{...data.settings.skills,levels:['Not yet rated','Introduced','Developing','Proficient','Advanced'].map((fallback,index)=>data.settings.skills.levels?.[index]||fallback)}},
   profile: { ...data.profile, highlights: data.profile.highlights ?? [] },
   projects: (data.projects ?? []).map(project => ({
     ...project, images: project.images ?? [], tools: project.tools ?? [],

@@ -36,6 +36,11 @@ await writeFile(resolve(output,'gallery/index.html'),renderGallery());
 await mkdir(resolve(output,'projects'),{recursive:true});
 await writeFile(resolve(output,'projects/index.html'),renderProjects());
 const projectIds=new Set();
+const pageBlocks=content.pages.flatMap(page=>page.blocks??[]);
+for(const block of pageBlocks){
+  if(block.videoUrl&&!block.videoFile&&!embedUrl(block.videoUrl))throw new Error(`Use a YouTube or Vimeo video link for ${block.title}`);
+  if(block.videoFile&&!/\.(mp4|webm)$/i.test(block.videoFile))throw new Error(`Upload an MP4 or WebM video for ${block.title}`);
+}
 for(const project of content.projects){
   if(!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(project.id)||projectIds.has(project.id))throw new Error(`Project URL must be unique lowercase words separated by hyphens: ${project.id}`);
   projectIds.add(project.id);
@@ -58,8 +63,8 @@ const textFiles=['styles.css','index.html','projects/index.html','gallery/index.
   ...content.projects.map(p=>`projects/${p.id}/index.html`),
   ...cvPageIds.map(p=>`${p}/index.html`),...posts.map(p=>`updates/${p.slug}/index.html`)];
 for(const file of textFiles)assertTextIntegrity(await readFile(resolve(output,file),'utf8'),file);
-const newAssets=[...content.pages.map(p=>p.cover),...content.organizations.map(o=>o.logo),...content.experience.map(e=>e.image),...content.leadership.map(e=>e.image),...content.projects.flatMap(p=>[p.cover,...p.sections.flatMap(s=>[s.image,s.videoFile]),...p.videos.map(v=>v.file)])].filter(Boolean);
-for(const item of [...content.pages.map(p=>({image:p.cover,alt:p.coverAlt})),...content.experience.map(e=>({image:e.image,alt:e.imageAlt})),...content.leadership.map(e=>({image:e.image,alt:e.imageAlt})),...content.projects.flatMap(p=>[{image:p.cover,alt:p.coverAlt},...p.sections.map(s=>({image:s.image,alt:s.imageAlt}))])]){
+const newAssets=[content.settings.branding.logo,...pageBlocks.flatMap(b=>[b.image,b.videoFile]),...content.pages.map(p=>p.cover),...content.organizations.map(o=>o.logo),...content.experience.map(e=>e.image),...content.leadership.map(e=>e.image),...content.projects.flatMap(p=>[p.cover,...p.sections.flatMap(s=>[s.image,s.videoFile]),...p.videos.map(v=>v.file)])].filter(Boolean);
+for(const item of [...pageBlocks.map(b=>({image:b.image,alt:b.imageAlt})),...content.pages.map(p=>({image:p.cover,alt:p.coverAlt})),...content.experience.map(e=>({image:e.image,alt:e.imageAlt})),...content.leadership.map(e=>({image:e.image,alt:e.imageAlt})),...content.projects.flatMap(p=>[{image:p.cover,alt:p.coverAlt},...p.sections.map(s=>({image:s.image,alt:s.imageAlt}))])]){
   if(item.image&&!item.alt?.trim())throw new Error(`Add an image description for ${item.image}`);
 }
 for (const file of [...newAssets,...content.introPhotos.photos.map(photo=>photo.image), content.contact.resume, ...content.contact.links.filter(link=>link.type==='file').map(link=>link.file), ...content.gallery.photos.map(photo=>photo.image), ...content.projects.flatMap(p => p.images.map(i => i.src)), ...posts.flatMap(p=>p.image?[p.image]:[])]) {

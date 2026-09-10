@@ -7,7 +7,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "description": ""
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "work",
@@ -16,7 +17,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "description": ""
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "experience",
@@ -25,7 +27,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "description": "From student rocketry and UAV research to robotics and flight training."
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "leadership",
@@ -34,7 +37,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "description": "Coordination, mentorship, and community involvement alongside engineering."
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "education",
@@ -43,7 +47,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "description": "My academic background and the subjects behind my engineering work."
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "awards",
@@ -52,7 +57,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "description": "Academic recognition, engineering communication, and flight training."
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "skills",
@@ -61,7 +67,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "description": ""
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "gallery",
@@ -70,7 +77,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "description": ""
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "updates",
@@ -79,7 +87,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "description": ""
+      "monochrome": true,
+      "blocks": []
     },
     {
       "id": "contact",
@@ -88,7 +97,8 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "description": "Interested in working together? I’d like to hear from you."
+      "monochrome": true,
+      "blocks": []
     }
   ]
 }

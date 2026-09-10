@@ -185,13 +185,13 @@ content:
                     - top
                     - bottom
   - name: pages
-    label: Page covers
+    label: Page covers & extra blocks
     type: file
     path: site/content/pages.json
     format: json
     fields:
       - name: pages
-        label: Cover images for each page
+        label: Pages — covers and optional content
         type: object
         list:
           collapsible:
@@ -259,13 +259,77 @@ content:
             label: Credit source link
             type: string
             required: false
-          - name: description
-            label: Page introduction
-            type: text
-            required: false
+          - name: monochrome
+            label: Display cover in black and white
+            type: boolean
+          - name: blocks
+            label: Extra content blocks — add and reorder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.title}'
+            fields:
+              - name: title
+                label: Block heading
+                type: string
+                required: true
+              - name: body
+                label: Story / design decisions
+                type: rich-text
+                required: false
+                description: Write formatted text. Type '/' to add headings, lists, or images.
+                options:
+                  format: markdown
+                  switcher: false
+              - name: layout
+                label: Layout
+                type: select
+                required: false
+                options:
+                  values:
+                    - value: full
+                      label: Full width
+                    - value: image-left
+                      label: Image left, text right
+                    - value: image-right
+                      label: Text left, image right
+              - name: image
+                label: Photo, CAD render, drawing or chart
+                type: image
+                required: false
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+                    - svg
+              - name: imageAlt
+                label: Image description
+                type: string
+                required: false
+              - name: caption
+                label: Image caption
+                type: string
+                required: false
+              - name: videoUrl
+                label: YouTube or Vimeo link
+                type: string
+                required: false
+                description: Paste the full video address. Leave blank if using an uploaded video.
+              - name: videoFile
+                label: Upload video instead
+                type: file
+                required: false
+                description: Upload a short MP4 or WebM video. For longer videos, paste a YouTube or Vimeo link instead.
+                options:
+                  extensions:
+                    - mp4
+                    - webm
             description: >-
-              Used on Experience, Leadership, Education, and Awards. Other page introductions are edited in
-              their own content settings.
+              Add formatted text, images and videos below the main content of this page. Use the layout
+              selector to place the image beside the text or at full width.
   - name: organizations
     label: Organization logos
     type: file
@@ -460,6 +524,23 @@ content:
                 type: string
                 required: true
                 description: Describe the image for visitors using screen readers.
+              - name: fit
+                label: Photo fitting (optional override)
+                type: select
+                options:
+                  values:
+                    - contain
+                    - cover
+              - name: position
+                label: Photo crop position
+                type: select
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
   - name: settings
     label: Website text & layout
     type: file
@@ -492,6 +573,29 @@ content:
                 label: More menu label
                 type: string
                 required: true
+              - name: logo
+                label: Header logo image (optional)
+                type: image
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+                    - svg
+              - name: showName
+                label: Show name and subtitle beside logo
+                type: boolean
+              - name: showFooter
+                label: Show footer
+                type: boolean
+              - name: showBackToTop
+                label: Show back-to-top link
+                type: boolean
+              - name: copyright
+                label: Copyright text
+                type: string
+                description: Use {year} for the current year and {name} for your profile name.
           - name: intro
             label: Introduction buttons
             type: object
@@ -513,6 +617,47 @@ content:
                 label: Homepage directory introduction
                 type: string
                 required: true
+          - name: home
+            label: Homepage layout & visibility
+            type: object
+            fields:
+              - name: showAvailability
+                label: Show availability banner
+                type: boolean
+              - name: showLanguages
+                label: Show languages
+                type: boolean
+              - name: showHighlights
+                label: Show highlights
+                type: boolean
+              - name: showDirectory
+                label: Show page directory
+                type: boolean
+              - name: showWorkButton
+                label: Show projects button
+                type: boolean
+              - name: showCvButton
+                label: Show CV button
+                type: boolean
+              - name: nameLayout
+                label: Name layout
+                type: select
+                options:
+                  values:
+                    - label: Stacked (current)
+                      value: stacked
+                    - label: One line when space allows
+                      value: inline
+                required: true
+              - name: photoSide
+                label: Slideshow position on wider screens
+                type: select
+                options:
+                  values:
+                    - left
+                    - right
+                required: true
+            required: true
           - name: sections
             label: Pages shown in navigation and homepage directory
             type: select
@@ -523,6 +668,8 @@ content:
               Arrange the visible links under Navigation below.
             options:
               values:
+                - label: Introduction
+                  value: intro
                 - label: Projects
                   value: work
                 - label: Technical experience
@@ -535,10 +682,12 @@ content:
                   value: awards
                 - label: Skills
                   value: skills
-                - label: Updates invitation
+                - label: Updates
                   value: updates
                 - label: Contact
                   value: contact
+                - label: Gallery page
+                  value: gallery
           - name: navigation
             label: Navigation tabs — drag to reorder
             type: object
@@ -663,6 +812,9 @@ content:
                 label: Heading
                 type: string
                 required: true
+              - name: description
+                label: Page introduction
+                type: text
           - name: leadership
             label: Leadership page text
             type: object
@@ -676,6 +828,9 @@ content:
                 label: Heading
                 type: string
                 required: true
+              - name: description
+                label: Page introduction
+                type: text
           - name: education
             label: Education page text
             type: object
@@ -693,6 +848,9 @@ content:
                 label: Gpa Label
                 type: string
                 required: true
+              - name: description
+                label: Page introduction
+                type: text
           - name: awards
             label: Awards page text
             type: object
@@ -706,6 +864,9 @@ content:
                 label: Heading
                 type: string
                 required: true
+              - name: description
+                label: Page introduction
+                type: text
           - name: skills
             label: Skills page text
             type: object
@@ -787,6 +948,9 @@ content:
                 label: Linkedin Label
                 type: string
                 required: true
+              - name: showSidebar
+                label: Show profile sidebar on Updates
+                type: boolean
           - name: accessibility
             label: Navigation and accessibility labels
             type: object
@@ -825,74 +989,160 @@ content:
                 label: Updates Title
                 type: string
                 required: true
-          - name: appearance
-            label: Colours, font and page width
-            type: object
+  - name: appearance
+    label: Theme & layout
+    type: file
+    path: site/content/appearance.json
+    format: json
+    fields:
+      - name: appearance
+        label: Theme & layout
+        type: object
+        required: true
+        fields:
+          - name: background
+            label: Background
+            type: string
             required: true
-            fields:
-              - name: background
-                label: Background
-                type: string
-                required: true
-                pattern:
-                  regex: ^#[0-9a-fA-F]{6}$
-                  message: 'Use a six-digit hex colour, such as #b6f16c.'
-              - name: foreground
-                label: Foreground
-                type: string
-                required: true
-                pattern:
-                  regex: ^#[0-9a-fA-F]{6}$
-                  message: 'Use a six-digit hex colour, such as #b6f16c.'
-              - name: accent
-                label: Accent
-                type: string
-                required: true
-                pattern:
-                  regex: ^#[0-9a-fA-F]{6}$
-                  message: 'Use a six-digit hex colour, such as #b6f16c.'
-              - name: card
-                label: Card
-                type: string
-                required: true
-                pattern:
-                  regex: ^#[0-9a-fA-F]{6}$
-                  message: 'Use a six-digit hex colour, such as #b6f16c.'
-              - name: border
-                label: Border
-                type: string
-                required: true
-                pattern:
-                  regex: ^#[0-9a-fA-F]{6}$
-                  message: 'Use a six-digit hex colour, such as #b6f16c.'
-              - name: mutedText
-                label: Secondary text colour
-                type: string
-                required: true
-                pattern:
-                  regex: ^#[0-9a-fA-F]{6}$
-                  message: 'Use a six-digit hex colour, such as #b6f16c.'
-              - name: font
-                label: Text font
-                type: select
-                required: true
-                options:
-                  values:
-                    - label: Arial (current)
-                      value: Arial, Helvetica, sans-serif
-                    - label: Georgia
-                      value: Georgia, serif
-                    - label: Verdana
-                      value: Verdana, sans-serif
-                    - label: Monospace
-                      value: monospace
-              - name: width
-                label: Maximum page width (pixels)
-                type: number
-                required: true
-                options:
-                  min: 900
-                  max: 1600
+            pattern:
+              regex: ^#[0-9a-fA-F]{6}$
+              message: 'Use a six-digit hex colour, such as #b6f16c.'
+          - name: foreground
+            label: Foreground
+            type: string
+            required: true
+            pattern:
+              regex: ^#[0-9a-fA-F]{6}$
+              message: 'Use a six-digit hex colour, such as #b6f16c.'
+          - name: accent
+            label: Accent
+            type: string
+            required: true
+            pattern:
+              regex: ^#[0-9a-fA-F]{6}$
+              message: 'Use a six-digit hex colour, such as #b6f16c.'
+          - name: card
+            label: Card
+            type: string
+            required: true
+            pattern:
+              regex: ^#[0-9a-fA-F]{6}$
+              message: 'Use a six-digit hex colour, such as #b6f16c.'
+          - name: border
+            label: Border
+            type: string
+            required: true
+            pattern:
+              regex: ^#[0-9a-fA-F]{6}$
+              message: 'Use a six-digit hex colour, such as #b6f16c.'
+          - name: mutedText
+            label: Secondary text colour
+            type: string
+            required: true
+            pattern:
+              regex: ^#[0-9a-fA-F]{6}$
+              message: 'Use a six-digit hex colour, such as #b6f16c.'
+          - name: font
+            label: Text font
+            type: select
+            required: true
+            options:
+              values:
+                - label: Arial (current)
+                  value: Arial, Helvetica, sans-serif
+                - label: Georgia
+                  value: Georgia, serif
+                - label: Verdana
+                  value: Verdana, sans-serif
+                - label: Monospace
+                  value: monospace
+          - name: width
+            label: Maximum page width (pixels)
+            type: number
+            required: true
+            options:
+              min: 900
+              max: 1600
+          - name: headingFont
+            label: Heading font
+            type: select
+            required: true
+            options:
+              values:
+                - label: Arial (current)
+                  value: Arial, Helvetica, sans-serif
+                - label: Georgia
+                  value: Georgia, serif
+                - label: Verdana
+                  value: Verdana, sans-serif
+                - label: Monospace
+                  value: monospace
+          - name: bodySize
+            label: Body text size (pixels)
+            type: number
+            options:
+              min: 14
+              max: 22
+          - name: lineHeight
+            label: Body line spacing
+            type: number
+            options:
+              min: 1.4
+              max: 2.2
+          - name: coverHeight
+            label: Maximum cover height on large screens (pixels)
+            type: number
+            options:
+              min: 210
+              max: 650
+          - name: coverOpacity
+            label: Cover photo brightness (%)
+            type: number
+            options:
+              min: 30
+              max: 100
+          - name: imageRadius
+            label: Photo corner rounding (pixels)
+            type: number
+            options:
+              min: 0
+              max: 32
+          - name: logoBackground
+            label: Background behind organization logos
+            type: string
+            pattern:
+              regex: ^#[0-9a-fA-F]{6}$
+              message: Use a six-digit hex colour.
+          - name: galleryColumns
+            label: Gallery columns on larger screens
+            type: number
+            options:
+              min: 1
+              max: 3
+          - name: galleryFit
+            label: Gallery photo fitting
+            type: select
+            options:
+              values:
+                - contain
+                - cover
+          - name: galleryRatio
+            label: Gallery photo proportions
+            type: select
+            options:
+              values:
+                - 4 / 3
+                - 3 / 2
+                - 1 / 1
+                - auto
+          - name: projectLayout
+            label: Projects page image alignment
+            type: select
+            options:
+              values:
+                - alternating
+                - image-left
+                - image-right
   - name: profile
     label: Introduction & name
     fields:
@@ -1170,6 +1420,23 @@ content:
                 label: Short caption
                 type: string
                 required: false
+          - name: coverFit
+            label: Project cover fitting
+            type: select
+            options:
+              values:
+                - contain
+                - cover
+          - name: coverPosition
+            label: Project cover crop position
+            type: select
+            options:
+              values:
+                - center
+                - top
+                - bottom
+                - left
+                - right
         description: >-
           Add projects or drag to reorder. Each project automatically appears on the Projects page and has its
           own detail page.

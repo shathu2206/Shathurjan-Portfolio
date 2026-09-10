@@ -8,7 +8,7 @@ An aerospace engineering portfolio for internship and co-op applications.
 
 Open **[Pages CMS](https://app.pagescms.org)** and sign in with GitHub. Select `shathu2206 / Shathurjan-Portfolio` and the `main` branch. Edit your profile, projects, technical experience, leadership, education, awards, and skills through forms and image upload controls. Use **Engineering Updates** to write formatted posts with images and optional LinkedIn links. Saving automatically rebuilds the website; posts appear only when **Show on website** is enabled.
 
-See [EDITING.md](EDITING.md) for the one-time connection and a guide to everyday editing. No code editing is needed for content updates.
+See [EDITING.md](EDITING.md) for the dashboard map and a guide to everyday editing. **Page covers & extra blocks** adds formatted text, images and videos to any existing main page. **Website text & layout** manages navigation, wording, branding and homepage visibility. **Theme & layout** manages colours, typography and supported layout options. No code editing is needed for these updates.
 
 ## GitHub Pages setup
 
@@ -38,6 +38,7 @@ The complete static website is written to `site/out/`: the introduction at `/`, 
 | --- | --- |
 | `.pages.yml` | Visual editing dashboard configuration |
 | `site/content/*.json` | Profile, projects, experience, education, and skills |
+| `site/content/appearance.json` | Shared theme and layout settings edited through Pages CMS |
 | `site/content/portfolio.ts` | Combines the content for the website |
 | `site/public/assets/` | CV and CAD renders |
 | `site/app/page.tsx` | Page layout |

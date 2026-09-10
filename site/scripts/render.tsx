@@ -28,4 +28,4 @@ export function renderPost(post:Post){return document(<PostPage post={post}/>,`$
 export function renderGallery(){return document(<GalleryPage/>,`${content.gallery.title} | ${content.profile.name}`,content.gallery.description)}
 export function renderProjects(){return document(<ProjectsPage/>,`${content.settings.work.title} | ${content.profile.name}`,content.settings.work.description)}
 export function renderProject(project:Project){return document(<ProjectPage project={project}/>,`${project.title} | ${content.profile.name}`,project.summary)}
-export function renderSection(page:CVPageId){const title=page==='contact'?content.contact.title:content.settings[page].title;return document(<SectionPage page={page}/>,`${title} | ${content.profile.name}`,content.pages.find(p=>p.id===page)?.description||title)}
+export function renderSection(page:CVPageId){const title=page==='contact'?content.contact.title:content.settings[page].title;return document(<SectionPage page={page}/>,`${title} | ${content.profile.name}`,page==='contact'?content.contact.intro:content.settings[page].description||title)}

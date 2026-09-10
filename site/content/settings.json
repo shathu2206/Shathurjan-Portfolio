@@ -4,7 +4,12 @@
       "monogram": "SM",
       "subtitle": "ENGINEERING PORTFOLIO",
       "footer": "Aerospace engineering · Toronto",
-      "moreLabel": "More"
+      "moreLabel": "More",
+      "logo": "",
+      "showName": true,
+      "showFooter": true,
+      "showBackToTop": true,
+      "copyright": "{year} {name}"
     },
     "intro": {
       "workButton": "Explore my work",
@@ -13,6 +18,7 @@
       "exploreDescription": "The work, the learning, and the people behind it."
     },
     "sections": [
+      "intro",
       "work",
       "experience",
       "leadership",
@@ -20,7 +26,8 @@
       "awards",
       "skills",
       "updates",
-      "contact"
+      "contact",
+      "gallery"
     ],
     "navigation": [
       {
@@ -92,16 +99,19 @@
     },
     "experience": {
       "eyebrow": "TECHNICAL EXPERIENCE",
-      "title": "Across engineering disciplines."
+      "title": "Across engineering disciplines.",
+      "description": "From student rocketry and UAV research to robotics and flight training."
     },
     "leadership": {
       "eyebrow": "LEADERSHIP & COMMUNITY",
-      "title": "Working with people."
+      "title": "Working with people.",
+      "description": "Coordination, mentorship, and community involvement alongside engineering."
     },
     "education": {
       "eyebrow": "EDUCATION",
       "title": "A foundation to build on.",
-      "gpaLabel": "GPA"
+      "gpaLabel": "GPA",
+      "description": "My academic background and the subjects behind my engineering work."
     },
     "skills": {
       "eyebrow": "TECHNICAL COMPETENCIES",
@@ -128,7 +138,8 @@
       "readLabel": "Read update",
       "backLabel": "All updates",
       "byLabel": "By",
-      "linkedinLabel": "Read on LinkedIn"
+      "linkedinLabel": "Read on LinkedIn",
+      "showSidebar": true
     },
     "accessibility": {
       "skipLink": "Skip to content",
@@ -141,19 +152,20 @@
       "description": "Projects, technical experience, leadership, education, and engineering updates.",
       "updatesTitle": "Engineering Updates"
     },
-    "appearance": {
-      "background": "#101922",
-      "foreground": "#f1f5f7",
-      "accent": "#b6f16c",
-      "card": "#16212b",
-      "border": "#34424e",
-      "mutedText": "#b3bfc9",
-      "font": "Arial, Helvetica, sans-serif",
-      "width": 1240
-    },
     "awards": {
       "eyebrow": "RECOGNITION",
-      "title": "Awards & achievements"
+      "title": "Awards & achievements",
+      "description": "Academic recognition, engineering communication, and flight training."
+    },
+    "home": {
+      "showAvailability": true,
+      "showLanguages": true,
+      "showHighlights": true,
+      "showDirectory": true,
+      "showWorkButton": true,
+      "showCvButton": true,
+      "nameLayout": "stacked",
+      "photoSide": "right"
     }
   }
 }

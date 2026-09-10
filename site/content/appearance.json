@@ -1,0 +1,23 @@
+{
+  "appearance": {
+    "background": "#101922",
+    "foreground": "#f1f5f7",
+    "accent": "#b6f16c",
+    "card": "#16212b",
+    "border": "#34424e",
+    "mutedText": "#b3bfc9",
+    "font": "Arial, Helvetica, sans-serif",
+    "width": 1240,
+    "headingFont": "Arial, Helvetica, sans-serif",
+    "bodySize": 16,
+    "lineHeight": 1.75,
+    "coverHeight": 360,
+    "coverOpacity": 72,
+    "imageRadius": 0,
+    "logoBackground": "#ffffff",
+    "galleryColumns": 2,
+    "galleryFit": "contain",
+    "galleryRatio": "4 / 3",
+    "projectLayout": "alternating"
+  }
+}
