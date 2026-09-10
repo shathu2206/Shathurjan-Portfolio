@@ -1,3 +1,5 @@
+import {ImageFilters} from '../components/image-filters';
+export {imageFilterStyles} from '../components/image-filters';
 import { renderToStaticMarkup } from 'react-dom/server';
 import Home from '../app/page';
 import {GalleryPage} from '../components/gallery';
@@ -14,7 +16,7 @@ export {embedUrl} from '../lib/media';
 export { content };
 export { loadPosts };
 
-function document(page:React.ReactNode,title:string,description:string,carousel=false){return '<!doctype html>'+renderToStaticMarkup(<html lang="en" style={themeStyle()}><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><link rel="icon" href={`${base}/favicon.svg`}/><link rel="stylesheet" href={`${base}/styles.css`}/></head><body>{page}<script src={`${base}/site-navigation.js`} defer data-legacy-routes={carousel?JSON.stringify(Object.fromEntries([...routeIds.filter(id=>id!=='intro').map(id=>[id,pageUrl(id)]),...content.projects.map(p=>[p.id,projectUrl(p.id)])])):undefined}/>{carousel&&<script src={`${base}/intro-carousel.js`} defer/>}</body></html>)}
+function document(page:React.ReactNode,title:string,description:string,carousel=false){return '<!doctype html>'+renderToStaticMarkup(<html lang="en" style={themeStyle()}><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>{title}</title><meta name="description" content={description}/><link rel="icon" href={`${base}/favicon.svg`}/><link rel="stylesheet" href={`${base}/styles.css`}/><ImageFilters/></head><body>{page}<script src={`${base}/site-navigation.js`} defer data-legacy-routes={carousel?JSON.stringify(Object.fromEntries([...routeIds.filter(id=>id!=='intro').map(id=>[id,pageUrl(id)]),...content.projects.map(p=>[p.id,projectUrl(p.id)])])):undefined}/>{carousel&&<script src={`${base}/intro-carousel.js`} defer/>}</body></html>)}
 
 export function renderIcon(){return renderToStaticMarkup(<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="10" fill={content.settings.appearance.background}/><text x="32" y="43" textAnchor="middle" fontFamily="Arial,sans-serif" fontWeight="700" fontSize="26" fill={content.settings.appearance.accent}>{content.settings.branding.monogram}</text></svg>)}
 

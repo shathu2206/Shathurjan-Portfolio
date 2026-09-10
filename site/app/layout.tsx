@@ -1,3 +1,4 @@
+import {ImageFilters} from '../components/image-filters';
 import type { Metadata } from 'next';
 import content from '../content/portfolio';
 import {themeStyle} from '../lib/theme';
@@ -8,5 +9,5 @@ export const metadata: Metadata = {
   icons: { icon: `${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/favicon.svg` },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" style={themeStyle()}><body>{children}<script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/site-navigation.js`} defer/><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/intro-carousel.js`} defer/></body></html>;
+  return <html lang="en" style={themeStyle()}><head><ImageFilters/></head><body>{children}<script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/site-navigation.js`} defer/><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/intro-carousel.js`} defer/></body></html>;
 }

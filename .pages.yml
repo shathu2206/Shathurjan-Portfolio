@@ -1169,6 +1169,85 @@ content:
                 - alternating
                 - image-left
                 - image-right
+  - name: image-filters
+    label: Image filters
+    type: file
+    path: site/content/image-filters.json
+    format: json
+    fields:
+      - name: imageFilters
+        label: Filters by image
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.image}'
+        description: >-
+          Choose an existing image to control its appearance everywhere that same file is used, including
+          covers, slideshow, gallery, logos and posts. No uploaded file is altered. Use one entry per image.
+        fields:
+          - name: image
+            label: Image to style
+            type: image
+            required: true
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+          - name: enabled
+            label: Apply these image settings
+            type: boolean
+            default: true
+            description: >-
+              Turn off to return to the page defaults. To remove a cover’s grayscale effect, leave this on and
+              choose Original colours.
+          - name: effect
+            label: Colour filter
+            type: select
+            default: original
+            options:
+              values:
+                - label: Original colours (no colour filter)
+                  value: original
+                - label: Grayscale
+                  value: grayscale
+                - label: Sepia
+                  value: sepia
+          - name: brightness
+            label: Brightness (%)
+            type: number
+            default: 100
+            options:
+              min: 0
+              max: 200
+            description: 100 = normal. Lower to reduce, higher to increase.
+          - name: contrast
+            label: Contrast (%)
+            type: number
+            default: 100
+            options:
+              min: 0
+              max: 200
+            description: 100 = normal. Lower to reduce, higher to increase.
+          - name: saturation
+            label: Saturation (%)
+            type: number
+            default: 100
+            options:
+              min: 0
+              max: 200
+            description: 100 = normal. Lower to reduce, higher to increase.
+          - name: opacity
+            label: Opacity (%)
+            type: number
+            default: 100
+            options:
+              min: 0
+              max: 100
+            description: 100 = fully visible.
   - name: profile
     label: Introduction & name
     fields:
