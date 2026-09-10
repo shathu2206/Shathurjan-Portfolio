@@ -6,7 +6,8 @@
         "Toronto Metropolitan University"
       ],
       "logo": "assets/tmu-logo.svg",
-      "url": "https://www.torontomu.ca/"
+      "url": "https://www.torontomu.ca/",
+      "visible": true
     },
     {
       "name": "NASA Space Apps Challenge",
@@ -14,23 +15,23 @@
         "NASA Space Apps"
       ],
       "logo": "assets/space-apps-logo.png",
-      "url": "https://www.spaceappschallenge.org/"
+      "url": "https://www.spaceappschallenge.org/",
+      "visible": true
     },
     {
       "name": "MARS",
       "match": [
         "Metropolitan Aerospace Rocket Society"
       ],
-      "logo": "",
-      "url": ""
+      "logo": "assets/Mars_Logo_Text-Nikolai-Sydorenko.png",
+      "visible": true
     },
     {
       "name": "University Soaring Society",
       "match": [
         "University Soaring Society"
       ],
-      "logo": "",
-      "url": ""
+      "visible": true
     }
   ]
 }
