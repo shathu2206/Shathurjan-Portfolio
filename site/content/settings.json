@@ -9,7 +9,8 @@
       "showName": true,
       "showFooter": true,
       "showBackToTop": true,
-      "copyright": "{year} {name}"
+      "copyright": "{year} {name}",
+      "hideOnScroll": true
     },
     "intro": {
       "workButton": "Explore my work",

@@ -5,6 +5,49 @@
   const menu = document.querySelector('.nav-more');
   const panel = menu?.querySelector('.nav-menu');
   const summary = menu?.querySelector('summary');
+  const header = document.querySelector('.header-shell');
+  if (header?.dataset?.scrollHide === 'true') {
+    const scrollPosition = () => Math.max(0, Math.min(window.scrollY, document.documentElement.scrollHeight - window.innerHeight));
+    let previous = scrollPosition();
+    let distance = 0;
+    let direction = 0;
+    let queued = false;
+    const reveal = () => {
+      header.classList.remove('is-scrolled-away');
+      previous = scrollPosition();
+      distance = 0;
+      direction = 0;
+    };
+    const update = () => {
+      queued = false;
+      const current = scrollPosition();
+      const delta = current - previous;
+      previous = current;
+      if (current <= header.offsetHeight + 24 || menu?.open || header.matches(':focus-within')) {
+        reveal();
+        return;
+      }
+      if (!delta) return;
+      const nextDirection = Math.sign(delta);
+      distance = nextDirection === direction ? distance + Math.abs(delta) : Math.abs(delta);
+      direction = nextDirection;
+      // Ignore small trackpad movements and touch bounce at either page edge.
+      if (distance >= 8) {
+        header.classList.toggle('is-scrolled-away', direction > 0);
+        distance = 0;
+      }
+    };
+    window.addEventListener('scroll', () => {
+      if (!queued) {
+        queued = true;
+        window.requestAnimationFrame(update);
+      }
+    }, {passive:true});
+    window.addEventListener('resize', reveal, {passive:true});
+    window.addEventListener('pageshow', reveal);
+    header.addEventListener('focusin', reveal);
+    menu?.addEventListener('toggle', () => { if (menu.open) reveal(); });
+  }
   const fitPanel = () => {
     if (!menu?.open || !panel) return;
     const viewport = window.visualViewport;

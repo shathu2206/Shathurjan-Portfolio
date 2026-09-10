@@ -121,6 +121,10 @@ button:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px soli
 @media (max-width: 720px) { .site-header nav { font-size: .8125rem; } }
 
 /* CMS presentation settings retain the original defaults and mobile reflow. */
+.header-shell[data-scroll-hide="true"] { position: sticky; transition: transform .18s ease; }
+.header-shell.is-scrolled-away { transform: translateY(-100%); }
+.header-shell:focus-within { transform: translateY(0); transition: none; }
+@media (prefers-reduced-motion: reduce) { .header-shell[data-scroll-hide="true"] { transition: none; } }
 html { font-size: var(--body-size, 16px); }
 body { font-size: 1rem; line-height: var(--body-line-height, 1.75); }
 h1, h2, h3, h4 { font-family: var(--heading-font, var(--site-font)); }

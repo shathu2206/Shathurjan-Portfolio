@@ -615,6 +615,13 @@ content:
                 label: Copyright text
                 type: string
                 description: Use {year} for the current year and {name} for your profile name.
+              - name: hideOnScroll
+                label: Hide navigation when scrolling down
+                type: boolean
+                default: true
+                description: >-
+                  The top bar returns when you scroll up. It stays visible while its menu is open or a
+                  navigation item has keyboard focus.
           - name: intro
             label: Introduction buttons
             type: object

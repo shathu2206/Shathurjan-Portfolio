@@ -32,6 +32,8 @@ Home is now an introduction and directory. Projects, Experience, Skills, Gallery
 
 Under **Website text & layout → Navigation tabs**, change a label, drag links to reorder, or choose **Top bar** / **More menu**. Keep the top bar short for smaller screens. The More icon changes from plus to minus while open. Enter or Space toggles it; Arrow Down opens it and focuses the first link; Tab moves through links, and Escape closes it. The dropdown scrolls within the available screen height. **Pages shown in navigation and homepage directory** controls which CV/project pages are linked. Hiding a link does not delete its page; the direct address still works. This visibility list covers Home, Gallery and Updates too.
 
+The top bar hides as you scroll down and returns when you scroll up. It stays visible near the top of the page, while More is open, or while a navigation item has focus. You can turn this behavior off under **Website text & layout → Header and footer → Hide navigation when scrolling down**.
+
 Old homepage section links forward to the corresponding new pages.
 
 ## Add or update a project
