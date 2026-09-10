@@ -169,4 +169,11 @@ h1, h2, h3, h4 { font-family: var(--heading-font, var(--site-font)); }
 .theme-options button[aria-pressed="true"]{box-shadow:inset 3px 0 var(--primary)}
 .theme-options button:focus-visible{outline:2px solid var(--primary);outline-offset:1px}
 body{padding-bottom:80px}
+/* Keep translucent cover photos on the same dark backing in either theme. */
+.page-cover{background:#16212b}
+.page-cover figcaption{left:auto;max-width:calc(100% - 48px);padding:4px 8px;border-radius:4px;background:rgb(0 0 0 / .8);font-size:.75rem}
+.page-cover figcaption a,.page-cover figcaption a:hover{color:#fff}
+.page-cover figcaption a:hover{text-decoration:underline}
+[data-theme="light"] .primary:hover{background:color-mix(in srgb,var(--primary) 85%,black)}
+@media(prefers-color-scheme:light){:root:not([data-theme]) .primary:hover{background:color-mix(in srgb,var(--primary) 85%,black)}}
 @media(prefers-reduced-motion:reduce){.theme-picker summary{transition:none}}
