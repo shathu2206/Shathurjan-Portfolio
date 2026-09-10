@@ -11,9 +11,17 @@
         "Collaborate with electronics and software teams to align mechanical design with control and AI navigation systems.",
         "Support research into lightweight materials and control surface design for future autonomous deployment."
       ],
-      "image": "assets/screenshot4-8-2026185926wwwinstagramcom.jpeg",
       "imageAlt": "hehe",
-      "imageCaption": "haha"
+      "imageCaption": "haha",
+      "showLogo": true,
+      "showPhotos": true,
+      "photos": [
+        {
+          "image": "assets/screenshot4-8-2026185926wwwinstagramcom-1.jpeg",
+          "alt": "hehe",
+          "visible": true
+        }
+      ]
     },
     {
       "title": "Lead-in-Training",
@@ -25,7 +33,9 @@
         "Assist teams with preliminary rocket configuration, stability analysis, and performance evaluation using OpenRocket.",
         "Guide members through CAD development in Onshape, including component design, assembly integration, and design iteration.",
         "Assist with manufacturing, troubleshooting, launch preparation, and technical decision-making while developing team leadership skills."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     },
     {
       "title": "Glider Pilot Trainee · Scholarship Recipient",
@@ -37,7 +47,9 @@
         "Progressed through supervised glider flight training and successfully completed first solo flight.",
         "Develop practical experience in aircraft handling, aerotow procedures, circuit operations, takeoffs, landings, and flight safety.",
         "Continue flight training and licensing requirements toward obtaining a Glider Pilot Licence."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     },
     {
       "title": "Propulsion Subteam Member · Igniter Team",
@@ -49,7 +61,9 @@
         "Reviewed material options, manufacturing processes, and safety factors relevant to igniter development and spincasting.",
         "Attended propulsion meetings to understand igniter requirements and gain exposure to hybrid-engine fundamentals.",
         "Support igniter development activities while building practical knowledge of propulsion-system design, manufacturing, and testing."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     },
     {
       "title": "Competitor · Mechanical / Structural Designer",
@@ -61,7 +75,9 @@
         "Model parts in Onshape with CF-PETG and steel reinforcements to balance stiffness, impact strength, and weight.",
         "Manage mass budget, geometry layout, and manufacturability under beetleweight constraints.",
         "Integrate with electronics systems for wiring protection, component placement, and service accessibility."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     },
     {
       "title": "Competitor · Lead Developer",
@@ -73,7 +89,9 @@
         "Built a Node.js and Express server with front-end logic in HTML, CSS, and JavaScript using Esri ArcGIS and Open-Meteo APIs.",
         "Modelled crater scaling, shockwave radius, and energy propagation using open scientific datasets for hazard prediction.",
         "Earned NASA Space Apps “Best Storytelling” Second Runner-Up for clarity in scientific communication and system design."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     },
     {
       "title": "Competitor · Lead CAD Designer",
@@ -85,7 +103,9 @@
         "Derived and implemented curvature equations to generate accurate geometry based on OpenRocket data.",
         "Integrated spline-based point inputs from MATLAB into CATIA for parametric surface generation.",
         "Ensured alignment between avionics design, structural manufacturability, and aerodynamic performance."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     },
     {
       "title": "Embedded Systems Designer",
@@ -97,7 +117,9 @@
         "Programmed C++ logic for real-time response to soil-moisture and environmental sensors.",
         "Wired and calibrated circuits for stable closed-loop control and reliable one-year operation.",
         "Collaborated with the biology team to define operational thresholds and environmental parameters."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     },
     {
       "title": "Electronics Integrator",
@@ -109,7 +131,9 @@
         "Created 3D-printed chassis parts using Bambu Studio and Arduino IDE C++ for motor control routines.",
         "Supported troubleshooting and debugging post-demo to identify performance inconsistencies.",
         "Gained foundational experience in autonomous system wiring, motion control, and sensor integration."
-      ]
+      ],
+      "showLogo": true,
+      "showPhotos": true
     }
   ]
 }
