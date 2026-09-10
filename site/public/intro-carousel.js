@@ -40,6 +40,7 @@ class IntroCarousel extends HTMLElement {
       else this.schedule();
     });
     listen(this,'pointercancel',()=>{this.gesture=null;this.schedule();});
+    listen(this,'lostpointercapture',()=>{if(this.gesture){this.gesture=null;this.schedule();}});
     listen(this,'focusin',()=>{this.focused=true;this.stop();});
     listen(this,'focusout',event=>{this.focused=this.contains(event.relatedTarget);this.schedule();});
     listen(document,'visibilitychange',()=>this.schedule());

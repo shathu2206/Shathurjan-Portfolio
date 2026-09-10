@@ -1,6 +1,6 @@
 # Edit your portfolio without code
 
-**[Open Pages CMS](https://app.pagescms.org/shathu2206/shathurjan-portfolio/main)** Â· **[View your website](https://shathu2206.github.io/Shathurjan-Portfolio/)**
+**[Open Pages CMS](https://app.pagescms.org/shathu2206/shathurjan-portfolio/main)** · **[View your website](https://shathu2206.github.io/Shathurjan-Portfolio/)**
 
 Choose a dashboard section, make changes, and press **Save**. Saving automatically publishes the website through GitHub Pages. Allow about a minute, then refresh the website. Uploading a file to Media alone does not place it on a page: select that file in a photo or cover field and save the content too.
 
@@ -11,7 +11,7 @@ Choose a dashboard section, make changes, and press **Save**. Saving automatical
 | **Introduction & name** | Your name, combined intro/about, availability, languages and highlights |
 | **Intro photos** | The slideshow beside your introduction: photos, captions, order, crop and timing |
 | **Page covers** | The wide cover photo, crop position and credit for each page; introductions for Experience, Education, Leadership and Awards |
-| **Organization logos** | Logos beside matching CV entries, plus the homepage organization strip |
+| **Organization logos** | Logos beside matching CV entries and projects, with optional website links |
 | **Projects** | The Projects index and every individual project page, including cover images, story blocks, photos and videos |
 | **Technical experience** | Engineering roles, responsibilities, dates and optional work photos |
 | **Leadership & community** | Leadership and volunteer roles, descriptions and optional photos |
@@ -27,7 +27,7 @@ Choose a dashboard section, make changes, and press **Save**. Saving automatical
 
 Home is now an introduction and directory. Projects, Experience, Skills, Gallery and Updates are separate pages. Education, Awards & Achievements, Leadership and Contact also have their own pages, linked through **More** and the homepage directory.
 
-Under **Website text & layout â†’ Navigation tabs**, change a label, drag links to reorder, or choose **Top bar** / **More menu**. Keep the top bar short for smaller screens. **Pages shown in navigation and homepage directory** controls which CV/project pages are linked. Hiding a link does not delete its page; the direct address still works. Home, Gallery and Updates remain available unless you remove their navigation entries.
+Under **Website text & layout → Navigation tabs**, change a label, drag links to reorder, or choose **Top bar** / **More menu**. Keep the top bar short for smaller screens. The More icon changes from plus to minus while open. Enter or Space toggles it; Arrow Down opens it and focuses the first link; Tab moves through links, and Escape closes it. The dropdown scrolls within the available screen height. **Pages shown in navigation and homepage directory** controls which CV/project pages are linked. Hiding a link does not delete its page; the direct address still works. Home, Gallery and Updates remain available unless you remove their navigation entries.
 
 Old homepage section links forward to the corresponding new pages.
 
@@ -49,21 +49,21 @@ Your current covers are labelled illustrative diagrams, not CAD renders of your 
 
 Open **Skills**. Add or rename a category, then open each individual skill and set **Your proficiency**: Not yet rated, Introduced, Developing, Proficient, or Advanced. All initial ratings are **Not yet rated**, for you to assess yourself. Optional notes can describe training or project use. Drag skills and categories to reorder them.
 
-The visible labels can be renamed under **Website text & layout â†’ Skills page text â†’ Proficiency labels**. Keep the five labels in the same order; ratings refer to their positions.
+The visible labels can be renamed under **Website text & layout → Skills page text → Proficiency labels**. Keep the five labels in the same order; ratings refer to their positions.
 
 ## Covers and logos
 
 In **Page covers**, open the entry for the relevant page and choose a photo. Add its description, crop position and optional credit/source link. Remove the image for a text-only header. Keep one entry per page. Other page headings and introductions are edited under their own content sections or **Website text & layout**.
 
-In **Organization logos**, add the organization name, its logo and a matching name from your experience/education/project entries. For example, `NASA Space Apps` matches any organization entry containing that phrase. The logo is used alongside those entries. **Show in homepage organization strip** adds it to the introduction page, with your involvement as a caption. Without a logo, that strip uses the organization's name. Upload the real team logo when you have it.
+In **Organization logos**, add the organization name, its logo and a matching name from your experience/education/project entries. For example, `NASA Space Apps` matches any organization entry containing that phrase. The logo is used alongside those entries. Its optional website address becomes a clickable logo link. Upload the real team logo when you have it. The homepage organization strip has been removed.
 
 The starter cover photos are credited NASA research imagery, separate from your own project work. Logo and photo sources are recorded in [MEDIA-CREDITS.md](MEDIA-CREDITS.md).
 
 ## Intro photos and Gallery
 
-Open **Intro photos â†’ Photos** to add, replace or reorder slideshow images. Select the image, add a description and optional caption, then save. The dots remain below the image; arrows appear on mouse hover, and mobile visitors can swipe. Automatic changes default to 15 seconds. One photo displays without controls; no photos hides the frame.
+Open **Intro photos → Photos** to add, replace or reorder slideshow images. Select the image, add a description and optional caption, then save. The dots remain below the image; arrows appear on mouse hover, and mobile visitors can swipe. Automatic changes default to 15 seconds. One photo displays without controls; no photos hides the frame.
 
-Open **Gallery â†’ Photos** for the separate gallery. Each item has an image, title and short caption. Drag to reorder or remove entries. Your current intro photo list is preserved.
+Open **Gallery → Photos** for the separate gallery. Each item has an image, title and short caption. Drag to reorder or remove entries. Your current intro photo list is preserved.
 
 ## Write an engineering update
 
@@ -88,3 +88,5 @@ Make sure you saved the content entry after selecting its media, wait briefly an
 Choose PNG, JPG, JPEG, WebP or SVG for images. Around 1600 pixels wide and under 1 MB is a useful target for photos. Remove an image from all content entries and save before deleting the file from Media.
 
 Normal content changes require no code. New kinds of components beyond these layouts still need a design/code change.
+
+The layout reflows for narrow screens and zoomed text. Short landscape screens use a scrolling header to leave room for the content. Touch targets are enlarged on touch-capable devices; the slideshow retains swipes, mouse-hover arrows, keyboard controls, reduced-motion support and pinch zoom.

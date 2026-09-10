@@ -296,7 +296,9 @@ content:
             label: Organization logo
             type: image
             required: false
-            description: Use the actual organization logo. Without a logo, its name is used in the homepage strip.
+            description: >-
+              Use the actual organization logo. It appears beside matching experience, education, awards and
+              projects.
             options:
               extensions:
                 - png
@@ -308,13 +310,7 @@ content:
             label: Organization website
             type: string
             required: false
-          - name: note
-            label: Your involvement — homepage caption
-            type: string
-            required: false
-          - name: featured
-            label: Show in homepage organization strip
-            type: boolean
+            description: Optional website opened when a visitor selects this logo.
   - name: contact
     label: Get in touch
     type: file
@@ -515,10 +511,6 @@ content:
                 required: true
               - name: exploreDescription
                 label: Homepage directory introduction
-                type: string
-                required: true
-              - name: organizationsLabel
-                label: Organization strip heading
                 type: string
                 required: true
           - name: sections

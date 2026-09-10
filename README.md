@@ -1,4 +1,4 @@
-# Shathurjan Muhunthan â€” Engineering Portfolio
+# Shathurjan Muhunthan — Engineering Portfolio
 
 An aerospace engineering portfolio for internship and co-op applications.
 
@@ -12,7 +12,7 @@ See [EDITING.md](EDITING.md) for the one-time connection and a guide to everyday
 
 ## GitHub Pages setup
 
-Keep this repository public for free GitHub Pages hosting. In **Settings â†’ Pages â†’ Build and deployment**, set **Source** to **GitHub Actions**. The included **Publish portfolio** workflow builds and deploys every change to `main`. You can also run it manually from the Actions tab.
+Keep this repository public for free GitHub Pages hosting. In **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**. The included **Publish portfolio** workflow builds and deploys every change to `main`. You can also run it manually from the Actions tab.
 
 ## Local preview
 

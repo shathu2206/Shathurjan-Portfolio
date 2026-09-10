@@ -10,8 +10,7 @@
       "workButton": "Explore my work",
       "cvButton": "View CV",
       "exploreLabel": "Explore the portfolio",
-      "exploreDescription": "The work, the learning, and the people behind it.",
-      "organizationsLabel": "EDUCATION & PROJECT INVOLVEMENT"
+      "exploreDescription": "The work, the learning, and the people behind it."
     },
     "sections": [
       "work",

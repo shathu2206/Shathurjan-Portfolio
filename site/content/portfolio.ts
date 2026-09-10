@@ -18,7 +18,7 @@ export interface Experience { title: string; organization: string; date: string;
 export interface StoryBlock {title:string;body?:string;image?:string;imageAlt?:string;caption?:string;layout?:string;videoUrl?:string;videoFile?:string}
 export interface Project {id:string;title:string;category:string;organization:string;date:string;role:string;summary:string;contributions:string[];outcomeLabel:string;outcome:string;tools:string[];images:{src:string;alt:string;caption?:string}[];link?:string;cover?:string;coverAlt?:string;coverCaption?:string;featured?:boolean;sections:StoryBlock[];videos:{title:string;url?:string;file?:string;caption?:string}[]}
 export interface PageCover {id:string;cover?:string;coverAlt?:string;position?:string;credit?:string;creditUrl?:string;description?:string}
-export interface Organization {name:string;match:string[];logo?:string;url?:string;note?:string;featured?:boolean}
+export interface Organization {name:string;match:string[];logo?:string;url?:string}
 
 interface Portfolio {
   pages:PageCover[];

@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { mkdir, readFile, writeFile, cp, rm, access } from 'node:fs/promises';
 import { resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
+import { assertTextIntegrity } from './text-integrity.mjs';
 
 // This portfolio is a static document. Render React at build time so GitHub
 // Pages needs no server; the intro carousel uses a small progressive-enhancement script.
@@ -53,6 +54,10 @@ for(const post of posts){
   await writeFile(resolve(output,'updates',post.slug,'index.html'),renderPost(post));
 }
 await writeFile(resolve(output, '.nojekyll'), '');
+const textFiles=['styles.css','index.html','projects/index.html','gallery/index.html','updates/index.html',
+  ...content.projects.map(p=>`projects/${p.id}/index.html`),
+  ...cvPageIds.map(p=>`${p}/index.html`),...posts.map(p=>`updates/${p.slug}/index.html`)];
+for(const file of textFiles)assertTextIntegrity(await readFile(resolve(output,file),'utf8'),file);
 const newAssets=[...content.pages.map(p=>p.cover),...content.organizations.map(o=>o.logo),...content.experience.map(e=>e.image),...content.leadership.map(e=>e.image),...content.projects.flatMap(p=>[p.cover,...p.sections.flatMap(s=>[s.image,s.videoFile]),...p.videos.map(v=>v.file)])].filter(Boolean);
 for(const item of [...content.pages.map(p=>({image:p.cover,alt:p.coverAlt})),...content.experience.map(e=>({image:e.image,alt:e.imageAlt})),...content.leadership.map(e=>({image:e.image,alt:e.imageAlt})),...content.projects.flatMap(p=>[{image:p.cover,alt:p.coverAlt},...p.sections.map(s=>({image:s.image,alt:s.imageAlt}))])]){
   if(item.image&&!item.alt?.trim())throw new Error(`Add an image description for ${item.image}`);

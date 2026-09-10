@@ -6,9 +6,7 @@
         "Toronto Metropolitan University"
       ],
       "logo": "assets/tmu-logo.svg",
-      "url": "https://www.torontomu.ca/",
-      "note": "BEng · Aerospace Engineering",
-      "featured": true
+      "url": "https://www.torontomu.ca/"
     },
     {
       "name": "NASA Space Apps Challenge",
@@ -16,9 +14,7 @@
         "NASA Space Apps"
       ],
       "logo": "assets/space-apps-logo.png",
-      "url": "https://www.spaceappschallenge.org/",
-      "note": "2025 challenge participant",
-      "featured": true
+      "url": "https://www.spaceappschallenge.org/"
     },
     {
       "name": "MARS",
@@ -26,9 +22,7 @@
         "Metropolitan Aerospace Rocket Society"
       ],
       "logo": "",
-      "url": "",
-      "note": "Student rocketry",
-      "featured": true
+      "url": ""
     },
     {
       "name": "University Soaring Society",
@@ -36,9 +30,7 @@
         "University Soaring Society"
       ],
       "logo": "",
-      "url": "",
-      "note": "Glider flight training",
-      "featured": true
+      "url": ""
     }
   ]
 }
