@@ -14,7 +14,7 @@
     "coverHeight": 360,
     "coverOpacity": 72,
     "imageRadius": 0,
-    "logoBackground": "#ffffff",
+    "logoBackground": "transparent",
     "galleryColumns": 2,
     "galleryFit": "contain",
     "galleryRatio": "4 / 3",

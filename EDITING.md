@@ -81,6 +81,16 @@ The starter cover photos are credited NASA research imagery, separate from your 
 
 ## Intro photos and Gallery
 
+### Size each image independently
+
+Beside every image or logo picker, open **[image name] — size & background** and turn on **Customize this image**. Set its width percentage, optional maximum width in pixels, aspect ratio, fit, crop position and background. For example, set a logo to a maximum width of 180 pixels, or one experience photo to 600 pixels. Images still shrink to fit smaller screens. **Original proportions** avoids stretching; **Fill and crop** fills a selected aspect ratio.
+
+These controls are available inside individual experience and leadership entries (including each additional photo), education, awards, projects and story blocks, page covers, intro photos, Gallery, Updates and the header logo. **Organization logos** sets the shared logo's layout; an entry's logo layout can override it independently. Reusing the same uploaded file does not couple these placement settings. Turn off **Customize this image** to return to the normal layout or shared logo setting.
+
+PNG transparency is preserved. Logos now default to a transparent background; select **white**, **dark** or **theme** for an individual image if it needs contrast. This changes the area behind an image, not pixels already contained in the file. The Space Apps PNG already has a transparent background.
+
+The separate **Image appearance & sizing** editor still supports filters and fallback sizing by file. Individual placement sizing takes priority. Images embedded inside formatted post text use that by-file editor; use an image picker/story block when you need separate placement controls. Save the edited entry in Pages CMS, then wait for GitHub Pages to rebuild.
+
 Open **Intro photos → Photos** to add, replace or reorder slideshow images. Select the image, add a description and optional caption, then save. The dots remain below the image; arrows appear on mouse hover, and mobile visitors can swipe. Automatic changes default to 15 seconds. One photo displays without controls; no photos hides the frame.
 
 Open **Gallery → Photos** for the separate gallery. Each item has an image, title, short caption and optional crop controls. Drag to reorder or remove entries. **Theme & layout** sets the default image fitting, proportions and number of columns on larger screens; mobile keeps a single column. `auto` proportions show images at their natural aspect ratio. An individual photo's fitting override takes priority over the gallery default.

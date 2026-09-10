@@ -67,6 +67,81 @@ content:
             - jpeg
             - webp
             - svg
+      - name: imageLayout
+        label: Cover image — size & background
+        type: object
+        fields:
+          - name: enabled
+            label: Customize this image
+            type: boolean
+            default: false
+            description: Applies only to this placement. Turn off to use the normal page layout.
+          - name: width
+            label: Width (% of available space)
+            type: number
+            default: 100
+            options:
+              min: 1
+              max: 100
+          - name: maxWidth
+            label: Maximum width (pixels)
+            type: number
+            description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+            options:
+              min: 16
+              max: 3840
+          - name: ratio
+            label: Aspect ratio
+            type: select
+            default: auto
+            options:
+              values:
+                - value: auto
+                  label: Original proportions
+                - value: 16 / 9
+                  label: 16 / 9
+                - value: 3 / 2
+                  label: 3 / 2
+                - value: 4 / 3
+                  label: 4 / 3
+                - value: 1 / 1
+                  label: 1 / 1
+                - value: 4 / 5
+                  label: 4 / 5
+                - value: 9 / 16
+                  label: 9 / 16
+          - name: fit
+            label: Fit
+            type: select
+            default: contain
+            options:
+              values:
+                - value: contain
+                  label: Show entire image
+                - value: cover
+                  label: Fill and crop
+          - name: position
+            label: Crop position
+            type: select
+            default: center
+            options:
+              values:
+                - center
+                - top
+                - bottom
+                - left
+                - right
+          - name: background
+            label: Background behind image
+            type: select
+            default: transparent
+            options:
+              values:
+                - transparent
+                - white
+                - dark
+                - theme
+            description: Transparent preserves PNG transparency. Cannot remove a background already baked into a file.
       - name: imageAlt
         label: Cover image description
         type: string
@@ -158,6 +233,83 @@ content:
                     - jpeg
                     - webp
                     - svg
+              - name: imageLayout
+                label: Photo — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: alt
                 label: Image description
                 type: string
@@ -237,6 +389,83 @@ content:
                 - jpeg
                 - webp
                 - svg
+          - name: coverLayout
+            label: Cover photo — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
           - name: coverAlt
             label: Image description
             type: string
@@ -306,6 +535,83 @@ content:
                     - jpeg
                     - webp
                     - svg
+              - name: imageLayout
+                label: Photo, CAD render, drawing or chart — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: imageAlt
                 label: Image description
                 type: string
@@ -389,6 +695,83 @@ content:
                 - jpeg
                 - webp
                 - svg
+          - name: logoLayout
+            label: Organization logo — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
           - name: url
             label: Organization website
             type: string
@@ -537,6 +920,83 @@ content:
                     - jpeg
                     - webp
                     - svg
+              - name: imageLayout
+                label: Photo — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: title
                 label: Photo title
                 type: string
@@ -609,6 +1069,83 @@ content:
                     - jpeg
                     - webp
                     - svg
+              - name: logoLayout
+                label: Header logo image (optional) — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: showName
                 label: Show name and subtitle beside logo
                 type: boolean
@@ -1146,6 +1683,7 @@ content:
             pattern:
               regex: ^#[0-9a-fA-F]{6}$
               message: Use a six-digit hex colour.
+            description: 'Use transparent to preserve PNG transparency, or a hex color such as #ffffff.'
           - name: galleryColumns
             label: Gallery columns on larger screens
             type: number
@@ -1463,6 +2001,83 @@ content:
                     - jpeg
                     - webp
                     - svg
+              - name: srcLayout
+                label: Image — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: alt
                 label: Image description
                 type: string
@@ -1493,6 +2108,83 @@ content:
                 - jpeg
                 - webp
                 - svg
+          - name: coverLayout
+            label: Cover image — project list and project page — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
           - name: coverAlt
             label: Cover image description
             type: string
@@ -1544,6 +2236,83 @@ content:
                     - jpeg
                     - webp
                     - svg
+              - name: imageLayout
+                label: Photo, CAD render, drawing or chart — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: imageAlt
                 label: Image description
                 type: string
@@ -1668,6 +2437,83 @@ content:
             description: >-
               Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
               switch off to hide either logo.
+          - name: logoLayout
+            label: Company / organization logo override — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
         description: >-
           Add projects or drag to reorder. Each project automatically appears on the Projects page and has its
           own detail page.
@@ -1716,6 +2562,83 @@ content:
                 - jpeg
                 - webp
                 - svg
+          - name: imageLayout
+            label: Optional photo — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
           - name: imageAlt
             label: Photo description
             type: string
@@ -1741,6 +2664,83 @@ content:
             description: >-
               Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
               switch off to hide either logo.
+          - name: logoLayout
+            label: Company / organization logo override — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
           - name: showPhotos
             label: Show work photos
             type: boolean
@@ -1764,6 +2764,83 @@ content:
                     - webp
                     - svg
                 required: true
+              - name: imageLayout
+                label: Photo — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: alt
                 label: Image description
                 type: string
@@ -1846,6 +2923,83 @@ content:
                 description: >-
                   Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn
                   the switch off to hide either logo.
+              - name: logoLayout
+                label: Company / organization logo override — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
           - name: showLogo
             label: Show company / organization logo
             type: boolean
@@ -1863,6 +3017,83 @@ content:
             description: >-
               Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
               switch off to hide either logo.
+          - name: logoLayout
+            label: Company / organization logo override — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
     type: file
     path: site/content/education.json
     format: json
@@ -1963,6 +3194,83 @@ content:
                 - jpeg
                 - webp
                 - svg
+          - name: imageLayout
+            label: Optional photo — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
           - name: imageAlt
             label: Photo description
             type: string
@@ -1988,6 +3296,83 @@ content:
             description: >-
               Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
               switch off to hide either logo.
+          - name: logoLayout
+            label: Company / organization logo override — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
           - name: showPhotos
             label: Show work photos
             type: boolean
@@ -2011,6 +3396,83 @@ content:
                     - webp
                     - svg
                 required: true
+              - name: imageLayout
+                label: Photo — size & background
+                type: object
+                fields:
+                  - name: enabled
+                    label: Customize this image
+                    type: boolean
+                    default: false
+                    description: Applies only to this placement. Turn off to use the normal page layout.
+                  - name: width
+                    label: Width (% of available space)
+                    type: number
+                    default: 100
+                    options:
+                      min: 1
+                      max: 100
+                  - name: maxWidth
+                    label: Maximum width (pixels)
+                    type: number
+                    description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                    options:
+                      min: 16
+                      max: 3840
+                  - name: ratio
+                    label: Aspect ratio
+                    type: select
+                    default: auto
+                    options:
+                      values:
+                        - value: auto
+                          label: Original proportions
+                        - value: 16 / 9
+                          label: 16 / 9
+                        - value: 3 / 2
+                          label: 3 / 2
+                        - value: 4 / 3
+                          label: 4 / 3
+                        - value: 1 / 1
+                          label: 1 / 1
+                        - value: 4 / 5
+                          label: 4 / 5
+                        - value: 9 / 16
+                          label: 9 / 16
+                  - name: fit
+                    label: Fit
+                    type: select
+                    default: contain
+                    options:
+                      values:
+                        - value: contain
+                          label: Show entire image
+                        - value: cover
+                          label: Fill and crop
+                  - name: position
+                    label: Crop position
+                    type: select
+                    default: center
+                    options:
+                      values:
+                        - center
+                        - top
+                        - bottom
+                        - left
+                        - right
+                  - name: background
+                    label: Background behind image
+                    type: select
+                    default: transparent
+                    options:
+                      values:
+                        - transparent
+                        - white
+                        - dark
+                        - theme
+                    description: >-
+                      Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                      file.
               - name: alt
                 label: Image description
                 type: string
@@ -2065,6 +3527,83 @@ content:
             description: >-
               Choose a logo for this entry. Leave empty to use a matching Organization logos entry. Turn the
               switch off to hide either logo.
+          - name: logoLayout
+            label: Company / organization logo override — size & background
+            type: object
+            fields:
+              - name: enabled
+                label: Customize this image
+                type: boolean
+                default: false
+                description: Applies only to this placement. Turn off to use the normal page layout.
+              - name: width
+                label: Width (% of available space)
+                type: number
+                default: 100
+                options:
+                  min: 1
+                  max: 100
+              - name: maxWidth
+                label: Maximum width (pixels)
+                type: number
+                description: Optional. For example, 180 for a logo or 600 for a photo. Shrinks to fit small screens.
+                options:
+                  min: 16
+                  max: 3840
+              - name: ratio
+                label: Aspect ratio
+                type: select
+                default: auto
+                options:
+                  values:
+                    - value: auto
+                      label: Original proportions
+                    - value: 16 / 9
+                      label: 16 / 9
+                    - value: 3 / 2
+                      label: 3 / 2
+                    - value: 4 / 3
+                      label: 4 / 3
+                    - value: 1 / 1
+                      label: 1 / 1
+                    - value: 4 / 5
+                      label: 4 / 5
+                    - value: 9 / 16
+                      label: 9 / 16
+              - name: fit
+                label: Fit
+                type: select
+                default: contain
+                options:
+                  values:
+                    - value: contain
+                      label: Show entire image
+                    - value: cover
+                      label: Fill and crop
+              - name: position
+                label: Crop position
+                type: select
+                default: center
+                options:
+                  values:
+                    - center
+                    - top
+                    - bottom
+                    - left
+                    - right
+              - name: background
+                label: Background behind image
+                type: select
+                default: transparent
+                options:
+                  values:
+                    - transparent
+                    - white
+                    - dark
+                    - theme
+                description: >-
+                  Transparent preserves PNG transparency. Cannot remove a background already baked into a
+                  file.
 settings:
   content:
     merge: true

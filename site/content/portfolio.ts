@@ -1,3 +1,4 @@
+import type {ImageLayout} from '../components/picture';
 import settingsData from './settings.json';
 import appearanceData from './appearance.json';
 import introPhotosData from './intro-photos.json';
@@ -15,20 +16,20 @@ import organizations from './organizations.json';
 
 export interface ContactLink {label:string;type:'phone'|'email'|'link'|'linkedin'|'cv'|'file';text?:string;value?:string;file?:string}
 
-export interface LogoOptions {showLogo?:boolean;logo?:string}
-export interface Experience extends LogoOptions {showPhotos?:boolean;photos?:{image:string;alt:string;caption?:string;visible?:boolean}[]; title: string; organization: string; date: string; description: string; details?: string[]; image?:string; imageAlt?:string; imageCaption?:string }
-export interface StoryBlock {title:string;body?:string;image?:string;imageAlt?:string;caption?:string;layout?:string;videoUrl?:string;videoFile?:string;videoCaptions?:string;videoCaptionLanguage?:string;videoCaptionLabel?:string}
-export interface Project extends LogoOptions {id:string;title:string;category:string;organization:string;date:string;role:string;summary:string;contributions:string[];outcomeLabel:string;outcome:string;tools:string[];images:{src:string;alt:string;caption?:string}[];link?:string;cover?:string;coverAlt?:string;coverCaption?:string;coverFit?:string;coverPosition?:string;featured?:boolean;sections:StoryBlock[];videos:{title:string;url?:string;file?:string;caption?:string;captions?:string;captionLanguage?:string;captionLabel?:string}[]}
-export interface PageCover {id:string;cover?:string;coverAlt?:string;position?:string;credit?:string;creditUrl?:string;monochrome?:boolean;blocks?:StoryBlock[]}
-export interface Organization {visible?:boolean;name:string;match:string[];logo?:string;url?:string}
+export interface LogoOptions {showLogo?:boolean;logoLayout?:ImageLayout;logo?:string}
+export interface Experience extends LogoOptions {showPhotos?:boolean;photos?:{imageLayout?:ImageLayout;image:string;alt:string;caption?:string;visible?:boolean}[]; title: string; organization: string; date: string; description: string; details?: string[]; imageLayout?:ImageLayout;image?:string; imageAlt?:string; imageCaption?:string }
+export interface StoryBlock {title:string;body?:string;imageLayout?:ImageLayout;image?:string;imageAlt?:string;caption?:string;layout?:string;videoUrl?:string;videoFile?:string;videoCaptions?:string;videoCaptionLanguage?:string;videoCaptionLabel?:string}
+export interface Project extends LogoOptions {id:string;title:string;category:string;organization:string;date:string;role:string;summary:string;contributions:string[];outcomeLabel:string;outcome:string;tools:string[];images:{srcLayout?:ImageLayout;src:string;alt:string;caption?:string}[];link?:string;coverLayout?:ImageLayout;cover?:string;coverAlt?:string;coverCaption?:string;coverFit?:string;coverPosition?:string;featured?:boolean;sections:StoryBlock[];videos:{title:string;url?:string;file?:string;caption?:string;captions?:string;captionLanguage?:string;captionLabel?:string}[]}
+export interface PageCover {id:string;coverLayout?:ImageLayout;cover?:string;coverAlt?:string;position?:string;credit?:string;creditUrl?:string;monochrome?:boolean;blocks?:StoryBlock[]}
+export interface Organization {visible?:boolean;name:string;match:string[];logoLayout?:ImageLayout;logo?:string;url?:string}
 
 interface Portfolio {
   pages:PageCover[];
   organizations:Organization[];
-  introPhotos: {visible:boolean;label:string;autoplay:boolean;intervalSeconds:number;previousLabel:string;nextLabel:string;photoLabel:string;photos:{image:string;alt:string;caption?:string;fit?:string;position?:string}[]};
+  introPhotos: {visible:boolean;label:string;autoplay:boolean;intervalSeconds:number;previousLabel:string;nextLabel:string;photoLabel:string;photos:{imageLayout?:ImageLayout;image:string;alt:string;caption?:string;fit?:string;position?:string}[]};
   contact: {eyebrow:string;title:string;intro:string;resume:string;links:ContactLink[]};
-  settings: typeof settingsData.settings & typeof appearanceData;
-  gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{image:string;alt:string;title:string;caption?:string;fit?:string;position?:string}[]};
+  settings: typeof settingsData.settings & {branding:{logoLayout?:ImageLayout}} & typeof appearanceData;
+  gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{imageLayout?:ImageLayout;image:string;alt:string;title:string;caption?:string;fit?:string;position?:string}[]};
   profile: {
     name: string; role: string;
     availability: string; intro: string;

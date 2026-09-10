@@ -1,3 +1,4 @@
+import {Picture} from './picture';
 /* oxlint-disable jsx-a11y/prefer-tag-over-role -- Carousel slides are labelled groups, following the ARIA carousel pattern. */
 import {createElement} from 'react';
 import {ChevronLeft,ChevronRight} from 'lucide-react';
@@ -13,7 +14,7 @@ export function IntroPhotos(){
   },<>
     <div className="intro-photo-stage">
     <div className="intro-slides">{p.photos.map((photo,index)=><figure data-slide key={index} hidden={index!==0} role="group" aria-roledescription="slide" aria-label={`${index+1} / ${p.photos.length}`}>
-      <img src={asset(photo.image)} alt={photo.alt} width="900" height="1125" loading={index===0?'eager':'lazy'} style={{objectFit:photo.fit==='cover'?'cover':'contain',objectPosition:photo.position||'center'}}/>
+      <Picture layout={photo.imageLayout} src={asset(photo.image)} alt={photo.alt} width="900" height="1125" loading={index===0?'eager':'lazy'} style={{objectFit:photo.fit==='cover'?'cover':'contain',objectPosition:photo.position||'center'}}/>
     </figure>)}</div>
     <div className="intro-photo-controls" data-controls hidden>
       <button className="intro-photo-arrow" type="button" data-previous aria-label={p.previousLabel}><ChevronLeft size={22}/></button>

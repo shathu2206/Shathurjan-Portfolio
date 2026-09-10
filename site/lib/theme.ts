@@ -20,7 +20,7 @@ export function themeStyle():CSSProperties {
     '--cover-height':`${number(appearance.coverHeight,360,210,650)}px`,
     '--cover-opacity':number(appearance.coverOpacity,72,30,100)/100,
     '--image-radius':`${number(appearance.imageRadius,0,0,32)}px`,
-    '--logo-background':color(appearance.logoBackground,'#ffffff'),
+    '--logo-background':appearance.logoBackground==='transparent'?'transparent':color(appearance.logoBackground,'transparent'),
     '--gallery-columns':Math.round(number(appearance.galleryColumns,2,1,3)),
     '--gallery-fit':appearance.galleryFit==='cover'?'cover':'contain',
     '--gallery-ratio':['4 / 3','3 / 2','1 / 1','auto'].includes(appearance.galleryRatio)?appearance.galleryRatio:'4 / 3',

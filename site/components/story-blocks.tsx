@@ -1,3 +1,4 @@
+import {Picture} from './picture';
 /* oxlint-disable jsx-a11y/media-has-caption -- The CMS supplies the conditional caption track below; silent demonstrations do not require one. */
 import {RichText} from './rich-text';
 import content,{type StoryBlock} from '../content/portfolio';
@@ -19,7 +20,7 @@ export function StoryBlocks({blocks,label}:{blocks:StoryBlock[];label?:string}){
       <h2>{block.title}</h2>
       {block.body&&<div className="post-body"><RichText>{block.body}</RichText></div>}
     </div>
-    {block.image&&<figure><img src={asset(block.image)} alt={block.imageAlt||''} width="1200" height="800" loading="lazy"/>{block.caption&&<figcaption>{block.caption}</figcaption>}</figure>}
+    {block.image&&<figure><Picture layout={block.imageLayout} src={asset(block.image)} alt={block.imageAlt||''} width="1200" height="800" loading="lazy"/>{block.caption&&<figcaption>{block.caption}</figcaption>}</figure>}
     <Video url={block.videoUrl} file={block.videoFile} title={block.title} captions={block.videoCaptions} captionLanguage={block.videoCaptionLanguage} captionLabel={block.videoCaptionLabel}/>
   </section>)}</div>;
 }

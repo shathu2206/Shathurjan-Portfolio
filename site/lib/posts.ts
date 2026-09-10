@@ -1,6 +1,7 @@
+import type {ImageLayout} from '../components/picture';
 import {readdir,readFile} from 'node:fs/promises';
 import {resolve} from 'node:path';
-export interface Post {slug:string; title:string;date:string;excerpt?:string;body:string;published:boolean;linkedin?:string;image?:string;imageAlt?:string}
+export interface Post {slug:string; title:string;date:string;excerpt?:string;body:string;published:boolean;linkedin?:string;imageLayout?:ImageLayout;image?:string;imageAlt?:string}
 export async function loadPosts(directory=resolve(process.cwd(),'content/posts')):Promise<Post[]> {
   const names=await readdir(directory);
   const posts=await Promise.all(names.filter(name=>name.endsWith('.json')).map(async name=>{
