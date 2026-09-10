@@ -1,3 +1,4 @@
+/* oxlint-disable jsx-a11y/prefer-tag-over-role -- Carousel slides are labelled groups, following the ARIA carousel pattern. */
 import {createElement} from 'react';
 import {ChevronLeft,ChevronRight} from 'lucide-react';
 import content from '../content/portfolio';

@@ -9,6 +9,7 @@ export async function loadPosts(directory=resolve(process.cwd(),'content/posts')
     if(!/^[a-z0-9][a-z0-9-]*$/.test(slug)) throw new Error(`Use a lowercase hyphenated post filename: ${name}`);
     if(data.published!==true)return null;
     if(!data.title?.trim()||!data.body?.trim()||!/^\d{4}-\d{2}-\d{2}$/.test(data.date)||Number.isNaN(Date.parse(data.date+'T12:00:00Z')))throw new Error(`Complete the title, date, and post text in ${name}`);
+    if(new Date(data.date+'T12:00:00Z').toISOString().slice(0,10)!==data.date)throw new Error(`Choose a real calendar date in ${name}`);
     if(data.linkedin && !/^https:\/\/(www\.)?linkedin\.com\//i.test(data.linkedin))throw new Error(`Use a LinkedIn https:// URL in ${name}`);
     if(data.image && !data.imageAlt?.trim())throw new Error(`Add an image description in ${name}`);
     return {...data,slug} as Post;

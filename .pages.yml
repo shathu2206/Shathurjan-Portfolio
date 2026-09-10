@@ -11,6 +11,7 @@ media:
     - svg
     - mp4
     - webm
+    - vtt
 content:
   - name: updates
     label: Engineering Updates
@@ -327,6 +328,24 @@ content:
                   extensions:
                     - mp4
                     - webm
+              - name: videoCaptions
+                label: Uploaded video captions (VTT)
+                type: file
+                options:
+                  extensions:
+                    - vtt
+                description: >-
+                  For uploaded MP4/WebM videos with spoken audio, select a WebVTT caption file. For
+                  YouTube/Vimeo, manage captions on the video host.
+              - name: videoCaptionLanguage
+                label: Caption language code
+                type: string
+                default: en
+                description: For example en for English or ta for Tamil.
+              - name: videoCaptionLabel
+                label: Caption menu label
+                type: string
+                default: Captions
             description: >-
               Add formatted text, images and videos below the main content of this page. Use the layout
               selector to place the image beside the text or at full width.
@@ -1388,6 +1407,24 @@ content:
                   extensions:
                     - mp4
                     - webm
+              - name: videoCaptions
+                label: Uploaded video captions (VTT)
+                type: file
+                options:
+                  extensions:
+                    - vtt
+                description: >-
+                  For uploaded MP4/WebM videos with spoken audio, select a WebVTT caption file. For
+                  YouTube/Vimeo, manage captions on the video host.
+              - name: videoCaptionLanguage
+                label: Caption language code
+                type: string
+                default: en
+                description: For example en for English or ta for Tamil.
+              - name: videoCaptionLabel
+                label: Caption menu label
+                type: string
+                default: Captions
             description: >-
               Use blocks for the problem, constraints, design decisions, testing, results, or lessons learned.
               Each block can include text, an image, and a video.
@@ -1420,6 +1457,24 @@ content:
                 label: Short caption
                 type: string
                 required: false
+              - name: captions
+                label: Uploaded video captions (VTT)
+                type: file
+                options:
+                  extensions:
+                    - vtt
+                description: >-
+                  For uploaded MP4/WebM videos with spoken audio, select a WebVTT caption file. For
+                  YouTube/Vimeo, manage captions on the video host.
+              - name: captionLanguage
+                label: Caption language code
+                type: string
+                default: en
+                description: For example en for English or ta for Tamil.
+              - name: captionLabel
+                label: Caption menu label
+                type: string
+                default: Captions
           - name: coverFit
             label: Project cover fitting
             type: select

@@ -24,7 +24,7 @@ npm ci
 npm run dev
 ```
 
-Open the local URL printed in the terminal. To build the public website:
+Open the local URL printed in the terminal. `npm start` is also an alias for this local development preview. To build the public website:
 
 ```sh
 npm run build
@@ -48,3 +48,5 @@ The complete static website is written to `site/out/`: the introduction at `/`, 
 | `.github/workflows/deploy.yml` | Automatic GitHub Pages publishing |
 
 The initial content was adapted from the supplied CV. Update dates, project status, achievements, and results as your work progresses. Project covers are labelled illustrative diagrams until original renders are uploaded. All skill proficiency levels are intentionally unrated. Photos, story blocks, video embeds/uploads, page covers and organization logos can be managed in Pages CMS. See [MEDIA-CREDITS.md](MEDIA-CREDITS.md) for supplied imagery sources.
+
+The lint configuration checks the portfolio's authored code. It excludes the unused starter UI library and hooks, and disables Next.js image/head rules because the published site uses static HTML and standard image elements. The Miniflare `sharp` override pins a compatible security patch until the preview tooling includes it upstream.

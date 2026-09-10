@@ -29,9 +29,14 @@
     "build/**",
     "dist/**",
     "coverage/**",
+    ".build/**",
+    "components/ui/**",
+    "hooks/**",
     "next-env.d.ts"
   ],
   "rules": {
+    "nextjs/no-img-element": "off",
+    "nextjs/no-head-element": "off",
     "no-array-constructor": "error",
     "no-var": "error",
     "prefer-const": "error",

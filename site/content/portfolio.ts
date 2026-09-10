@@ -16,8 +16,8 @@ import organizations from './organizations.json';
 export interface ContactLink {label:string;type:'phone'|'email'|'link'|'linkedin'|'cv'|'file';text?:string;value?:string;file?:string}
 
 export interface Experience { title: string; organization: string; date: string; description: string; details?: string[]; image?:string; imageAlt?:string; imageCaption?:string }
-export interface StoryBlock {title:string;body?:string;image?:string;imageAlt?:string;caption?:string;layout?:string;videoUrl?:string;videoFile?:string}
-export interface Project {id:string;title:string;category:string;organization:string;date:string;role:string;summary:string;contributions:string[];outcomeLabel:string;outcome:string;tools:string[];images:{src:string;alt:string;caption?:string}[];link?:string;cover?:string;coverAlt?:string;coverCaption?:string;coverFit?:string;coverPosition?:string;featured?:boolean;sections:StoryBlock[];videos:{title:string;url?:string;file?:string;caption?:string}[]}
+export interface StoryBlock {title:string;body?:string;image?:string;imageAlt?:string;caption?:string;layout?:string;videoUrl?:string;videoFile?:string;videoCaptions?:string;videoCaptionLanguage?:string;videoCaptionLabel?:string}
+export interface Project {id:string;title:string;category:string;organization:string;date:string;role:string;summary:string;contributions:string[];outcomeLabel:string;outcome:string;tools:string[];images:{src:string;alt:string;caption?:string}[];link?:string;cover?:string;coverAlt?:string;coverCaption?:string;coverFit?:string;coverPosition?:string;featured?:boolean;sections:StoryBlock[];videos:{title:string;url?:string;file?:string;caption?:string;captions?:string;captionLanguage?:string;captionLabel?:string}[]}
 export interface PageCover {id:string;cover?:string;coverAlt?:string;position?:string;credit?:string;creditUrl?:string;monochrome?:boolean;blocks?:StoryBlock[]}
 export interface Organization {name:string;match:string[];logo?:string;url?:string}
 

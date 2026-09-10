@@ -46,6 +46,8 @@ Old homepage section links forward to the corresponding new pages.
 
 For video, paste a full YouTube or Vimeo URL, or upload an MP4/WebM. An uploaded file takes priority if both fields are filled. Videos have playback controls and do not autoplay. Use hosted video links for longer clips; keep uploaded clips small (preferably under 20 MB, always under GitHub's 100 MB file limit).
 
+For uploaded videos containing speech, add a WebVTT (`.vtt`) file under **Uploaded video captions**, set its language code, and choose its menu label. Caption controls appear in the video player. For YouTube/Vimeo videos, add captions on that video host.
+
 Your current covers are labelled illustrative diagrams, not CAD renders of your actual designs. They are ready to replace. No demonstration videos or measured results have been invented.
 
 ## Set your skill levels
@@ -74,7 +76,7 @@ Open **Gallery → Photos** for the separate gallery. Each item has an image, ti
 
 In **Website text & layout → Homepage layout & visibility**, show or hide the availability banner, languages, highlights, page directory and action buttons. Choose a stacked or flowing name and put the slideshow on the left or right on wider screens. On smaller screens it follows the introduction.
 
-The branding controls let you upload a header logo in place of the initials, hide the adjacent name/subtitle, edit footer wording, and show or hide the footer and back-to-top link. The copyright template supports `{year}` and `{name}`. The small browser-tab icon continues to use your initials and theme colours. Under **Engineering Updates page text**, you can hide the profile sidebar.
+The branding controls let you upload a header logo in place of the initials, hide the adjacent name/subtitle, edit footer wording, and show or hide the footer and back-to-top link. The copyright template supports `{year}` and `{name}`. The small browser-tab icon continues to use your initials and theme colours. Under **Updates page and post labels**, you can hide the profile sidebar.
 
 Open **Theme & layout** for the shared colours, fonts, text size and line spacing, maximum content width, cover brightness and height, organization-logo background, photo corner rounding, gallery layout, and project image alignment. Larger-screen layout choices automatically collapse for smaller screens. Photo rounding applies to content photos and video frames; the intro slideshow keeps its existing rounded frame and compact dots.
 
@@ -96,7 +98,7 @@ To replace your CV, select a new **Main CV (PDF)** in this same editor. The home
 
 ## If a change does not appear
 
-Make sure you saved the content entry after selecting its media, wait briefly and refresh. Check [Publish portfolio](https://github.com/shathu2206/Shathurjan-Portfolio/actions/workflows/deploy.yml): green means published. A failed update leaves the previous working version live. Common causes are a missing uploaded file, missing image description, duplicate project short name, or unsupported video link. The build message identifies the field to correct.
+Make sure you saved the content entry after selecting its media, wait briefly and refresh. Check [Publish portfolio](https://github.com/shathu2206/Shathurjan-Portfolio/actions/workflows/deploy.yml): green means published. A failed update leaves the previous working version live. Common causes are a missing uploaded file (including images inserted in formatted text), broken local link, missing image description, invalid calendar date, duplicate project short name, or unsupported video link. The build message identifies the content to correct.
 
 Choose PNG, JPG, JPEG, WebP or SVG for images. Around 1600 pixels wide and under 1 MB is a useful target for photos. Remove an image from all content entries and save before deleting the file from Media. If the new dashboard sections are missing, refresh Pages CMS and make sure you have selected this repository's `main` branch.
 

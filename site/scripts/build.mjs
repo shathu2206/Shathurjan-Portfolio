@@ -4,6 +4,7 @@ import { mkdir, readFile, writeFile, cp, rm, access } from 'node:fs/promises';
 import { resolve, sep } from 'node:path';
 import { pathToFileURL } from 'node:url';
 import { assertTextIntegrity } from './text-integrity.mjs';
+import { validateOutput } from './validate-output.mjs';
 
 // This portfolio is a static document. Render React at build time so GitHub
 // Pages needs no server; the intro carousel uses a small progressive-enhancement script.
@@ -74,3 +75,4 @@ for (const file of [...newAssets,...content.introPhotos.photos.map(photo=>photo.
   await access(resolve(output, assetPath));
 }
 console.log(`Built homepage, Projects index, ${content.projects.length} case studies, ${cvPageIds.length} CV pages, Gallery, Updates, and ${posts.length} published posts.`);
+await validateOutput(output,textFiles,'/Shathurjan-Portfolio');
