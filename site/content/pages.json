@@ -7,8 +7,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "work",
@@ -17,8 +16,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "experience",
@@ -27,8 +25,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "leadership",
@@ -37,8 +34,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "education",
@@ -47,8 +43,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "awards",
@@ -57,8 +52,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "skills",
@@ -67,8 +61,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "gallery",
@@ -77,8 +70,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "updates",
@@ -87,8 +79,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / Langley · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     },
     {
       "id": "contact",
@@ -97,8 +88,7 @@
       "position": "center",
       "credit": "Cover imagery: NASA / JAXA · aerospace research",
       "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
-      "monochrome": true,
-      "blocks": []
+      "monochrome": false
     }
   ]
 }
