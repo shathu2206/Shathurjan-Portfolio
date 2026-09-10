@@ -1,106 +1,90 @@
 # Edit your portfolio without code
 
-**Your dashboard:** [Pages CMS](https://app.pagescms.org)
+**[Open Pages CMS](https://app.pagescms.org/shathu2206/shathurjan-portfolio/main)** Â· **[View your website](https://shathu2206.github.io/Shathurjan-Portfolio/)**
 
-**Your website:** [Shathurjan's portfolio](https://shathu2206.github.io/Shathurjan-Portfolio/)
+Choose a dashboard section, make changes, and press **Save**. Saving automatically publishes the website through GitHub Pages. Allow about a minute, then refresh the website. Uploading a file to Media alone does not place it on a page: select that file in a photo or cover field and save the content too.
 
-## Connect once
+## Where to edit
 
-1. Open Pages CMS and sign in with your GitHub account, **shathu2206**.
-2. If prompted to install the Pages CMS GitHub app, select **Only select repositories**, then **Shathurjan-Portfolio**. This lets the editor save your portfolio content and images to that repository.
-3. Open **Shathurjan-Portfolio** and select the **main** branch.
-4. The editing sections are already configured. You do not need to create a configuration or edit code.
-
-## Everyday editing
-
-Choose a section in the dashboard, make changes, and press **Save**. Saving updates the repository and starts automatic publishing. Allow a short time for GitHub to finish, then refresh your website. Save publishes your changes; this setup does not have a separate draft workflow.
-
-| Dashboard section | What you can change |
+| Dashboard section | What it controls |
 | --- | --- |
-| **Introduction & name** | Name everywhere on the site, combined Introduction/About text, languages, availability, and highlights |
-| **Website text & layout** | All section headings, descriptions, buttons, navigation tabs, header/footer, Updates page labels, search descriptions, colours, font, page width, and section order/visibility |
-| **Get in touch** | Contact heading and introduction, main CV, and an expandable list of phone numbers, emails, websites, social profiles and documents |
-| **Intro photos** | Upload and reorder introduction photos, edit captions, choose cropping, and set automatic timing |
-| **Gallery** | Add, replace, remove and reorder photos; edit their titles, captions, image descriptions and page headings |
-| **Projects** | Add, edit, remove, and reorder project cards; upload renders and photos |
-| **Engineering Updates** | Write new posts, format text, upload images, and add optional LinkedIn links |
-| **Technical experience** | Engineering roles, dates, descriptions, and responsibilities |
-| **Leadership & community** | Volunteer, leadership, tutoring, coaching, and community roles |
-| **Awards & achievements** | Awards, organisations, and dates |
-| **Education** | University, degree, dates, coursework, and recognition |
-| **Skills** | Skill groups and the entries in each group |
+| **Introduction & name** | Your name, combined intro/about, availability, languages and highlights |
+| **Intro photos** | The slideshow beside your introduction: photos, captions, order, crop and timing |
+| **Page covers** | The wide cover photo, crop position and credit for each page; introductions for Experience, Education, Leadership and Awards |
+| **Organization logos** | Logos beside matching CV entries, plus the homepage organization strip |
+| **Projects** | The Projects index and every individual project page, including cover images, story blocks, photos and videos |
+| **Technical experience** | Engineering roles, responsibilities, dates and optional work photos |
+| **Leadership & community** | Leadership and volunteer roles, descriptions and optional photos |
+| **Education** | Schools, degrees, dates, GPA and coursework |
+| **Awards & achievements** | Awards, organizations and dates |
+| **Skills** | Categories, individual skills, your proficiency ratings and notes |
+| **Gallery** | Photos, titles, short captions and gallery page introduction |
+| **Engineering Updates** | Formatted posts, cover images and optional LinkedIn links |
+| **Get in touch** | Contact page title, introduction, CV and any number of contact links |
+| **Website text & layout** | Navigation, page headings, button labels, homepage directory, logo initials, footer, colours, fonts and width |
+
+## Pages and navigation
+
+Home is now an introduction and directory. Projects, Experience, Skills, Gallery and Updates are separate pages. Education, Awards & Achievements, Leadership and Contact also have their own pages, linked through **More** and the homepage directory.
+
+Under **Website text & layout â†’ Navigation tabs**, change a label, drag links to reorder, or choose **Top bar** / **More menu**. Keep the top bar short for smaller screens. **Pages shown in navigation and homepage directory** controls which CV/project pages are linked. Hiding a link does not delete its page; the direct address still works. Home, Gallery and Updates remain available unless you remove their navigation entries.
+
+Old homepage section links forward to the corresponding new pages.
+
+## Add or update a project
+
+1. Open **Projects**, then expand an existing project or add one.
+2. Enter the title, a unique short project name such as `wing-analysis`, your role, team, dates, summary and contributions. The short name creates its address: `/projects/wing-analysis/`. Keep it stable after sharing links.
+3. Select a **Cover image**. It appears on both the project index and its detail page. Add an image description and optional caption. Replace the illustrative cover and its caption when you have your own render.
+4. Turn **Highlight this project first** on to place it before non-highlighted projects. Drag to reorder projects within each group.
+5. Add **Project story blocks** for the problem, design choices, testing, results or lessons learned. Each block has a heading, formatted text, optional image, caption and video. Choose **Full width**, **Image left, text right**, or **Text left, image right**, then drag blocks to set their order.
+6. Add extra photos under **CAD renders and photos**, or demonstrations under **Additional videos**.
+7. **Save**. The index and the project's own page update automatically.
+
+For video, paste a full YouTube or Vimeo URL, or upload an MP4/WebM. An uploaded file takes priority if both fields are filled. Videos have playback controls and do not autoplay. Use hosted video links for longer clips; keep uploaded clips small (preferably under 20 MB, always under GitHub's 100 MB file limit).
+
+Your current covers are labelled illustrative diagrams, not CAD renders of your actual designs. They are ready to replace. No demonstration videos or measured results have been invented.
+
+## Set your skill levels
+
+Open **Skills**. Add or rename a category, then open each individual skill and set **Your proficiency**: Not yet rated, Introduced, Developing, Proficient, or Advanced. All initial ratings are **Not yet rated**, for you to assess yourself. Optional notes can describe training or project use. Drag skills and categories to reorder them.
+
+The visible labels can be renamed under **Website text & layout â†’ Skills page text â†’ Proficiency labels**. Keep the five labels in the same order; ratings refer to their positions.
+
+## Covers and logos
+
+In **Page covers**, open the entry for the relevant page and choose a photo. Add its description, crop position and optional credit/source link. Remove the image for a text-only header. Keep one entry per page. Other page headings and introductions are edited under their own content sections or **Website text & layout**.
+
+In **Organization logos**, add the organization name, its logo and a matching name from your experience/education/project entries. For example, `NASA Space Apps` matches any organization entry containing that phrase. The logo is used alongside those entries. **Show in homepage organization strip** adds it to the introduction page, with your involvement as a caption. Without a logo, that strip uses the organization's name. Upload the real team logo when you have it.
+
+The starter cover photos are credited NASA research imagery, separate from your own project work. Logo and photo sources are recorded in [MEDIA-CREDITS.md](MEDIA-CREDITS.md).
+
+## Intro photos and Gallery
+
+Open **Intro photos â†’ Photos** to add, replace or reorder slideshow images. Select the image, add a description and optional caption, then save. The dots remain below the image; arrows appear on mouse hover, and mobile visitors can swipe. Automatic changes default to 15 seconds. One photo displays without controls; no photos hides the frame.
+
+Open **Gallery â†’ Photos** for the separate gallery. Each item has an image, title and short caption. Drag to reorder or remove entries. Your current intro photo list is preserved.
 
 ## Write an engineering update
 
-1. Open **Engineering Updates** in the dashboard and create a new entry.
-2. Give it a title and date. Add a short introduction for the feed if you want one.
-3. Click **Your post** and start writing. Type `/` to insert headings, lists, or images. Select text to reveal formatting controls.
-4. Optionally select a **Cover image** and describe it in **Cover image description**. You can also insert more images into the post itself.
-5. Optionally paste the URL of your LinkedIn version in **LinkedIn post link**. This adds a link to LinkedIn; it does not automatically post to or import from LinkedIn.
-6. Turn **Show on website** on, then **Save**. The post appears at the top of [Engineering Updates](https://shathu2206.github.io/Shathurjan-Portfolio/updates/) after publishing finishes.
+1. Open **Engineering Updates** and create a new entry.
+2. Add the title, date and optional feed introduction / cover image. Describe any cover image.
+3. Write in **Your post**. Type `/` to add headings, lists or images; select text to format it.
+4. Optionally paste your LinkedIn post link. This creates a link, not an automatic cross-post.
+5. Turn **Show on website** on and press **Save**.
 
-Leave **Show on website** off to keep a post off the website while working on it. Draft files are still visible in this public GitHub repository. The date is a display/sorting date, not a publishing schedule. Each published post has its own shareable link. Keep its filename unchanged after sharing that link.
+Leave that switch off while preparing a post. Draft content is still stored in this public GitHub repository. The date controls display and sorting, not scheduled publishing. Keep filenames unchanged after sharing post links. A clearly labelled sample post is available to edit or remove.
 
-## Navigate the portfolio
+## Contact details and your CV
 
-The top navigation stays visible while you scroll. **Intro**, **Projects**, **Experience**, **Leadership**, **Education**, **Awards & Achievements**, **Skills**, and **Contact** jump to sections. **Updates** opens the separate post feed. **Gallery** opens the photo gallery. Education and Awards & Achievements are separate sections, each with its own tab. Their headings, order and visibility can be edited independently under **Website text & layout**. All About text, the professional summary, and languages are together below your name in the introduction.
+Open **Get in touch**. Edit the title/intro and add as many contact entries as needed. Choose phone, email, website, LinkedIn, main CV or uploaded document; enter its label and destination. Display text is optional. Drag entries to reorder. The first LinkedIn entry also controls the Updates sidebar link.
 
-## Edit the introduction slideshow
+To replace your CV, select a new **Main CV (PDF)** in this same editor. The homepage CV button and all main-CV contact entries update together.
 
-Open **Intro photos** in Pages CMS. Replace the labelled placeholders under **Photos**, or add more photos. Add an image description and an optional caption. Drag entries to reorder them. Choose **Show the whole photo** to avoid cropping, or **Fill the frame** for a full portrait frame. Save to publish.
+## If a change does not appear
 
-The slideshow switches every **15 seconds** by default. Visitors can switch photos with arrows that appear on hover or keyboard focus, small, closely spaced dots immediately below the image, keyboard arrow keys, or horizontal swipes on touchscreens. There is no separate control panel or page counter. Playback pauses while the mouse or keyboard focus is inside the slideshow, during a swipe, or while the browser tab is hidden. Reduced-motion preferences disable automatic playback. Vertical touch gestures still scroll the page. You can change the timing or disable automatic changes in the editor. One photo displays without slideshow controls; removing all photos or disabling **Show photos** hides the frame. On small screens, photos appear below the introduction.
+Make sure you saved the content entry after selecting its media, wait briefly and refresh. Check [Publish portfolio](https://github.com/shathu2206/Shathurjan-Portfolio/actions/workflows/deploy.yml): green means published. A failed update leaves the previous working version live. Common causes are a missing uploaded file, missing image description, duplicate project short name, or unsupported video link. The build message identifies the field to correct.
 
-## Add gallery photos
+Choose PNG, JPG, JPEG, WebP or SVG for images. Around 1600 pixels wide and under 1 MB is a useful target for photos. Remove an image from all content entries and save before deleting the file from Media.
 
-Open **Gallery** in Pages CMS. Under **Photos**, add an entry or open a placeholder. Upload or select a photo, enter its title, a short caption and an image description, then **Save**. Drag entries to reorder them or remove an entry to take it off the gallery. The three starter images are clearly labelled placeholders, ready to replace.
-
-A sample engineering update is also published in **Engineering Updates**. Edit it into your own post, turn **Show on website** off to hide it, or remove it when you no longer need it.
-
-## Add a project
-
-1. Open **Projects** and add an item to **Featured projects**.
-2. Enter its title and a unique **Short project name**, such as `wing-analysis`. This is part of the project's direct link, so keep it stable after sharing.
-3. Fill in your role, team, dates, description, contributions, and result or current progress.
-4. Add tools and images if you have them. The project link is optional.
-5. Save. The new card appears in the same design as the others.
-
-Open an existing project card to edit it. Use the editor's list controls to reorder or remove cards. Their order in the editor is their order on your website.
-
-## Upload CAD renders or photos
-
-1. Open the project in **Projects**.
-2. Under **CAD renders and photos**, add an image item.
-3. Click the **Image** picker and upload a PNG, JPG, JPEG, or WebP, or select an existing upload.
-4. Write an **Image description** for visitors using screen readers. Add a caption if useful.
-5. Save the project list.
-
-Aim for around 1600 pixels wide and under 1 MB when practical. No images are required: cards without images remain complete. Uploaded media and portfolio content are public once committed to this public repository. Remove an image from its project and save before deleting the underlying media file.
-
-## Edit Get in touch or add a contact entry
-
-Open **Get in touch** in Pages CMS. Edit the headings and introduction at the top. Under **Contact entries**, open any entry to change it, or add a new item. Choose its type, enter a label and destination, and optionally set the display text. Phone and email entries use the number/address as their display text when left blank. For a website, paste the full https:// address; for a document, choose a PDF. Main CV entries use the PDF at the top of this editor. Drag entries to reorder them, or remove an entry to take it off the website. Save to publish.
-
-The first entry of type **LinkedIn profile** also controls the LinkedIn link on the Updates page. Removing all LinkedIn profile entries hides that link.
-
-## Replace your CV
-
-Open **Get in touch**, find **Main CV (PDF)**, and choose or upload your new PDF. Then save. The introduction’s CV button and all Main CV contact entries update automatically. You can use a new filename; you do not need to overwrite the previous PDF.
-
-## Check publishing
-
-Open [Publish portfolio in GitHub Actions](https://github.com/shathu2206/Shathurjan-Portfolio/actions/workflows/deploy.yml). A green run means the update has published. If a run fails, the previous working version stays live. Check that any selected CV or image is still present in the media library.
-
-## Layout and design
-
-Open **Website text & layout**. Each existing section has its own editable headings and labels. Use **Homepage sections** to reorder sections; remove an entry to hide that section without deleting its content. Add it back to show it again. The introduction stays at the top. The Updates page remains available independently of its homepage invitation.
-
-Under **Navigation tabs**, change labels, reorder tabs, or remove them. Select destinations from the dropdown. Tabs for hidden homepage sections automatically disappear. The Intro, Updates and Gallery destinations remain available.
-
-Under **Colours, font and page width**, change the palette using six-digit hex colours (for example `#b6f16c`), choose a font, and adjust page width. Under **Header and footer**, edit the logo initials, subtitle, and footer. Your full name comes from **Introduction & name** and updates throughout the site automatically. Logo initials also update the browser icon.
-
-Changes stay within the existing responsive design; entirely new types of page components still require a design/code change.
-
-## Optional direct editing
-
-If you prefer GitHub's file editor, the portfolio content is in the JSON files under `site/content/`. Posts are individual JSON files in `site/content/posts/`. `.pages.yml` describes the dashboard fields. Normal content editing does not require opening these files.
+Normal content changes require no code. New kinds of components beyond these layouts still need a design/code change.

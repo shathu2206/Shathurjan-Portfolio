@@ -8,6 +8,9 @@ media:
     - jpeg
     - webp
     - pdf
+    - svg
+    - mp4
+    - webm
 content:
   - name: updates
     label: Engineering Updates
@@ -62,6 +65,7 @@ content:
             - jpg
             - jpeg
             - webp
+            - svg
       - name: imageAlt
         label: Cover image description
         type: string
@@ -152,6 +156,7 @@ content:
                     - jpg
                     - jpeg
                     - webp
+                    - svg
               - name: alt
                 label: Image description
                 type: string
@@ -179,6 +184,137 @@ content:
                     - center
                     - top
                     - bottom
+  - name: pages
+    label: Page covers
+    type: file
+    path: site/content/pages.json
+    format: json
+    fields:
+      - name: pages
+        label: Cover images for each page
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.id}'
+        fields:
+          - name: id
+            label: Page
+            type: select
+            required: false
+            description: One entry per page. Removing an image gives that page a text-only header.
+            options:
+              values:
+                - value: intro
+                  label: Home
+                - value: work
+                  label: Projects
+                - value: experience
+                  label: Experience
+                - value: leadership
+                  label: Leadership
+                - value: education
+                  label: Education
+                - value: awards
+                  label: Awards
+                - value: skills
+                  label: Skills
+                - value: gallery
+                  label: Gallery
+                - value: updates
+                  label: Updates
+                - value: contact
+                  label: Contact
+          - name: cover
+            label: Cover photo
+            type: image
+            required: false
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+          - name: coverAlt
+            label: Image description
+            type: string
+            required: false
+          - name: position
+            label: Photo crop position
+            type: select
+            required: false
+            options:
+              values:
+                - center
+                - top
+                - bottom
+                - left
+                - right
+          - name: credit
+            label: Photo credit
+            type: string
+            required: false
+          - name: creditUrl
+            label: Credit source link
+            type: string
+            required: false
+          - name: description
+            label: Page introduction
+            type: text
+            required: false
+            description: >-
+              Used on Experience, Leadership, Education, and Awards. Other page introductions are edited in
+              their own content settings.
+  - name: organizations
+    label: Organization logos
+    type: file
+    path: site/content/organizations.json
+    format: json
+    fields:
+      - name: organizations
+        label: Organizations
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: '{fields.name}'
+        fields:
+          - name: name
+            label: Organization name
+            type: string
+            required: true
+          - name: match
+            label: Match names in your CV
+            type: string
+            required: false
+            description: >-
+              Enter the organization name or a distinctive part of it. Its logo appears beside matching
+              experience, education, awards and projects.
+            list: true
+          - name: logo
+            label: Organization logo
+            type: image
+            required: false
+            description: Use the actual organization logo. Without a logo, its name is used in the homepage strip.
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+          - name: url
+            label: Organization website
+            type: string
+            required: false
+          - name: note
+            label: Your involvement — homepage caption
+            type: string
+            required: false
+          - name: featured
+            label: Show in homepage organization strip
+            type: boolean
   - name: contact
     label: Get in touch
     type: file
@@ -314,6 +450,7 @@ content:
                     - jpg
                     - jpeg
                     - webp
+                    - svg
               - name: title
                 label: Photo title
                 type: string
@@ -355,6 +492,10 @@ content:
                 label: Footer text
                 type: text
                 required: true
+              - name: moreLabel
+                label: More menu label
+                type: string
+                required: true
           - name: intro
             label: Introduction buttons
             type: object
@@ -368,14 +509,26 @@ content:
                 label: Cv Button
                 type: string
                 required: true
+              - name: exploreLabel
+                label: Homepage directory title
+                type: string
+                required: true
+              - name: exploreDescription
+                label: Homepage directory introduction
+                type: string
+                required: true
+              - name: organizationsLabel
+                label: Organization strip heading
+                type: string
+                required: true
           - name: sections
-            label: Homepage sections — drag to reorder, remove to hide
+            label: Pages shown in navigation and homepage directory
             type: select
             required: false
             list: true
             description: >-
-              The introduction stays at the top. Remove a section to hide it; add it back to restore it.
-              Matching navigation tabs hide automatically. Content is preserved.
+              Removing an entry hides its navigation and homepage links. Its direct page address still works.
+              Arrange the visible links under Navigation below.
             options:
               values:
                 - label: Projects
@@ -433,8 +586,19 @@ content:
                       value: contact
                     - label: Gallery page
                       value: gallery
+              - name: placement
+                label: Navigation location
+                type: select
+                required: false
+                description: Use More for secondary pages to keep the top bar uncluttered.
+                options:
+                  values:
+                    - value: main
+                      label: Top bar
+                    - value: more
+                      label: More menu
           - name: work
-            label: Projects section
+            label: Projects page text
             type: object
             required: true
             fields:
@@ -455,15 +619,47 @@ content:
                 type: string
                 required: true
               - name: linkLabel
-                label: Link Label
+                label: External project link button
                 type: string
                 required: true
               - name: toolsLabel
                 label: Tools Label
                 type: string
                 required: true
+              - name: backLabel
+                label: Back to all projects
+                type: string
+                required: true
+              - name: roleLabel
+                label: Role label
+                type: string
+                required: true
+              - name: organizationLabel
+                label: Organization label
+                type: string
+                required: true
+              - name: dateLabel
+                label: Timeline label
+                type: string
+                required: true
+              - name: mediaLabel
+                label: Photo and video section title
+                type: string
+                required: true
+              - name: nextLabel
+                label: Next project label
+                type: string
+                required: true
+              - name: caseStudyLabel
+                label: Open project button
+                type: string
+                required: true
+              - name: storyLabel
+                label: Project story label
+                type: string
+                required: true
           - name: experience
-            label: Experience section
+            label: Experience page text
             type: object
             required: true
             fields:
@@ -476,7 +672,7 @@ content:
                 type: string
                 required: true
           - name: leadership
-            label: Leadership section
+            label: Leadership page text
             type: object
             required: true
             fields:
@@ -489,7 +685,7 @@ content:
                 type: string
                 required: true
           - name: education
-            label: Education section
+            label: Education page text
             type: object
             required: true
             fields:
@@ -506,7 +702,7 @@ content:
                 type: string
                 required: true
           - name: awards
-            label: Awards & achievements section
+            label: Awards page text
             type: object
             required: true
             fields:
@@ -519,7 +715,7 @@ content:
                 type: string
                 required: true
           - name: skills
-            label: Skills section
+            label: Skills page text
             type: object
             required: true
             fields:
@@ -531,25 +727,19 @@ content:
                 label: Heading
                 type: string
                 required: true
-          - name: updates
-            label: Updates invitation on homepage
-            type: object
-            required: true
-            fields:
-              - name: eyebrow
-                label: Small label above heading
+              - name: levels
+                label: Proficiency labels, in order from unrated to advanced
                 type: string
-                required: true
-              - name: title
-                label: Heading
+                list: true
+                description: >-
+                  Keep five labels: unrated, introduced, developing, proficient, advanced. Change the wording
+                  here and assign each skill its level under Technical skills.
+              - name: legend
+                label: Skill rating legend
                 type: string
                 required: true
               - name: description
-                label: Description
-                type: text
-                required: true
-              - name: button
-                label: Button
+                label: Page introduction
                 type: string
                 required: true
           - name: journal
@@ -776,7 +966,7 @@ content:
     label: Projects
     fields:
       - name: projects
-        label: Featured projects
+        label: Projects — each gets its own page
         type: object
         list:
           collapsible:
@@ -792,8 +982,8 @@ content:
             type: string
             required: true
             description: >-
-              A unique name for the project link, e.g. wing-analysis. Keep this unchanged after sharing the
-              link.
+              Unique lowercase words separated by hyphens, such as wing-design. This becomes the project page
+              address; keep it unchanged after sharing links.
             pattern:
               regex: ^[a-z][a-z0-9-]*$
               message: Use lowercase letters, numbers and hyphens, starting with a letter.
@@ -852,6 +1042,7 @@ content:
                     - jpg
                     - jpeg
                     - webp
+                    - svg
               - name: alt
                 label: Image description
                 type: string
@@ -867,9 +1058,129 @@ content:
             required: false
             pattern: ^https://
             description: A full https:// address, or leave empty.
+          - name: featured
+            label: Highlight this project first
+            type: boolean
+          - name: cover
+            label: Cover image — project list and project page
+            type: image
+            required: false
+            description: Replace the illustrative cover with your own photo or CAD render.
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+          - name: coverAlt
+            label: Cover image description
+            type: string
+            required: false
+          - name: coverCaption
+            label: Cover caption
+            type: string
+            required: false
+          - name: sections
+            label: Project story blocks — add and reorder
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.title}'
+            fields:
+              - name: title
+                label: Block heading
+                type: string
+                required: true
+              - name: body
+                label: Story / design decisions
+                type: rich-text
+                required: false
+                description: Write formatted text. Type '/' to add headings, lists, or images.
+                options:
+                  format: markdown
+                  switcher: false
+              - name: layout
+                label: Layout
+                type: select
+                required: false
+                options:
+                  values:
+                    - value: full
+                      label: Full width
+                    - value: image-left
+                      label: Image left, text right
+                    - value: image-right
+                      label: Text left, image right
+              - name: image
+                label: Photo, CAD render, drawing or chart
+                type: image
+                required: false
+                options:
+                  extensions:
+                    - png
+                    - jpg
+                    - jpeg
+                    - webp
+                    - svg
+              - name: imageAlt
+                label: Image description
+                type: string
+                required: false
+              - name: caption
+                label: Image caption
+                type: string
+                required: false
+              - name: videoUrl
+                label: YouTube or Vimeo link
+                type: string
+                required: false
+                description: Paste the full video address. Leave blank if using an uploaded video.
+              - name: videoFile
+                label: Upload video instead
+                type: file
+                required: false
+                description: Upload a short MP4 or WebM video. For longer videos, paste a YouTube or Vimeo link instead.
+                options:
+                  extensions:
+                    - mp4
+                    - webm
+            description: >-
+              Use blocks for the problem, constraints, design decisions, testing, results, or lessons learned.
+              Each block can include text, an image, and a video.
+          - name: videos
+            label: Additional videos
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.title}'
+            fields:
+              - name: title
+                label: Video title
+                type: string
+                required: true
+              - name: url
+                label: YouTube or Vimeo link
+                type: string
+                required: false
+              - name: file
+                label: Or upload video
+                type: file
+                required: false
+                description: Upload a short MP4 or WebM video. For longer videos, paste a YouTube or Vimeo link instead.
+                options:
+                  extensions:
+                    - mp4
+                    - webm
+              - name: caption
+                label: Short caption
+                type: string
+                required: false
         description: >-
-          Add a project, open an existing card to edit it, or reorder the cards. Their order here is their
-          order on the website.
+          Add projects or drag to reorder. Each project automatically appears on the Projects page and has its
+          own detail page.
     type: file
     path: site/content/projects.json
     format: json
@@ -904,6 +1215,25 @@ content:
             label: Responsibilities and achievements
             type: text
             list: true
+          - name: image
+            label: Optional photo
+            type: image
+            required: false
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+          - name: imageAlt
+            label: Photo description
+            type: string
+            required: false
+          - name: imageCaption
+            label: Photo caption
+            type: string
+            required: false
     type: file
     path: site/content/experience.json
     format: json
@@ -977,9 +1307,39 @@ content:
             type: string
             required: true
           - name: items
-            label: Skills
-            type: string
-            list: true
+            label: Skills in this category
+            type: object
+            list:
+              collapsible:
+                collapsed: true
+                summary: '{fields.name}'
+            fields:
+              - name: name
+                label: Skill name
+                type: string
+                required: true
+              - name: level
+                label: Your proficiency
+                type: select
+                required: false
+                description: Choose your own assessment. No level is assumed until you set it.
+                options:
+                  values:
+                    - value: '0'
+                      label: Not yet rated
+                    - value: '1'
+                      label: Introduced
+                    - value: '2'
+                      label: Developing
+                    - value: '3'
+                      label: Proficient
+                    - value: '4'
+                      label: Advanced
+              - name: note
+                label: Optional note
+                type: string
+                required: false
+                description: 'For example: training, coursework, or a project where you used this skill.'
     type: file
     path: site/content/skills.json
     format: json
@@ -1017,6 +1377,25 @@ content:
             label: Responsibilities and achievements
             type: text
             list: true
+          - name: image
+            label: Optional photo
+            type: image
+            required: false
+            options:
+              extensions:
+                - png
+                - jpg
+                - jpeg
+                - webp
+                - svg
+          - name: imageAlt
+            label: Photo description
+            type: string
+            required: false
+          - name: imageCaption
+            label: Photo caption
+            type: string
+            required: false
   - name: awards
     label: Awards & achievements
     type: file

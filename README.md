@@ -1,4 +1,4 @@
-# Shathurjan Muhunthan — Engineering Portfolio
+# Shathurjan Muhunthan â€” Engineering Portfolio
 
 An aerospace engineering portfolio for internship and co-op applications.
 
@@ -12,7 +12,7 @@ See [EDITING.md](EDITING.md) for the one-time connection and a guide to everyday
 
 ## GitHub Pages setup
 
-Keep this repository public for free GitHub Pages hosting. In **Settings → Pages → Build and deployment**, set **Source** to **GitHub Actions**. The included **Publish portfolio** workflow builds and deploys every change to `main`. You can also run it manually from the Actions tab.
+Keep this repository public for free GitHub Pages hosting. In **Settings â†’ Pages â†’ Build and deployment**, set **Source** to **GitHub Actions**. The included **Publish portfolio** workflow builds and deploys every change to `main`. You can also run it manually from the Actions tab.
 
 ## Local preview
 
@@ -30,7 +30,7 @@ Open the local URL printed in the terminal. To build the public website:
 npm run build
 ```
 
-The complete static website is written to `site/out/`: the portfolio at `/`, Gallery at `/gallery/`, the Updates feed at `/updates/`, and each published post at `/updates/<filename>/`. React renders the content at build time, so the published site requires no server or visitor login. A small browser script powers the introduction photo carousel; the first photo and the rest of the content remain visible without JavaScript. Only `site/out/` is deployed; the original source stays in this repository.
+The complete static website is written to `site/out/`: the introduction at `/`, the Projects index at `/projects/`, case studies at `/projects/<id>/`, individual Experience, Leadership, Education, Awards, Skills and Contact pages, Gallery at `/gallery/`, the Updates feed at `/updates/`, and each published post at `/updates/<filename>/`. React renders the content at build time, so the published site requires no server or visitor login. A small browser script powers the introduction photo carousel; the first photo and the rest of the content remain visible without JavaScript. Only `site/out/` is deployed; the original source stays in this repository.
 
 ## Files
 
@@ -46,4 +46,4 @@ The complete static website is written to `site/out/`: the portfolio at `/`, Gal
 | `site/scripts/build.mjs` | Generates and validates the static website |
 | `.github/workflows/deploy.yml` | Automatic GitHub Pages publishing |
 
-The initial content was adapted from the supplied CV. Update dates, project status, achievements, and results as your work progresses. Empty image arrays are intentional; the site displays complete text-based project cards until your renders are added.
+The initial content was adapted from the supplied CV. Update dates, project status, achievements, and results as your work progresses. Project covers are labelled illustrative diagrams until original renders are uploaded. All skill proficiency levels are intentionally unrated. Photos, story blocks, video embeds/uploads, page covers and organization logos can be managed in Pages CMS. See [MEDIA-CREDITS.md](MEDIA-CREDITS.md) for supplied imagery sources.

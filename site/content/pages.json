@@ -1,0 +1,94 @@
+{
+  "pages": [
+    {
+      "id": "intro",
+      "cover": "assets/cover-wind-tunnel.jpg",
+      "coverAlt": "Engineers inspecting the D8 aircraft model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / Langley · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
+      "description": ""
+    },
+    {
+      "id": "work",
+      "cover": "assets/cover-x59.jpg",
+      "coverAlt": "X-59 research model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / JAXA · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
+      "description": ""
+    },
+    {
+      "id": "experience",
+      "cover": "assets/cover-wind-tunnel.jpg",
+      "coverAlt": "Engineers inspecting the D8 aircraft model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / Langley · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
+      "description": "From student rocketry and UAV research to robotics and flight training."
+    },
+    {
+      "id": "leadership",
+      "cover": "assets/cover-x59.jpg",
+      "coverAlt": "X-59 research model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / JAXA · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
+      "description": "Coordination, mentorship, and community involvement alongside engineering."
+    },
+    {
+      "id": "education",
+      "cover": "assets/cover-wind-tunnel.jpg",
+      "coverAlt": "Engineers inspecting the D8 aircraft model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / Langley · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
+      "description": "My academic background and the subjects behind my engineering work."
+    },
+    {
+      "id": "awards",
+      "cover": "assets/cover-x59.jpg",
+      "coverAlt": "X-59 research model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / JAXA · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
+      "description": "Academic recognition, engineering communication, and flight training."
+    },
+    {
+      "id": "skills",
+      "cover": "assets/cover-wind-tunnel.jpg",
+      "coverAlt": "Engineers inspecting the D8 aircraft model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / Langley · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
+      "description": ""
+    },
+    {
+      "id": "gallery",
+      "cover": "assets/cover-x59.jpg",
+      "coverAlt": "X-59 research model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / JAXA · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
+      "description": ""
+    },
+    {
+      "id": "updates",
+      "cover": "assets/cover-wind-tunnel.jpg",
+      "coverAlt": "Engineers inspecting the D8 aircraft model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / Langley · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/double-bubble-tunnel/",
+      "description": ""
+    },
+    {
+      "id": "contact",
+      "cover": "assets/cover-x59.jpg",
+      "coverAlt": "X-59 research model in a wind tunnel",
+      "position": "center",
+      "credit": "Cover imagery: NASA / JAXA · aerospace research",
+      "creditUrl": "https://www.nasa.gov/image-article/x-59-model-tested-wind-tunnel-japan/",
+      "description": "Interested in working together? I’d like to hear from you."
+    }
+  ]
+}

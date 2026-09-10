@@ -3,11 +3,15 @@
     "branding": {
       "monogram": "SM",
       "subtitle": "ENGINEERING PORTFOLIO",
-      "footer": "Aerospace engineering · Toronto"
+      "footer": "Aerospace engineering · Toronto",
+      "moreLabel": "More"
     },
     "intro": {
       "workButton": "Explore my work",
-      "cvButton": "View CV"
+      "cvButton": "View CV",
+      "exploreLabel": "Explore the portfolio",
+      "exploreDescription": "The work, the learning, and the people behind it.",
+      "organizationsLabel": "EDUCATION & PROJECT INVOLVEMENT"
     },
     "sections": [
       "work",
@@ -21,44 +25,54 @@
     ],
     "navigation": [
       {
-        "label": "Intro",
-        "target": "intro"
+        "label": "Home",
+        "target": "intro",
+        "placement": "main"
       },
       {
         "label": "Projects",
-        "target": "work"
+        "target": "work",
+        "placement": "main"
       },
       {
         "label": "Experience",
-        "target": "experience"
+        "target": "experience",
+        "placement": "main"
       },
       {
         "label": "Leadership",
-        "target": "leadership"
+        "target": "leadership",
+        "placement": "more"
       },
       {
         "label": "Education",
-        "target": "education"
+        "target": "education",
+        "placement": "more"
       },
       {
         "label": "Awards & Achievements",
-        "target": "awards"
+        "target": "awards",
+        "placement": "more"
       },
       {
         "label": "Skills",
-        "target": "skills"
+        "target": "skills",
+        "placement": "main"
       },
       {
         "label": "Gallery",
-        "target": "gallery"
+        "target": "gallery",
+        "placement": "main"
       },
       {
         "label": "Updates",
-        "target": "updates"
+        "target": "updates",
+        "placement": "main"
       },
       {
         "label": "Contact",
-        "target": "contact"
+        "target": "contact",
+        "placement": "more"
       }
     ],
     "work": {
@@ -66,8 +80,16 @@
       "title": "Engineering in practice.",
       "description": "Structures, systems, and the decisions that connect them.",
       "contributionLabel": "My contribution",
-      "linkLabel": "View project",
-      "toolsLabel": "Tools and methods"
+      "linkLabel": "External project link",
+      "toolsLabel": "Tools and methods",
+      "backLabel": "All projects",
+      "roleLabel": "My role",
+      "organizationLabel": "Team / organization",
+      "dateLabel": "Timeline",
+      "mediaLabel": "Images & demonstrations",
+      "nextLabel": "Next project",
+      "caseStudyLabel": "Explore project",
+      "storyLabel": "Project story"
     },
     "experience": {
       "eyebrow": "TECHNICAL EXPERIENCE",
@@ -84,13 +106,16 @@
     },
     "skills": {
       "eyebrow": "TECHNICAL COMPETENCIES",
-      "title": "Tools I work with."
-    },
-    "updates": {
-      "eyebrow": "ENGINEERING UPDATES",
-      "title": "What I’m working on.",
-      "description": "Project progress, lessons learned, and notes from engineering student life.",
-      "button": "Explore updates"
+      "title": "Tools I work with.",
+      "levels": [
+        "Not yet rated",
+        "Introduced",
+        "Developing",
+        "Proficient",
+        "Advanced"
+      ],
+      "legend": "Self-assessed proficiency",
+      "description": "Design, analysis, programming, and the practical skills that bring a system together."
     },
     "journal": {
       "eyebrow": "ENGINEERING UPDATES",

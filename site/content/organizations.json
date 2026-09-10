@@ -1,0 +1,44 @@
+{
+  "organizations": [
+    {
+      "name": "Toronto Metropolitan University",
+      "match": [
+        "Toronto Metropolitan University"
+      ],
+      "logo": "assets/tmu-logo.svg",
+      "url": "https://www.torontomu.ca/",
+      "note": "BEng · Aerospace Engineering",
+      "featured": true
+    },
+    {
+      "name": "NASA Space Apps Challenge",
+      "match": [
+        "NASA Space Apps"
+      ],
+      "logo": "assets/space-apps-logo.png",
+      "url": "https://www.spaceappschallenge.org/",
+      "note": "2025 challenge participant",
+      "featured": true
+    },
+    {
+      "name": "MARS",
+      "match": [
+        "Metropolitan Aerospace Rocket Society"
+      ],
+      "logo": "",
+      "url": "",
+      "note": "Student rocketry",
+      "featured": true
+    },
+    {
+      "name": "University Soaring Society",
+      "match": [
+        "University Soaring Society"
+      ],
+      "logo": "",
+      "url": "",
+      "note": "Glider flight training",
+      "featured": true
+    }
+  ]
+}

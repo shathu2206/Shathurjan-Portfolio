@@ -22,7 +22,13 @@
         "Parametric surfaces"
       ],
       "images": [],
-      "link": ""
+      "link": "",
+      "cover": "assets/project-rocket-cad.svg",
+      "coverAlt": "Illustrative aerospace / cad line drawing, not a project render",
+      "coverCaption": "Illustrative cover · project photography and CAD renders to follow",
+      "featured": true,
+      "sections": [],
+      "videos": []
     },
     {
       "id": "combat-robot",
@@ -46,7 +52,13 @@
         "Mass budgeting"
       ],
       "images": [],
-      "link": ""
+      "link": "",
+      "cover": "assets/project-combat-robot.svg",
+      "coverAlt": "Illustrative mechanical / robotics line drawing, not a project render",
+      "coverCaption": "Illustrative cover · project photography and CAD renders to follow",
+      "featured": true,
+      "sections": [],
+      "videos": []
     },
     {
       "id": "skydrone",
@@ -70,7 +82,13 @@
         "FEA / CFD"
       ],
       "images": [],
-      "link": ""
+      "link": "",
+      "cover": "assets/project-skydrone.svg",
+      "coverAlt": "Illustrative structures / research line drawing, not a project render",
+      "coverCaption": "Illustrative cover · project photography and CAD renders to follow",
+      "featured": true,
+      "sections": [],
+      "videos": []
     },
     {
       "id": "asteroid-platform",
@@ -94,7 +112,13 @@
         "Data visualisation"
       ],
       "images": [],
-      "link": ""
+      "link": "",
+      "cover": "assets/project-asteroid-platform.svg",
+      "coverAlt": "Illustrative simulation / software line drawing, not a project render",
+      "coverCaption": "Illustrative cover · project photography and CAD renders to follow",
+      "featured": true,
+      "sections": [],
+      "videos": []
     }
   ]
 }

@@ -28,10 +28,10 @@ export function contactHref(link:ContactLink):string {
   }
 }
 
-export function ContactSection(){
+export function ContactSection({standalone=false}:{standalone?:boolean}){
   const {contact}=content;
   return <section id="contact" className="contact-section wrap" aria-labelledby="contact-title">
-    <div><p className="eyebrow">{contact.eyebrow}</p><h2 id="contact-title">{contact.title}</h2><p className="preserve-lines">{contact.intro}</p></div>
+    <div><p className="eyebrow">{contact.eyebrow}</p>{standalone?<h1 id="contact-title">{contact.title}</h1>:<h2 id="contact-title">{contact.title}</h2>}<p className="preserve-lines">{contact.intro}</p></div>
     <div className="contact-links">{contact.links.map((link,index)=>{
       const file=link.type==='cv'||link.type==='file';
       const newTab=file||link.type==='link'||link.type==='linkedin';

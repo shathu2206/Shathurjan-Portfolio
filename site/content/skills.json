@@ -1,28 +1,138 @@
 {
   "skills": [
     {
-      "title": "Design & modelling",
+      "title": "CAD & geometry",
       "items": [
-        "SolidWorks · Onshape · CATIA",
-        "Parametric CAD · Geometry / surface design",
-        "Assembly integration · OpenRocket"
+        {
+          "name": "SolidWorks",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Onshape",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "CATIA",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Parametric CAD",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Geometry / surface design",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Assembly integration",
+          "level": "0",
+          "note": ""
+        }
       ]
     },
     {
-      "title": "Tools & languages",
+      "title": "Simulation & analysis",
       "items": [
-        "ANSYS (training) · MATLAB · Simulink",
-        "Arduino IDE (C/C++) · C",
-        "HTML · CSS · JavaScript",
-        "Data analysis / visualisation · Testing / prototyping"
+        {
+          "name": "ANSYS",
+          "level": "0",
+          "note": "Training"
+        },
+        {
+          "name": "MATLAB",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Simulink",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "OpenRocket",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Data analysis / visualisation",
+          "level": "0",
+          "note": ""
+        }
       ]
     },
     {
-      "title": "Professional skills",
+      "title": "Programming & embedded systems",
       "items": [
-        "Technical communication · Team coordination",
-        "Technical mentorship · Safety-minded testing",
-        "Event / logistics management"
+        {
+          "name": "Arduino IDE (C/C++)",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "C",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "HTML",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "CSS",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "JavaScript",
+          "level": "0",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Prototyping & verification",
+      "items": [
+        {
+          "name": "Testing / prototyping",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Safety-minded testing",
+          "level": "0",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Communication & coordination",
+      "items": [
+        {
+          "name": "Technical communication",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Team coordination",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Technical mentorship",
+          "level": "0",
+          "note": ""
+        },
+        {
+          "name": "Event / logistics management",
+          "level": "0",
+          "note": ""
+        }
       ]
     }
   ]
