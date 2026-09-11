@@ -5,18 +5,25 @@
       "subtitle": "ENGINEERING PORTFOLIO",
       "footer": "Aerospace engineering · Toronto",
       "moreLabel": "More",
-      "logo": "",
       "showName": true,
       "showFooter": true,
       "showBackToTop": true,
       "copyright": "{year} {name}",
-      "hideOnScroll": true
+      "hideOnScroll": true,
+      "logoLayout": {
+        "enabled": false,
+        "width": 100,
+        "ratio": "auto",
+        "fit": "contain",
+        "position": "center",
+        "background": "transparent"
+      }
     },
     "intro": {
       "workButton": "Explore my work",
       "cvButton": "View CV",
       "exploreLabel": "Explore the portfolio",
-      "exploreDescription": "The work, the learning, and the people behind it."
+      "exploreDescription": " "
     },
     "sections": [
       "intro",
