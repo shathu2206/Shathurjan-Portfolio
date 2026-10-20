@@ -1166,27 +1166,6 @@ content:
                 description: >-
                   The top bar returns when you scroll up. It stays visible while its menu is open or a
                   navigation item has keyboard focus.
-          - name: intro
-            label: Introduction buttons
-            type: object
-            required: true
-            fields:
-              - name: workButton
-                label: Work Button
-                type: string
-                required: true
-              - name: cvButton
-                label: Cv Button
-                type: string
-                required: true
-              - name: exploreLabel
-                label: Homepage directory title
-                type: string
-                required: true
-              - name: exploreDescription
-                label: Homepage directory introduction
-                type: string
-                required: true
           - name: home
             label: Homepage layout & visibility
             type: object
@@ -1235,7 +1214,7 @@ content:
             list: true
             description: >-
               Removing an entry hides its navigation and homepage links. Its direct page address still works.
-              Arrange the visible links under Navigation below.
+              Edit homepage link labels and order in Introduction & name.
             options:
               values:
                 - label: Introduction
@@ -1947,6 +1926,66 @@ content:
                 label: Proficiency
                 type: string
                 required: true
+          - name: homepage
+            label: Homepage headings, buttons & portfolio links
+            type: object
+            fields:
+              - name: workButton
+                label: Work Button
+                type: string
+                required: true
+              - name: cvButton
+                label: Cv Button
+                type: string
+                required: true
+              - name: exploreLabel
+                label: Explore the portfolio — heading
+                type: string
+              - name: exploreDescription
+                label: Text beside the heading
+                type: text
+                description: >-
+                  For example: The work, the learning, and the people behind it. Leave blank to hide this
+                  text.
+              - name: links
+                label: Portfolio link titles
+                type: object
+                description: >-
+                  Rename, add, remove or drag to reorder the homepage links. Top navigation labels are managed
+                  separately in Site settings.
+                list:
+                  collapsible:
+                    collapsed: true
+                    summary: '{fields.label}'
+                fields:
+                  - name: label
+                    label: Title shown on the homepage
+                    type: string
+                    required: true
+                  - name: target
+                    label: Page this link opens
+                    type: select
+                    required: true
+                    options:
+                      values:
+                        - label: Projects
+                          value: work
+                        - label: Technical experience
+                          value: experience
+                        - label: Leadership & community
+                          value: leadership
+                        - label: Education
+                          value: education
+                        - label: Awards & achievements
+                          value: awards
+                        - label: Skills
+                          value: skills
+                        - label: Updates page
+                          value: updates
+                        - label: Contact
+                          value: contact
+                        - label: Gallery page
+                          value: gallery
     type: file
     path: site/content/profile.json
     format: json

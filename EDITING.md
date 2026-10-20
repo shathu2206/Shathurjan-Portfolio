@@ -79,6 +79,12 @@ In **Organization logos**, add the organization name, its logo and a matching na
 
 The starter cover photos are credited NASA research imagery, separate from your own project work. Logo and photo sources are recorded in [MEDIA-CREDITS.md](MEDIA-CREDITS.md).
 
+## Homepage heading and portfolio links
+
+Open **Introduction & name → Homepage headings, buttons & portfolio links**. Here you can edit the **Explore the portfolio — heading**, the **Text beside the heading**, the two introduction button labels, and every **Portfolio link title** (Projects, Experience, Leadership, Education, Awards & Achievements, Skills, Gallery, Updates and Contact). Add, remove or drag links to reorder them, and choose which page each opens. These labels are independent of the top navigation. A page hidden in Site settings stays hidden from the homepage links too.
+
+Leave the heading or description blank to hide that text. Save this entry to publish your changes. Removing the optional header logo is also supported; the header returns to your monogram.
+
 ## Intro photos and Gallery
 
 ### Light and dark themes

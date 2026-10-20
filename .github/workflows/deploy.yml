@@ -36,6 +36,9 @@ jobs:
       - name: Build static portfolio
         run: npm run build
         working-directory: site
+      - name: Check CMS editing behavior
+        run: node scripts/check-cms-editing.mjs
+        working-directory: site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

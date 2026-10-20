@@ -15,6 +15,9 @@ import pages from './pages.json';
 import organizations from './organizations.json';
 
 export interface ContactLink {label:string;type:'phone'|'email'|'link'|'linkedin'|'cv'|'file';text?:string;value?:string;file?:string}
+// CMS removes empty optional keys. Keep the schema independent of today's JSON values.
+export interface Branding {monogram:string;subtitle?:string;footer?:string;moreLabel:string;logo?:string;logoLayout?:ImageLayout;showName?:boolean;showFooter?:boolean;showBackToTop?:boolean;copyright?:string;hideOnScroll?:boolean}
+export interface HomepageCopy {workButton?:string;cvButton?:string;exploreLabel?:string;exploreDescription?:string;links?:{label:string;target:string}[]}
 
 export interface LogoOptions {showLogo?:boolean;logoLayout?:ImageLayout;logo?:string}
 export interface Experience extends LogoOptions {showPhotos?:boolean;photos?:{imageLayout?:ImageLayout;image:string;alt:string;caption?:string;visible?:boolean}[]; title: string; organization: string; date: string; description: string; details?: string[]; imageLayout?:ImageLayout;image?:string; imageAlt?:string; imageCaption?:string }
@@ -28,11 +31,12 @@ interface Portfolio {
   organizations:Organization[];
   introPhotos: {visible:boolean;label:string;autoplay:boolean;intervalSeconds:number;previousLabel:string;nextLabel:string;photoLabel:string;photos:{imageLayout?:ImageLayout;image:string;alt:string;caption?:string;fit?:string;position?:string}[]};
   contact: {eyebrow:string;title:string;intro:string;resume:string;links:ContactLink[]};
-  settings: typeof settingsData.settings & {branding:{logoLayout?:ImageLayout}} & typeof appearanceData;
+  settings: Omit<typeof settingsData.settings,'branding'> & {branding:Branding} & typeof appearanceData;
   gallery: {eyebrow:string;title:string;description:string;emptyMessage:string;photos:{imageLayout?:ImageLayout;image:string;alt:string;title:string;caption?:string;fit?:string;position?:string}[]};
   profile: {
     name: string; role: string;
     availability: string; intro: string;
+    homepage: HomepageCopy;
     languages?: {language:string;level:string}[];
     highlights: {value: string; label: string}[];
   };
@@ -54,7 +58,7 @@ const content: Portfolio = {
   contact: {...data.contact, links: data.contact.links ?? []},
   gallery: {...data.gallery, photos: data.gallery.photos ?? []},
   settings: {...data.settings, appearance:appearanceData.appearance, sections: data.settings.sections ?? [], navigation: data.settings.navigation ?? [], skills:{...data.settings.skills,levels:['Not yet rated','Introduced','Developing','Proficient','Advanced'].map((fallback,index)=>data.settings.skills.levels?.[index]||fallback)}},
-  profile: { ...data.profile, highlights: data.profile.highlights ?? [] },
+  profile: { ...data.profile, homepage:data.profile.homepage??{}, highlights: data.profile.highlights ?? [] },
   projects: (data.projects ?? []).map(project => ({
     ...project, images: project.images ?? [], tools: project.tools ?? [],
     contributions: project.contributions ?? [], sections:project.sections??[],videos:project.videos??[],

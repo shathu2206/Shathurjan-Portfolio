@@ -19,12 +19,6 @@
         "background": "transparent"
       }
     },
-    "intro": {
-      "workButton": "Explore my work",
-      "cvButton": "View CV",
-      "exploreLabel": "Explore the portfolio",
-      "exploreDescription": " "
-    },
     "sections": [
       "intro",
       "work",

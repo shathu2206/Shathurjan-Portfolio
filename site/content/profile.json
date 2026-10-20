@@ -27,6 +27,50 @@
         "language": "Tamil",
         "level": "Native"
       }
-    ]
+    ],
+    "homepage": {
+      "workButton": "Explore my work",
+      "cvButton": "View CV",
+      "exploreLabel": "Explore the portfolio",
+      "exploreDescription": " ",
+      "links": [
+        {
+          "label": "Projects",
+          "target": "work"
+        },
+        {
+          "label": "Experience",
+          "target": "experience"
+        },
+        {
+          "label": "Leadership",
+          "target": "leadership"
+        },
+        {
+          "label": "Education",
+          "target": "education"
+        },
+        {
+          "label": "Awards & Achievements",
+          "target": "awards"
+        },
+        {
+          "label": "Skills",
+          "target": "skills"
+        },
+        {
+          "label": "Gallery",
+          "target": "gallery"
+        },
+        {
+          "label": "Updates",
+          "target": "updates"
+        },
+        {
+          "label": "Contact",
+          "target": "contact"
+        }
+      ]
+    }
   }
 }
