@@ -14,7 +14,7 @@
           "enabled": false,
           "width": 100,
           "ratio": "auto",
-          "fit": "contain",
+          "fit": "cover",
           "position": "center",
           "background": "transparent"
         },
