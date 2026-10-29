@@ -4,7 +4,7 @@
       "title": "Hardware Team Member",
       "organization": "Skydrone Research Project (Frontier)",
       "date": "Sep 2025 – Present",
-      "description": "Autonomous UAV structures, engineering simulation with MATLAB/Simulink, and multidisciplinary integration.",
+      "description": "Autonomous UAV structures and multidisciplinary integration.",
       "details": [
         "Design and analyse the physical structure of an autonomous UAV for both terrestrial and extraterrestrial use cases.",
         "Conduct FEA and CFD simulations using SolidWorks, ANSYS, and MATLAB/Simulink to evaluate frame stiffness and aerodynamic efficiency.",
@@ -91,10 +91,10 @@
       "title": "Competitor · Lead CAD Designer",
       "organization": "Metropolitan Aerospace Rocket Society (MARS)",
       "date": "Jan 2025 – Mar 2025",
-      "description": "MATLAB programming and parametric CAD for a hybrid student rocket’s aerodynamic geometry.",
+      "description": "Parametric aerodynamic geometry for a hybrid student rocket.",
       "details": [
         "Modelled the aerodynamic nose cone and avionics bay for a hybrid student rocket using CATIA and MATLAB.",
-        "Programmed curvature equations in MATLAB from OpenRocket data to generate geometry for the rocket’s nose cone and avionics bay.",
+        "Derived and implemented curvature equations to generate accurate geometry based on OpenRocket data.",
         "Integrated spline-based point inputs from MATLAB into CATIA for parametric surface generation.",
         "Ensured alignment between avionics design, structural manufacturability, and aerodynamic performance."
       ],

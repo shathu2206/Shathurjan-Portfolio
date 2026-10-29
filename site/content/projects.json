@@ -3,21 +3,21 @@
     {
       "id": "rocket-cad",
       "title": "Parametric rocket design",
-      "category": "MATLAB PROGRAMMING / AEROSPACE CAD",
+      "category": "AEROSPACE / CAD",
       "organization": "Metropolitan Aerospace Rocket Society (MARS)",
       "date": "JAN – MAR 2025",
       "role": "Lead CAD Designer",
-      "summary": "Using MATLAB programming to turn rocket curvature equations into CAD-ready geometry for a hybrid student rocket’s nose cone and avionics bay.",
+      "summary": "Designing a hybrid student rocket’s nose cone and avionics bay, with aerodynamic geometry that could translate into a manufacturable structure.",
       "contributions": [
-        "Programmed curvature equations in MATLAB using OpenRocket configuration data to generate the rocket’s aerodynamic geometry.",
-        "Generated spline-based point inputs in MATLAB and transferred them into CATIA for parametric surface modelling.",
+        "Derived curvature equations from OpenRocket data and implemented them in MATLAB.",
+        "Transferred spline-based point inputs into CATIA to generate parametric surfaces.",
         "Integrated the avionics bay geometry with aerodynamic and structural requirements."
       ],
       "outcomeLabel": "DESIGN APPROACH",
       "outcome": "A connected workflow from rocket configuration data to equations, surface geometry, and component integration.",
       "tools": [
-        "MATLAB",
         "CATIA",
+        "MATLAB",
         "OpenRocket",
         "Parametric surfaces"
       ],
@@ -27,13 +27,7 @@
       "coverAlt": "Illustrative aerospace / cad line drawing, not a project render",
       "coverCaption": "Illustrative cover · project photography and CAD renders to follow",
       "featured": true,
-      "sections": [
-        {
-          "title": "From MATLAB code to CAD geometry",
-          "body": "I used MATLAB to connect the mathematical definition of the rocket’s aerodynamic shape with the geometry needed in CATIA. Starting with OpenRocket data, I implemented curvature equations and generated spline-based point inputs for parametric surface modelling.\n\nThis is how I like to use programming in engineering: turn a complicated task into a repeatable workflow, then carry the result into design and manufacturing decisions.",
-          "layout": "full"
-        }
-      ],
+      "sections": [],
       "videos": []
     },
     {
@@ -73,7 +67,7 @@
       "organization": "Skydrone Research Project · Frontier",
       "date": "SEP 2025 – PRESENT",
       "role": "Hardware Team Member",
-      "summary": "Contributing to autonomous UAV structures through mechanical design and engineering simulation, using MATLAB/Simulink alongside SolidWorks and ANSYS.",
+      "summary": "Contributing to the physical structure of an autonomous UAV being researched for terrestrial and extraterrestrial use cases.",
       "contributions": [
         "Design and analyse structural components for frame stiffness and aerodynamic efficiency.",
         "Contribute to FEA and CFD work using SolidWorks, ANSYS, and MATLAB/Simulink.",
@@ -82,9 +76,9 @@
       "outcomeLabel": "RESEARCH FOCUS",
       "outcome": "Lightweight materials, control surfaces, and mechanical integration for future autonomous deployment.",
       "tools": [
-        "MATLAB / Simulink",
         "SolidWorks",
         "ANSYS",
+        "MATLAB / Simulink",
         "FEA / CFD"
       ],
       "images": [],
