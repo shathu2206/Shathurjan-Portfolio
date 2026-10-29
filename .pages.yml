@@ -3697,6 +3697,9 @@ content:
           - name: dismissLabel
             label: Dismiss button label
             type: string
+          - name: reopenLabel
+            label: Footer link to reopen the notice
+            type: string
           - name: lastUpdated
             label: Last content update
             type: date

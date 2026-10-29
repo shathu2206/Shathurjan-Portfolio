@@ -1,6 +1,6 @@
 import data from '../content/notice.json';
 
-interface NoticeSettings {enabled?:boolean;version?:string;title?:string;message?:string;dismissLabel?:string;lastUpdated?:string;updatedLabel?:string;showFooterDate?:boolean}
+interface NoticeSettings {enabled?:boolean;version?:string;title?:string;message?:string;dismissLabel?:string;reopenLabel?:string;lastUpdated?:string;updatedLabel?:string;showFooterDate?:boolean}
 const notice=(data as {notice?:NoticeSettings}).notice??{};
 export function LastUpdated({footer=false}:{footer?:boolean}){
   if(footer&&notice.showFooterDate===false)return null;
@@ -12,9 +12,13 @@ export function LastUpdated({footer=false}:{footer?:boolean}){
 }
 export function SiteNotice(){
   if(notice.enabled===false||!notice.message?.trim())return null;
-  return <aside className="site-notice" data-site-notice data-notice-version={notice.version||'construction'} aria-labelledby="site-notice-title" hidden>
+  return <aside id="site-construction-notice" className="site-notice" data-site-notice data-notice-version={notice.version||'construction'} aria-labelledby="site-notice-title" tabIndex={-1} hidden>
     <h2 id="site-notice-title">{notice.title||'Portfolio update'}</h2>
     <p className="preserve-lines">{notice.message}</p>
     <div className="notice-actions"><LastUpdated/><button type="button" data-dismiss-notice>{notice.dismissLabel||'Got it'}</button></div>
   </aside>;
+}
+export function NoticeReopen(){
+  if(notice.enabled===false||!notice.message?.trim())return null;
+  return <button type="button" className="notice-reopen" data-reopen-notice aria-controls="site-construction-notice" aria-expanded="false" hidden>{notice.reopenLabel||'Construction notice'}</button>;
 }

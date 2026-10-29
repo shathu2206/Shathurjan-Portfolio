@@ -9,17 +9,31 @@
     }
     return false;
   };
-  if (remembered()) return;
-  notice.hidden = false;
+  const reopenButtons = document.querySelectorAll('[data-reopen-notice]');
+  let returnFocus = null;
+  const setVisible = visible => {
+    notice.hidden = !visible;
+    reopenButtons.forEach(button => button.setAttribute('aria-expanded', String(visible)));
+  };
+  setVisible(!remembered());
+  reopenButtons.forEach(button => {
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      returnFocus = button;
+      setVisible(true);
+      notice.focus({preventScroll: true});
+    });
+  });
   notice.querySelector('[data-dismiss-notice]').addEventListener('click', () => {
     for (const name of ['localStorage', 'sessionStorage']) {
       try { window[name].setItem(key, 'dismissed'); } catch { /* Dismiss even without storage. */ }
     }
-    notice.hidden = true;
+    setVisible(false);
+    if (returnFocus) { returnFocus.focus({preventScroll: true}); returnFocus = null; return; }
     const main = document.querySelector('main');
     if (main) { main.setAttribute('tabindex', '-1'); main.focus({preventScroll: true}); }
   });
   window.addEventListener('storage', event => {
-    if (event.key === key && event.newValue === 'dismissed') notice.hidden = true;
+    if (event.key === key && event.newValue === 'dismissed') setVisible(false);
   });
 })();

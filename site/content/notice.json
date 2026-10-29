@@ -1,10 +1,11 @@
 {
   "notice": {
     "enabled": true,
-    "version": "construction-2026-10",
-    "title": "A work in progress",
+    "version": "construction-2026-10-29-v2",
+    "title": "Portfolio under construction",
     "message": "This portfolio is still under construction. My experience and project pages are not fully up to date, and some roles I have recently taken on have not been added yet. Thanks for taking a look while I bring everything up to date.",
     "dismissLabel": "Got it",
+    "reopenLabel": "Construction notice",
     "lastUpdated": "2026-10-29",
     "updatedLabel": "Last updated",
     "showFooterDate": true

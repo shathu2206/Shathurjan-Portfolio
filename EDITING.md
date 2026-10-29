@@ -81,6 +81,8 @@ The starter cover photos are credited NASA research imagery, separate from your 
 
 ## Construction notice and update date
 
+The **Construction notice** link in the footer reopens the message after dismissal. Its label is editable here too. Reopening it does not reset the one-time acknowledgement for future visits.
+
 Open **Site notice & update date** in Pages CMS to edit the notice heading, message, dismissal button and last content update date. The notice is available on every page. Once someone clicks **Got it**, that browser remembers the dismissal across pages and future visits. If browser storage is blocked, the notice still closes but may reappear after navigation. It does not block access to the page.
 
 Turn **Show the construction notice** off when the portfolio is ready. The footer date can remain visible independently. Update **Last content update** when you revise the portfolio; it is a manually maintained content date, not a visitor's current date or a claim that all roles are current. Change **Notice version** only if you want returning visitors to see a revised notice again.

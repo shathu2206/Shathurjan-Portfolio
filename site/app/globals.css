@@ -185,6 +185,8 @@ body{padding-bottom:80px}
 .site-notice>p{margin-top:12px;font-size:.9rem;line-height:1.65;color:var(--muted-foreground)}
 .notice-actions{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:14px;margin-top:20px}
 .last-updated{font-size:.75rem;color:var(--muted-foreground)}
+.notice-reopen{padding:0;border:0;background:transparent;color:var(--primary);font:inherit;text-decoration:underline;text-underline-offset:3px;cursor:pointer}
+.notice-reopen:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
 .notice-actions button{min-height:44px;padding:9px 18px;border:1px solid var(--primary);border-radius:6px;background:var(--primary);color:var(--background);font:inherit;font-size:.875rem;cursor:pointer}
 .notice-actions button:hover{filter:brightness(.93)}
 .notice-actions button:focus-visible{outline:2px solid var(--primary);outline-offset:4px}
