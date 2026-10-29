@@ -39,7 +39,8 @@
         },
         {
           "name": "MATLAB",
-          "level": "0"
+          "level": "0",
+          "note": "Engineering simulations, equation-based geometry generation, and CAD workflows."
         },
         {
           "name": "Simulink",
@@ -58,6 +59,11 @@
     {
       "title": "Programming & embedded systems",
       "items": [
+        {
+          "name": "MATLAB programming",
+          "level": "0",
+          "note": "Turning engineering equations into reusable scripts and CAD-ready geometry."
+        },
         {
           "name": "Arduino IDE (C/C++)",
           "level": "0"

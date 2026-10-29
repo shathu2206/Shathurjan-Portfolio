@@ -79,6 +79,12 @@ In **Organization logos**, add the organization name, its logo and a matching na
 
 The starter cover photos are credited NASA research imagery, separate from your own project work. Logo and photo sources are recorded in [MEDIA-CREDITS.md](MEDIA-CREDITS.md).
 
+## Construction notice and update date
+
+Open **Site notice & update date** in Pages CMS to edit the notice heading, message, dismissal button and last content update date. The notice is available on every page. Once someone clicks **Got it**, that browser remembers the dismissal across pages and future visits. If browser storage is blocked, the notice still closes but may reappear after navigation. It does not block access to the page.
+
+Turn **Show the construction notice** off when the portfolio is ready. The footer date can remain visible independently. Update **Last content update** when you revise the portfolio; it is a manually maintained content date, not a visitor's current date or a claim that all roles are current. Change **Notice version** only if you want returning visitors to see a revised notice again.
+
 ## Homepage heading and portfolio links
 
 Open **Introduction & name → Homepage headings, buttons & portfolio links**. Here you can edit the **Explore the portfolio — heading**, the **Text beside the heading**, the two introduction button labels, and every **Portfolio link title** (Projects, Experience, Leadership, Education, Awards & Achievements, Skills, Gallery, Updates and Contact). Add, remove or drag links to reorder them, and choose which page each opens. These labels are independent of the top navigation. A page hidden in Site settings stays hidden from the homepage links too.

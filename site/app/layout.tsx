@@ -1,3 +1,4 @@
+import {SiteNotice} from '../components/site-notice';
 /* oxlint-disable next/no-sync-scripts -- Apply the saved theme before first paint in these static documents. */
 import {ThemePicker} from '../components/theme-picker';
 import {ImageFilters} from '../components/image-filters';
@@ -11,5 +12,5 @@ export const metadata: Metadata = {
   icons: { icon: `${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/favicon.svg` },
 };
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
-  return <html lang="en" style={themeStyle()}><head><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/theme.js`}/><ImageFilters/></head><body>{children}<ThemePicker/><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/site-navigation.js`} defer/><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/intro-carousel.js`} defer/></body></html>;
+  return <html lang="en" style={themeStyle()}><head><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/theme.js`}/><ImageFilters/></head><body>{children}<ThemePicker/><SiteNotice/><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/site-notice.js`} defer/><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/site-navigation.js`} defer/><script src={`${process.env.NODE_ENV === 'production' ? '/Shathurjan-Portfolio' : ''}/intro-carousel.js`} defer/></body></html>;
 }

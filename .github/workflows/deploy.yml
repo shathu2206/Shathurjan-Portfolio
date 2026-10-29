@@ -39,6 +39,9 @@ jobs:
       - name: Check CMS editing behavior
         run: node scripts/check-cms-editing.mjs
         working-directory: site
+      - name: Check construction notice behavior
+        run: node scripts/check-site-notice.mjs
+        working-directory: site
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:

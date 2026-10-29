@@ -3673,6 +3673,49 @@ content:
                 description: >-
                   Transparent preserves PNG transparency. Cannot remove a background already baked into a
                   file.
+  - name: notice
+    label: Site notice & update date
+    type: file
+    path: site/content/notice.json
+    format: json
+    fields:
+      - name: notice
+        label: Construction notice
+        type: object
+        fields:
+          - name: enabled
+            label: Show the construction notice
+            type: boolean
+            default: true
+          - name: title
+            label: Notice heading
+            type: string
+          - name: message
+            label: Notice message
+            type: text
+            description: Displayed on any page until a visitor dismisses it.
+          - name: dismissLabel
+            label: Dismiss button label
+            type: string
+          - name: lastUpdated
+            label: Last content update
+            type: date
+            options:
+              format: yyyy-MM-dd
+            description: Update this when you revise the portfolio. Shown in the notice and footer.
+          - name: updatedLabel
+            label: Date label
+            type: string
+          - name: showFooterDate
+            label: Keep the date in the footer after dismissal
+            type: boolean
+            default: true
+          - name: version
+            label: Notice version
+            type: string
+            description: >-
+              Dismissal is remembered across pages and visits in this browser. Change this value only to show
+              a new notice to returning visitors.
 settings:
   content:
     merge: true

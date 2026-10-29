@@ -4,7 +4,7 @@
       "title": "Hardware Team Member",
       "organization": "Skydrone Research Project (Frontier)",
       "date": "Sep 2025 – Present",
-      "description": "Autonomous UAV structures and multidisciplinary integration.",
+      "description": "Autonomous UAV structures, engineering simulation with MATLAB/Simulink, and multidisciplinary integration.",
       "details": [
         "Design and analyse the physical structure of an autonomous UAV for both terrestrial and extraterrestrial use cases.",
         "Conduct FEA and CFD simulations using SolidWorks, ANSYS, and MATLAB/Simulink to evaluate frame stiffness and aerodynamic efficiency.",
@@ -20,12 +20,13 @@
       "title": "Lead-in-Training",
       "organization": "Metropolitan Aerospace Rocket Society (MARS)",
       "date": "Sep 2025 – Present",
-      "description": "Supporting student rocket teams while developing technical leadership.",
+      "description": "Helping newer rocket teams develop engineering designs and communicate the reasoning behind their decisions.",
       "details": [
         "Support student teams through the design, manufacturing, assembly, and launch of competition rockets while training under an experienced lead.",
         "Assist teams with preliminary rocket configuration, stability analysis, and performance evaluation using OpenRocket.",
         "Guide members through CAD development in Onshape, including component design, assembly integration, and design iteration.",
-        "Assist with manufacturing, troubleshooting, launch preparation, and technical decision-making while developing team leadership skills."
+        "Assist with manufacturing, troubleshooting, launch preparation, and technical decision-making while developing team leadership skills.",
+        "Help newer teams justify and pitch their design decisions within limited time, combining technical guidance with clear engineering communication."
       ],
       "showLogo": true,
       "showPhotos": true
@@ -90,10 +91,10 @@
       "title": "Competitor · Lead CAD Designer",
       "organization": "Metropolitan Aerospace Rocket Society (MARS)",
       "date": "Jan 2025 – Mar 2025",
-      "description": "Parametric aerodynamic geometry for a hybrid student rocket.",
+      "description": "MATLAB programming and parametric CAD for a hybrid student rocket’s aerodynamic geometry.",
       "details": [
         "Modelled the aerodynamic nose cone and avionics bay for a hybrid student rocket using CATIA and MATLAB.",
-        "Derived and implemented curvature equations to generate accurate geometry based on OpenRocket data.",
+        "Programmed curvature equations in MATLAB from OpenRocket data to generate geometry for the rocket’s nose cone and avionics bay.",
         "Integrated spline-based point inputs from MATLAB into CATIA for parametric surface generation.",
         "Ensured alignment between avionics design, structural manufacturability, and aerodynamic performance."
       ],
